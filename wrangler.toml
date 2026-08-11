@@ -1,0 +1,9 @@
+name = "survey-cloudflare"
+compatibility_date = "2026-05-31"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "survey-db"
+# TODO: 把下面这行替换成你执行 `npx wrangler d1 create survey-db` 后拿到的 database_id
+database_id = "8f07f5b4-d95c-4561-9dcf-74ec831f67fa"

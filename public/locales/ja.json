@@ -1,0 +1,1579 @@
+{
+  "_meta": {
+    "name": "Japanese",
+    "name_local": "日本語",
+    "dir": "ltr",
+    "font": "system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif"
+  },
+  "defaults": {
+    "region": "overseas",
+    "nationality_background": "other_country"
+  },
+  "available_options": {
+    "is_adult": [
+      "yes_18_or_above",
+      "no_under_18"
+    ],
+    "age_group": [
+      "18_20",
+      "21_23",
+      "24_26",
+      "27_or_above",
+      "prefer_not_to_say"
+    ],
+    "education_stage": [
+      "senior_high_grade_3",
+      "equivalent_to_senior_high_grade_3",
+      "gap_year_or_not_currently_enrolled",
+      "college_preparatory_or_foundation",
+      "undergraduate_year_1",
+      "undergraduate_year_2",
+      "undergraduate_year_3",
+      "undergraduate_year_4",
+      "undergraduate_year_5_or_above",
+      "junior_college",
+      "postgraduate_master",
+      "postgraduate_doctoral",
+      "prefer_not_to_say"
+    ],
+    "major_category": [
+      "humanities",
+      "social_science",
+      "natural_science",
+      "engineering",
+      "medicine",
+      "arts",
+      "business",
+      "law",
+      "education",
+      "agriculture",
+      "prefer_not_to_say"
+    ],
+    "nationality_background": [
+      "china_mainland",
+      "hong_kong_macau_taiwan",
+      "overseas_chinese",
+      "other_country",
+      "prefer_not_to_say"
+    ],
+    "region": [
+      "north_china",
+      "northeast_china",
+      "east_china",
+      "central_china",
+      "south_china",
+      "southwest_china",
+      "northwest_china",
+      "overseas",
+      "prefer_not_to_say"
+    ],
+    "sexual_orientation": [
+      "heterosexual",
+      "homosexual",
+      "gay",
+      "lesbian",
+      "bisexual",
+      "pansexual",
+      "asexual",
+      "demisexual",
+      "queer",
+      "questioning",
+      "prefer_not_to_say",
+      "other"
+    ],
+    "relationship_status": [
+      "never_dated",
+      "dated_before_currently_single",
+      "currently_in_relationship",
+      "ambiguous_or_unofficial_relationship",
+      "not_sure_how_to_define",
+      "prefer_not_to_say"
+    ],
+    "relationship_willingness": [
+      "strongly_want",
+      "somewhat_want",
+      "let_it_be",
+      "not_now",
+      "clearly_not_want",
+      "prefer_not_to_say"
+    ],
+    "love_importance": [
+      "very_important",
+      "somewhat_important",
+      "neutral",
+      "not_very_important",
+      "not_important_at_all",
+      "prefer_not_to_say"
+    ],
+    "love_view": [
+      "serious_commitment",
+      "casual_dating",
+      "let_nature_take_course",
+      "marriage_oriented",
+      "experience_oriented",
+      "independent_love",
+      "prefer_not_to_say"
+    ],
+    "long_distance_acceptance": [
+      "fully_accept",
+      "somewhat_accept",
+      "depends",
+      "somewhat_reject",
+      "fully_reject",
+      "prefer_not_to_say"
+    ],
+    "study_impact": [
+      "very_positive",
+      "somewhat_positive",
+      "no_impact",
+      "somewhat_negative",
+      "very_negative",
+      "prefer_not_to_say"
+    ],
+    "relationship_core_values": [
+      "mutual_trust",
+      "communication",
+      "respect",
+      "shared_goals",
+      "emotional_support",
+      "personal_space",
+      "honesty",
+      "loyalty",
+      "growth_together",
+      "passion",
+      "prefer_not_to_say"
+    ],
+    "conflict_handling": [
+      "communicate_openly",
+      "cool_down_first",
+      "seek_compromise",
+      "avoid_conflict",
+      "ask_friends",
+      "seek_professional_help",
+      "prefer_not_to_say"
+    ],
+    "relationship_pressure": [
+      "strong_pressure",
+      "some_pressure",
+      "no_pressure",
+      "prefer_not_to_say"
+    ],
+    "boundary_awareness": [
+      "very_important",
+      "somewhat_important",
+      "not_very_important",
+      "prefer_not_to_say"
+    ],
+    "help_seeking": [
+      "always",
+      "sometimes",
+      "rarely",
+      "never",
+      "prefer_not_to_say"
+    ],
+    "school_education_need": [
+      "very_needed",
+      "somewhat_needed",
+      "neutral",
+      "not_very_needed",
+      "not_needed_at_all",
+      "prefer_not_to_say"
+    ],
+    "school_support": [
+      "very_sufficient",
+      "somewhat_sufficient",
+      "somewhat_insufficient",
+      "very_insufficient",
+      "prefer_not_to_say"
+    ]
+  },
+  "ui": {
+    "survey": {
+      "title": "大学生恋愛実態調査",
+      "subtitle": "課題研究・匿名アンケート・統計分析のみに使用"
+    },
+    "intro": {
+      "desc": "これは課題研究のための匿名アンケートであり、大学生の恋愛状況、親密な関係の価値観、感情的ストレス、およびキャンパス支援ニーズの全体的な状況を把握することを目的としています。",
+      "time": "所要時間：5〜8分",
+      "method": "匿名・自由意志・センシティブな質問はスキップ可能",
+      "purpose": "データ用途：課題研究の統計分析のみ"
+    },
+    "button": {
+      "start": "プライバシー説明を確認して回答を開始",
+      "agree": "説明を読み、同意して回答を開始",
+      "decline": "同意しない、回答を中止",
+      "submit": "回答を送信",
+      "print": "このページを印刷",
+      "copy": "暗号文をコピー",
+      "next_survey": "次の回答へ",
+      "paper_submit": "📄 オンライン入力が不便な方は郵送で提出",
+      "download_paper": "紙面版をダウンロード",
+      "go_encrypt": "暗号化入力ページへ"
+    },
+    "common": {
+      "select_placeholder": "選択してください",
+      "optional": "（任意）",
+      "multiple": "（複数選択可）",
+      "required": "（必須）"
+    },
+    "progress": {
+      "section": "第{current} / {total}パート：{name}",
+      "percent": "{pct}%完了"
+    },
+    "status": {
+      "submitting": "送信中...",
+      "submit_failed": "送信失敗：{msg}"
+    },
+    "success": {
+      "title": "送信完了",
+      "message": "ご回答ありがとうございます。匿名回答は課題研究の統計分析のみに使用されます。",
+      "again": "もう一度回答する"
+    },
+    "decline": {
+      "title": "回答を中止しました",
+      "message": "お時間をいただきありがとうございます。"
+    },
+    "underage": {
+      "title": "ご関心をお寄せいただきありがとうございます",
+      "message": "本アンケートはプライバシーに関わる内容を含むため、18歳以上の回答者のみを対象としています。"
+    },
+    "privacy": {
+      "title": "研究対象者への告知とプライバシーについて",
+      "welcome": "「大学生恋愛実態調査」へのご参加を歓迎します。本アンケートは課題研究の統計分析および学習研究の目的のみに使用され、商業利用、個人評価、または身分特定には使用されません。",
+      "read_first": "回答開始前に、以下の内容をよくお読みください。",
+      "data_security": {
+        "title": "データの管理とセキュリティについて",
+        "body": "本アンケートは、複数の第三者機関によるコンプライアンス審査とセキュリティ検証を受けたCloudflareのサービスで運用されています。データは信頼性の高い、慎重かつ責任ある方法で取り扱われ、すべての結果は集団レベルの統計分析、グラフ分析、結論の議論にのみ使用され、個別の回答が特定の個人に直接紐づけられることはありません。"
+      },
+      "anonymity": {
+        "title": "匿名性について",
+        "body": "本アンケートでは、氏名、学生番号、電話番号、身分証番号、詳細な住所、寮番号、WeChat ID、QQ番号など、個人を直接特定できる情報の入力は不要です。自由記述欄に個人を特定できる情報を含めないでください。"
+      },
+      "abuse": {
+        "title": "不正利用防止について",
+        "body": "重複回答、悪意のある投票、およびボットによる送信を防止するため、システムは送信時間、ブラウザのUser-Agent、Cloudflareが提供するセキュリティ情報、およびハッシュ化されたリクエスト識別子など、必要なHTTPSリクエストメタデータを記録する場合があります。"
+      },
+      "sensitive": {
+        "title": "センシティブな質問について",
+        "body": "本アンケートでは、国籍・居住地、ジェンダーアイデンティティ、性的指向、恋愛状況、恋愛観など、プライバシーに関わる内容を含む場合があります。これらは集団統計分析のみを目的としています。回答したくない質問は「回答しない」を選択するか、スキップしてください。"
+      },
+      "voluntary": {
+        "title": "自由意志による参加について",
+        "body": "本アンケートへの回答は自由意志で決めることができ、送信前にいつでも退出できます。アンケートを送信することは、上記の内容を読み、理解し、匿名回答を課題研究のデータ分析に使用することに同意したことを意味します。"
+      },
+      "age": {
+        "title": "年齢制限について",
+        "body": "18歳未満の方は、ジェンダーアイデンティティ、性的指向、恋愛経験などのプライバシーに関わる内容の入力を控えることをお勧めします。システムは年齢と教育段階の選択に基づいて、正式なアンケートへの進入を判断します。"
+      },
+      "consent_check": "上記の内容を確認し、本アンケートへの参加を自発的に希望します。",
+      "paper_option": "オンライン入力が不便な場合は、",
+      "paper_link": "📄 郵送による紙面提出",
+      "ai": {
+        "title": "AIデータ処理について",
+        "body": "AIはデータに一切アクセスしません。すべての結果はAIによる処理を経由しません。"
+      }
+    },
+    "paper": {
+      "title": "📄 紙面アンケートの提出方法",
+      "desc": "オンライン入力が不便な場合は、以下のいずれかの方法で紙面アンケートを提出できます。すべての紙面結果はオンライン結果と同じデータ構造を使用し、統一的に分析できます。",
+      "method1": {
+        "title": "方法1：従来の紙面版",
+        "step1": "空白のアンケートをダウンロードして印刷",
+        "step2": "手書きですべての質問に回答",
+        "step3": "封筒に入れて郵送"
+      },
+      "method2": {
+        "title": "方法2：エンドツーエンド暗号化紙面版",
+        "step1": "オンラインでアンケートに回答",
+        "step2": "ブラウザでAES-256-GCMによるローカル暗号化",
+        "step3": "暗号文を印刷して郵送"
+      },
+      "address": {
+        "title": "📮 送付先住所",
+        "line1": "中華人民共和国 遼寧省 瀋陽市 沈北新区 蒲河路77号 中国医科大学",
+        "line2": "郵便番号：110122",
+        "note": "対応：中国郵政EMS、中国郵政書留、UPU（中国本土以外からの郵送）"
+      },
+      "close": "閉じる",
+      "paper": {
+        "title": "大学生恋愛実態調査・紙面版",
+        "subtitle": "紙面入力版・課題研究・匿名アンケート",
+        "id_label": "あなたのアンケートID：",
+        "copy_id": "IDをコピー",
+        "id_note": "このIDを紙面アンケートの上部と封筒に書き写してください。これにより回答の照合が可能になります。",
+        "notice_title": "記入方法：",
+        "submit_title": "紙面アンケートの提出方法",
+        "submit_desc": "記入済みのアンケートを封筒に入れ、以下のいずれかの方法で郵送してください。",
+        "ems": "中国郵政EMS",
+        "registered": "中国郵政書留",
+        "upu": "UPU（中国本土以外からの郵送）",
+        "address_title": "送付先住所",
+        "address_line1": "中華人民共和国 遼寧省 瀋陽市 沈北新区 蒲河路77号",
+        "address_line2": "中国医科大学",
+        "address_zip": "郵便番号：110122",
+        "footer_note": "紙面アンケートは専用プログラムで暗号化解析されます。すべてのデータは課題研究の統計分析のみに使用されます。",
+        "copied": "IDをコピーしました："
+      }
+    },
+    "lang": {
+      "switch": "🌐 言語",
+      "auto": "自動検出",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文（台灣）",
+      "zh-HK": "繁體中文（香港）",
+      "en": "English",
+      "ja": "日本語",
+      "ko": "한국어"
+    },
+    "gender": {
+      "search_placeholder": "検索...",
+      "display_placeholder": "ジェンダーアイデンティティを選択または検索",
+      "empty_result": "一致する項目が見つかりません。「その他 / 自己記述」を選択できます。",
+      "self_describe_hint": "ご自身の言葉で記述してください。氏名、学生番号、連絡先などの個人情報は記載しないでください。"
+    },
+    "encrypt": {
+      "title": "エンドツーエンド暗号化紙面アンケート",
+      "header": "🔒 エンドツーエンド暗号化紙面アンケート",
+      "subtitle": "データはお使いのブラウザで暗号化され、サーバーは元の内容を決して読み取れません",
+      "step1": "オンラインで回答",
+      "step2": "ローカル暗号化",
+      "step3": "暗号文を印刷",
+      "step4": "紙面暗号文を郵送",
+      "key_label": "🔐 暗号化方式の説明",
+      "key_warning": "必ず番号を紙に書き、暗号文と一緒に郵送してください。番号を紛失すると、担当者は復号できません。",
+      "success": "✅ 暗号化完了",
+      "result_desc": "回答はAES-256-GCMアルゴリズムを使用してローカルブラウザで暗号化されました。以下が暗号文です。このページを印刷して郵送してください。",
+      "print_title": "📄 暗号化紙面アンケート・郵送用",
+      "paper_id_label": "アンケートID：",
+      "algorithm_label": "暗号化アルゴリズム：",
+      "time_label": "生成日時：",
+      "key_label_print": "復号キー（アンケートIDと同じ）：",
+      "address_label": "送付先：",
+      "submit_btn": "🔐 暗号化アンケートを生成して印刷",
+      "print_btn": "🖨️ このページを印刷",
+      "copy_btn": "📋 暗号文をコピー",
+      "next_btn": "🔄 次の回答へ",
+      "to_decode": "→ 復号デモページへ",
+      "to_online": "オンラインアンケートに戻る",
+      "copy_alert": "暗号文をクリップボードにコピーしました",
+      "error_prefix": "暗号化に失敗しました：",
+      "encrypting": "暗号化中..."
+    },
+    "decode": {
+      "title": "紙面アンケート復号デモ",
+      "header": "🔓 紙面アンケート復号デモ",
+      "subtitle": "暗号文とキーを入力し、ローカルブラウザで復号",
+      "step1_title": "Step 1：暗号文の入力",
+      "cipher_label": "暗号文（紙面アンケートから転記またはスキャン）",
+      "cipher_placeholder": "暗号文を貼り付け... 形式：ivBase64:cipherBase64",
+      "cipher_hint": "暗号文にはランダムな文字のみ含まれ、個人を特定できる情報は含まれていません。",
+      "step2_title": "Step 2：復号キーの入力",
+      "key_label": "復号キー",
+      "key_hint": "このキーは暗号化時に使用されたものと同じです。キーはサーバーにアップロードされません。",
+      "decrypt_btn": "🔓 復号を実行",
+      "result_title": "✅ 復号結果",
+      "export_btn": "📥 CSVをエクスポート",
+      "reset_btn": "🔄 次の復号へ",
+      "to_encrypt": "← 暗号化入力ページへ",
+      "to_online": "オンラインアンケートに戻る",
+      "overlay_title": "🔐 AES-256-GCM専用アルゴリズムで復号中..."
+    },
+    "country": {
+      "title": "国 / 地域を選択",
+      "search_placeholder": "国または地域を検索...",
+      "close": "閉じる",
+      "no_result": "一致する国または地域が見つかりません"
+    },
+    "sections": {
+      "gender_hint": "以下の質問はプライバシーに関わる内容です。集団統計分析のみを目的としています。「回答しない」を選択するか、スキップすることもできます。"
+    }
+  },
+  "sections": {
+    "background": "スクリーニングと基本情報",
+    "gender": "ジェンダーアイデンティティと性的指向",
+    "relationship": "恋愛状況",
+    "views": "恋愛観と影響要因",
+    "open": "自由記述",
+    "submit": "確認と送信"
+  },
+  "questions": {
+    "is_adult": {
+      "label": "18歳以上ですか？"
+    },
+    "age_group": {
+      "label": "年齢層を教えてください。"
+    },
+    "education_stage": {
+      "label": "現在の教育段階を教えてください。",
+      "hint": "ご自身の教育パスが標準的な高校や大学でない場合は、最も近い段階を選択してください。"
+    },
+    "major_category": {
+      "label": "専攻の分野を教えてください。"
+    },
+    "nationality_background": {
+      "label": "国籍・戸籍の背景を教えてください。"
+    },
+    "region": {
+      "label": "現在お住まい・学習している地域を教えてください。"
+    },
+    "gender_identity": {
+      "label": "ご自身のジェンダーアイデンティティを教えてください。",
+      "hint": "キーワードで検索したり、リストを閲覧したりできます。"
+    },
+    "gender_identity_self_describe": {
+      "label": "ご自身の言葉で記述してください。氏名、学生番号、連絡先などの個人情報は記載しないでください。",
+      "placeholder": "最大80文字"
+    },
+    "sexual_orientation": {
+      "label": "あなたの性的指向は以下のどれに近いですか？"
+    },
+    "sexual_orientation_self_describe": {
+      "label": "ご自身の言葉で記述してください。",
+      "placeholder": "最大80文字"
+    },
+    "relationship_status": {
+      "label": "現在の恋愛状況を教えてください。"
+    },
+    "relationship_willingness": {
+      "label": "恋愛への意欲はどの程度ですか？"
+    },
+    "love_importance": {
+      "label": "恋愛は大学生活においてどの程度重要だと思いますか？"
+    },
+    "influence_factors": {
+      "label": "現在の恋愛状況に影響を与えている要因は何ですか？"
+    },
+    "love_view": {
+      "label": "あなたの恋愛観は以下のどれに近いですか？"
+    },
+    "partner_factors": {
+      "label": "パートナーを選ぶ際に最も重視することは何ですか？"
+    },
+    "long_distance_acceptance": {
+      "label": "遠距離恋愛を受け入れることができますか？"
+    },
+    "study_impact": {
+      "label": "恋愛は学業にどのような影響を与えると思いますか？"
+    },
+    "relationship_core_values": {
+      "label": "恋愛関係で最も重要なことは何だと思いますか？"
+    },
+    "conflict_handling": {
+      "label": "恋愛中に衝突が起きた際、あなたはどう傾向がありますか？"
+    },
+    "relationship_pressure": {
+      "label": "恋愛に関する外部または内部のプレッシャーを感じていますか？"
+    },
+    "boundary_awareness": {
+      "label": "恋愛におけるパーソナルバウンダリーについてどう思いますか？"
+    },
+    "help_seeking": {
+      "label": "感情的な問題に直面した際、助けを求めますか？"
+    },
+    "school_education_need": {
+      "label": "学校は恋愛・感情教育を行うべきだと思いますか？"
+    },
+    "school_support": {
+      "label": "学校が現在提供している感情支援は十分だと思いますか？"
+    },
+    "open_problem": {
+      "label": "恋愛に関して現在抱えている最大の悩みや課題は何ですか？",
+      "placeholder": "ここに入力..."
+    },
+    "open_suggestion": {
+      "label": "大学の恋愛教育や感情支援に関する提案はありますか？",
+      "placeholder": "ここに入力..."
+    }
+  },
+  "options": {
+    "yes_18_or_above": "はい、18歳以上です",
+    "no_under_18": "いいえ、18歳未満です",
+    "prefer_not_to_say": "回答しない",
+    "not_sure": "わからない",
+    "self_describe": "その他 / 自己記述",
+    "other": "その他 / 自己記述",
+    "other_not_listed": "その他（リストにない）",
+    "prefer_to_self_describe": "自己記述したい",
+    "18_20": "18〜20歳",
+    "21_23": "21〜23歳",
+    "24_26": "24〜26歳",
+    "27_or_above": "27歳以上",
+    "senior_high_grade_3": "高校3年生",
+    "equivalent_to_senior_high_grade_3": "高校卒業学年と同等（職業高校/技術学校/国際高校/A-Level/IB/AP等）",
+    "gap_year_or_not_currently_enrolled": "高校卒業後、入学前 / ギャップイヤー / 現在在学していない",
+    "college_preparatory_or_foundation": "大学準備 / Foundation / ブリッジプログラム",
+    "undergraduate_year_1": "大学1年生 / 学部1年",
+    "undergraduate_year_2": "大学2年生 / 学部2年",
+    "undergraduate_year_3": "大学3年生 / 学部3年",
+    "undergraduate_year_4": "大学4年生 / 学部4年",
+    "undergraduate_year_5_or_above": "5年制以上の学部課程",
+    "junior_college": "短期大学 / 専門学校",
+    "postgraduate_master": "大学院修士課程",
+    "postgraduate_doctoral": "大学院博士課程",
+    "humanities": "人文科学",
+    "social_science": "社会科学",
+    "natural_science": "自然科学",
+    "engineering": "工学",
+    "medicine": "医学・保健",
+    "arts": "芸術・体育",
+    "business": "経済・経営",
+    "law": "法学",
+    "education": "教育学",
+    "agriculture": "農学",
+    "china_mainland": "中国本土",
+    "hong_kong_macau_taiwan": "香港・マカオ・台湾",
+    "overseas_chinese": "華僑",
+    "other_country": "その他の国・地域",
+    "north_china": "華北",
+    "northeast_china": "東北",
+    "east_china": "華東",
+    "central_china": "華中",
+    "south_china": "華南",
+    "southwest_china": "西南",
+    "northwest_china": "西北",
+    "overseas": "海外",
+    "heterosexual": "ヘテロセクシャル",
+    "homosexual": "ホモセクシャル",
+    "gay": "ゲイ",
+    "lesbian": "レズビアン",
+    "bisexual": "バイセクシャル",
+    "pansexual": "パンセクシャル",
+    "asexual": "アセクシャル",
+    "demisexual": "デミセクシャル",
+    "queer": "クィア",
+    "questioning": "模索中 / 不明確",
+    "never_dated": "恋愛経験なし",
+    "dated_before_currently_single": "過去に恋愛あり、現在独身",
+    "currently_in_relationship": "現在交際中",
+    "ambiguous_or_unofficial_relationship": "曖昧または非公式の関係",
+    "not_sure_how_to_define": "現在の関係をどう定義すべきかわからない",
+    "strongly_want": "強く恋愛したい",
+    "somewhat_want": "やや恋愛したい",
+    "let_it_be": "自然に任せたい",
+    "not_now": "今は恋愛したくない",
+    "clearly_not_want": "明確に恋愛したくない",
+    "very_important": "非常に重要",
+    "somewhat_important": "やや重要",
+    "neutral": "普通",
+    "not_very_important": "あまり重要でない",
+    "not_important_at_all": "全く重要でない",
+    "academic_pressure": "学業のプレッシャー",
+    "small_social_circle": "交友関係が狭い",
+    "lack_of_suitable_partner": "適切なパートナーがいない",
+    "financial_constraints": "経済的制約",
+    "family_expectations": "家族の期待や態度",
+    "personal_goals": "個人の目標を優先",
+    "past_experiences": "過去の経験の影響",
+    "social_media_influence": "SNSの影響",
+    "peer_pressure": "同世代からのプレッシャー",
+    "no_time": "時間がない",
+    "serious_commitment": "結婚を視野に入れた真剣な交際",
+    "casual_dating": "その時を楽しむ、必ずしも結婚目的ではない",
+    "let_nature_take_course": "自然に任せる、あえて追求しない",
+    "marriage_oriented": "生涯のパートナーを探す",
+    "experience_oriented": "恋愛経験を積む",
+    "independent_love": "独立性を保ち、恋愛は人生の一部",
+    "personality": "性格の相性",
+    "appearance": "外見",
+    "values_match": "価値観の一致",
+    "education_background": "学歴",
+    "family_background": "家庭環境",
+    "sense_of_humor": "ユーモアセンス",
+    "emotional_stability": "感情の安定性",
+    "ambition": "向上心",
+    "shared_interests": "共通の趣味",
+    "financial_stability": "経済的安定性",
+    "physical_attraction": "身体的魅力",
+    "kindness": "優しさと思いやり",
+    "fully_accept": "全く受け入れられる",
+    "somewhat_accept": "やや受け入れられる",
+    "depends": "状況による",
+    "somewhat_reject": "やや受け入れがたい",
+    "fully_reject": "全く受け入れられない",
+    "very_positive": "非常に前向き",
+    "somewhat_positive": "やや前向き",
+    "no_impact": "特に影響なし",
+    "somewhat_negative": "やや消極的",
+    "very_negative": "非常に消極的",
+    "mutual_trust": "相互の信頼",
+    "communication": "効果的なコミュニケーション",
+    "respect": "相互の尊重",
+    "shared_goals": "共通の目標",
+    "emotional_support": "感情的な支え",
+    "personal_space": "パーソナルスペース",
+    "honesty": "誠実さと率直さ",
+    "loyalty": "忠誠と誠実さ",
+    "growth_together": "共に成長すること",
+    "passion": "情熱とロマンス",
+    "communicate_openly": "率直にコミュニケーションを取る",
+    "cool_down_first": "まず冷静になる",
+    "seek_compromise": "妥協案を探す",
+    "avoid_conflict": "衝突を避け、相手が話すのを待つ",
+    "ask_friends": "友人に相談する",
+    "seek_professional_help": "専門家（カウンセラー）に相談する",
+    "strong_pressure": "非常にプレッシャーを感じる",
+    "some_pressure": "ややプレッシャーを感じる",
+    "no_pressure": "プレッシャーは感じない",
+    "very_important_boundary": "非常に重要",
+    "somewhat_important_boundary": "やや重要",
+    "not_very_important_boundary": "あまり重要でない",
+    "always": "いつも助けを求める",
+    "sometimes": "時々",
+    "rarely": "めったにない",
+    "never": "決してない",
+    "very_needed": "非常に必要",
+    "somewhat_needed": "やや必要",
+    "neutral_need": "どちらでもない",
+    "not_very_needed": "あまり必要でない",
+    "not_needed_at_all": "全く必要でない",
+    "very_sufficient": "非常に十分",
+    "somewhat_sufficient": "やや十分",
+    "somewhat_insufficient": "やや不十分",
+    "very_insufficient": "非常に不十分"
+  },
+  "gender_options": [
+    {
+      "value": "female",
+      "label": "Female / 女性",
+      "group": "一般的な選択肢"
+    },
+    {
+      "value": "male",
+      "label": "Male / 男性",
+      "group": "一般的な選択肢"
+    },
+    {
+      "value": "prefer_not_to_say",
+      "label": "回答しない",
+      "group": "一般的な選択肢"
+    },
+    {
+      "value": "not_sure",
+      "label": "わからない",
+      "group": "一般的な選択肢"
+    },
+    {
+      "value": "self_describe",
+      "label": "その他 / 自己記述",
+      "group": "一般的な選択肢"
+    },
+    {
+      "value": "woman",
+      "label": "Woman / 女性",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "girl",
+      "label": "Girl / 女の子",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "cisgender_woman",
+      "label": "Cisgender woman / シスジェンダー女性",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "cis_woman",
+      "label": "Cis woman / シス女性",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "transgender_woman",
+      "label": "Transgender woman / トランスジェンダー女性",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "trans_woman",
+      "label": "Trans woman / トランス女性",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "transfeminine",
+      "label": "Transfeminine / トランスフェミニン",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "femme",
+      "label": "Femme / ファム",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "demigirl",
+      "label": "Demigirl / デミガール",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "demiwoman",
+      "label": "Demiwoman / デミウーマン",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "librafeminine",
+      "label": "Librafeminine / リブラフェミニン",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "paragirl",
+      "label": "Paragirl / パラガール",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "juxera",
+      "label": "Juxera / ジュクセラ",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "girlflux",
+      "label": "Girlflux / ガールフラックス",
+      "group": "女性関連のアイデンティティ"
+    },
+    {
+      "value": "man",
+      "label": "Man / 男性",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "boy",
+      "label": "Boy / 男の子",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "cisgender_man",
+      "label": "Cisgender man / シスジェンダー男性",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "cis_man",
+      "label": "Cis man / シス男性",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "transgender_man",
+      "label": "Transgender man / トランスジェンダー男性",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "trans_man",
+      "label": "Trans man / トランス男性",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "transmasculine",
+      "label": "Transmasculine / トランスマスキュリン",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "masc",
+      "label": "Masc / マスク",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "demiboy",
+      "label": "Demiboy / デミボーイ",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "demiman",
+      "label": "Demiman / デミマン",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "libramasculine",
+      "label": "Libramasculine / リブラマスキュリン",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "paraboy",
+      "label": "Paraboy / パラボーイ",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "proxvir",
+      "label": "Proxvir / プロクスヴァー",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "boyflux",
+      "label": "Boyflux / ボーイフラックス",
+      "group": "男性関連のアイデンティティ"
+    },
+    {
+      "value": "nonbinary",
+      "label": "Non-binary / ノンバイナリー",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "non_binary",
+      "label": "Non binary / ノンバイナリー",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "enby",
+      "label": "Enby / エンビー",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "genderqueer",
+      "label": "Genderqueer / ジェンダークィア",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_nonconforming",
+      "label": "Gender non-conforming / ジェンダーノンコンフォーミング",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_variant",
+      "label": "Gender variant / ジェンダーヴァリアント",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_diverse",
+      "label": "Gender diverse / ジェンダーダイバース",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_expansive",
+      "label": "Gender expansive / ジェンダーエクスパンシブ",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_creative",
+      "label": "Gender creative / ジェンダークリエイティブ",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "gender_independent",
+      "label": "Gender independent / ジェンダーインディペンデント",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "third_gender",
+      "label": "Third gender / 第三のジェンダー",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "other_gender",
+      "label": "Other gender / その他のジェンダー",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "neither_man_nor_woman",
+      "label": "Neither man nor woman / 男性でも女性でもない",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "both_man_and_woman",
+      "label": "Both man and woman / 男性と女性の両方",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "between_man_and_woman",
+      "label": "Between man and woman / 男性と女性の間",
+      "group": "ノンバイナリー・ジェンダークィア"
+    },
+    {
+      "value": "agender",
+      "label": "Agender / アジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "genderless",
+      "label": "Genderless / ジェンダーレス",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "genderfree",
+      "label": "Genderfree / ジェンダーフリー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "gendervoid",
+      "label": "Gendervoid / ジェンダーヴォイド",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "voidgender",
+      "label": "Voidgender / ヴォイドジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "nullgender",
+      "label": "Nullgender / ナルジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "neutrois",
+      "label": "Neutrois / ニュートロワ",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "neutral_gender",
+      "label": "Neutral gender / ニュートラルジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "androgyne",
+      "label": "Androgyne / アンドロジン",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "androgynous",
+      "label": "Androgynous / アンドロジナス",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "maverique",
+      "label": "Maverique / マヴェリック",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "aporagender",
+      "label": "Aporagender / アポラジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "aliagender",
+      "label": "Aliagender / アリアジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "epicene",
+      "label": "Epicene / エピシーン",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "cassgender",
+      "label": "Cassgender / カスジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "greygender",
+      "label": "Greygender / グレイジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "graygender",
+      "label": "Graygender / グレイジェンダー",
+      "group": "アジェンダー・弱性別・ニュートラル"
+    },
+    {
+      "value": "genderfluid",
+      "label": "Genderfluid / ジェンダーフルイド",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderflux",
+      "label": "Genderflux / ジェンダーフラックス",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "fluidflux",
+      "label": "Fluidflux / フルイドフラックス",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "bigender",
+      "label": "Bigender / バイジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "trigender",
+      "label": "Trigender / トライジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "pangender",
+      "label": "Pangender / パンジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "polygender",
+      "label": "Polygender / ポリジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "multigender",
+      "label": "Multigender / マルチジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "omnigender",
+      "label": "Omnigender / オムニジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "ambigender",
+      "label": "Ambigender / アンビジェンダー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderfae",
+      "label": "Genderfae / ジェンダーフェイ",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderfaun",
+      "label": "Genderfaun / ジェンダーファウン",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderflor",
+      "label": "Genderflor / ジェンダーフロー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderfruct",
+      "label": "Genderfruct / ジェンダーフルクト",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderfrith",
+      "label": "Genderfrith / ジェンダーフリス",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderdoe",
+      "label": "Genderdoe / ジェンダードー",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderbuck",
+      "label": "Genderbuck / ジェンダーバック",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "demifluid",
+      "label": "Demifluid / デミフルイド",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "demiflux",
+      "label": "Demiflux / デミフラックス",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "genderfluid_nonbinary",
+      "label": "Genderfluid non-binary / ノンバイナリーフルイド",
+      "group": "流動性・変化性・多重ジェンダー"
+    },
+    {
+      "value": "demigender",
+      "label": "Demigender / デミジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "deminonbinary",
+      "label": "Deminonbinary / デミノンバイナリー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "demineutral",
+      "label": "Demineutral / デミニュートラル",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "demifluid_identity",
+      "label": "Demifluid identity / デミフルイドアイデンティティ",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "demiflux_identity",
+      "label": "Demiflux identity / デミフラックスアイデンティティ",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "semigender",
+      "label": "Semigender / セミジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "hemigender",
+      "label": "Hemigender / ヘミジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "libragender",
+      "label": "Libragender / リブラジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "librafluid",
+      "label": "Librafluid / リブラフルイド",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "paragender",
+      "label": "Paragender / パラジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "perigender",
+      "label": "Perigender / ペリジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "quasigender",
+      "label": "Quasigender / クォージェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "offgender",
+      "label": "Offgender / オフジェンダー",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "gender_near",
+      "label": "Gender-near / ジェンダーニア",
+      "group": "部分ジェンダー・つながりのアイデンティティ"
+    },
+    {
+      "value": "two_spirit",
+      "label": "Two-Spirit / ツースピリット",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "hijra",
+      "label": "Hijra / ヒジュラ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "faafafine",
+      "label": "Fa'afafine / ファファフィネ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "faafatama",
+      "label": "Fa'afatama / ファファタマ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "muxe",
+      "label": "Muxe / ムシェ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "travesti",
+      "label": "Travesti / トラヴェスティ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "bakla",
+      "label": "Bakla / バクラ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "kathoey",
+      "label": "Kathoey / カトーイ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "waria",
+      "label": "Waria / ワリア",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "mahu",
+      "label": "Māhū / マフ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "fakaleiti",
+      "label": "Fakaleiti / ファカレイティ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "akavaine",
+      "label": "Akava'ine / アカヴァイネ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "bissu",
+      "label": "Bissu / ビス",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "calabai",
+      "label": "Calabai / カラバイ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "calalai",
+      "label": "Calalai / カラライ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "x_gender",
+      "label": "X-gender / Xジェンダー",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "x_jenda",
+      "label": "X-jenda / Xジェンダ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "sekhet",
+      "label": "Sekhet / セケト",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "sworn_virgin",
+      "label": "Sworn virgin / 誓いの処女",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "femminiello",
+      "label": "Femminiello / フェンミニエッロ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "guevedoche",
+      "label": "Guevedoche / ゲベドチェ",
+      "group": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ"
+    },
+    {
+      "value": "transgender",
+      "label": "Transgender / トランスジェンダー",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "trans",
+      "label": "Trans / トランス",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "trans_star",
+      "label": "Trans* / トランス*",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "non_cisgender",
+      "label": "Non-cisgender / ノンシスジェンダー",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "gender_minority",
+      "label": "Gender minority / ジェンダーマイノリティ",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "transsexual",
+      "label": "Transsexual / トランスセクシャル",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "transvestite_identity",
+      "label": "Transvestite identity / トランスヴェスタイトアイデンティティ",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "crossdresser_identity",
+      "label": "Crossdresser identity / クロスドレッサーアイデンティティ",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "questioning_gender",
+      "label": "Questioning gender / ジェンダー模索中",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "gender_questioning",
+      "label": "Gender questioning / ジェンダー模索中",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "intergender",
+      "label": "Intergender / インタージェンダー",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "intersex_identity",
+      "label": "Intersex identity / インターセックスアイデンティティ",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "intersex_nonbinary",
+      "label": "Intersex non-binary / インターセックスノンバイナリー",
+      "group": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ"
+    },
+    {
+      "value": "queer",
+      "label": "Queer / クィア",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "queer_gender",
+      "label": "Queer gender / クィアジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "pomogender",
+      "label": "Pomogender / ポモジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "novigender",
+      "label": "Novigender / ノヴィジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "autigender",
+      "label": "Autigender / オーティジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "neurogender",
+      "label": "Neurogender / ニューロジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "xenogender",
+      "label": "Xenogender / ゼノジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "aesthetigender",
+      "label": "Aesthetigender / エステティジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "kingender",
+      "label": "Kingender / キンジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "personagender",
+      "label": "Personagender / ペルソナジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "egogender",
+      "label": "Egogender / エゴジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "charagender",
+      "label": "Charagender / キャラジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "mirrorgender",
+      "label": "Mirrorgender / ミラージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "blurgender",
+      "label": "Blurgender / ブラージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "chaosgender",
+      "label": "Chaosgender / カオスジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "cosmicgender",
+      "label": "Cosmicgender / コズミックジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "stargender",
+      "label": "Stargender / スタージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "solargender",
+      "label": "Solargender / ソーラージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "lunargender",
+      "label": "Lunargender / ルナージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "cadensgender",
+      "label": "Cadensgender / カデンスジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "colorgender",
+      "label": "Colorgender / カラージェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "dreamgender",
+      "label": "Dreamgender / ドリームジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "oneirogender",
+      "label": "Oneirogender / オネイロジェンダー",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "other_not_listed",
+      "label": "その他（リストにない）",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    },
+    {
+      "value": "prefer_to_self_describe",
+      "label": "自己記述したい",
+      "group": "その他の広義的または自己定義のアイデンティティ"
+    }
+  ],
+  "gender_groups": {
+    "常规选项": "一般的な選択肢",
+    "女性相关认同": "女性関連のアイデンティティ",
+    "男性相关认同": "男性関連のアイデンティティ",
+    "非二元与性别酷儿": "ノンバイナリー・ジェンダークィア",
+    "无性别、弱性别与中性": "アジェンダー・弱性別・ニュートラル",
+    "流动性、变化性与多重性别": "流動性・変化性・多重ジェンダー",
+    "部分性别与连接性认同": "部分ジェンダー・つながりのアイデンティティ",
+    "文化、社群与历史性别认同": "文化的・コミュニティ的・歴史的ジェンダーアイデンティティ",
+    "跨性别、非顺性别与相关伞状认同": "トランスジェンダー・シスジェンダー以外・関連する包括的アイデンティティ",
+    "其他广义或自定义认同": "その他の広義的または自己定義のアイデンティティ"
+  },
+  "errors": {
+    "INVALID_REQUEST_FORMAT": "リクエスト形式が不正です。",
+    "MISSING_CONSENT": "まずインフォームドコンセントに同意してください。",
+    "AGE_RESTRICTION": "本アンケートは18歳以上の回答者のみを対象としています。",
+    "INVALID_AGE_GROUP": "年齢層の選択が不正です。",
+    "INVALID_EDUCATION_STAGE": "教育段階の選択が不正です。",
+    "MISSING_TURNSTILE": "Turnstile認証がありません。",
+    "TURNSTILE_FAILED": "人間確認に失敗しました。ページを更新して再試行してください。",
+    "DATABASE_NOT_BOUND": "データベースがバインドされていません。",
+    "GENDER_DESCRIBE_TOO_LONG": "ジェンダーアイデンティティの自己記述は80文字以内にしてください。",
+    "ORIENTATION_DESCRIBE_TOO_LONG": "性的指向の自己記述は80文字以内にしてください。",
+    "INVALID_RELATIONSHIP_STATUS": "恋愛状況の選択が不正です。",
+    "INVALID_RELATIONSHIP_WILLINGNESS": "恋愛意欲の選択が不正です。",
+    "DATABASE_WRITE_FAILED": "データベース書き込みに失敗しました：",
+    "SERVER_INTERNAL_ERROR": "サーバー内部エラー：",
+    "METHOD_NOT_ALLOWED": "許可されていないメソッド"
+  },
+  "decode.columns.paper_id": "アンケートID",
+  "decode.columns.is_adult": "18歳以上",
+  "decode.columns.age_group": "年齢層",
+  "decode.columns.education_stage": "教育段階",
+  "decode.columns.major_category": "専攻",
+  "decode.columns.nationality_background": "国籍",
+  "decode.columns.region": "地域",
+  "decode.columns.gender_identity": "ジェンダーアイデンティティ",
+  "decode.columns.sexual_orientation": "性的指向",
+  "decode.columns.relationship_status": "恋愛状況",
+  "decode.columns.relationship_willingness": "恋愛意欲",
+  "decode.columns.love_importance": "恋愛の重要性",
+  "decode.columns.influence_factors": "影響要因",
+  "decode.columns.love_view": "恋愛観",
+  "decode.columns.partner_factors": "パートナー選び",
+  "decode.columns.long_distance_acceptance": "遠距離恋愛",
+  "decode.columns.study_impact": "学業への影響",
+  "decode.columns.relationship_core_values": "核心的価値",
+  "decode.columns.conflict_handling": "衝突対処",
+  "decode.columns.relationship_pressure": "恋愛プレッシャー",
+  "decode.columns.boundary_awareness": "バウンダリー意識",
+  "decode.columns.help_seeking": "助けを求める",
+  "decode.columns.school_education_need": "教育ニーズ",
+  "decode.columns.school_support": "感情支援評価",
+  "decode.columns.open_problem": "悩み・課題",
+  "decode.columns.open_suggestion": "提案",
+  "decode.empty": "未記入",
+  "decode.error.no_cipher": "暗号文を入力してください",
+  "decode.error.no_key": "復号キーを入力してください",
+  "decode.error.decrypt_failed": "復号に失敗しました：{msg}",
+  "countries": {
+    "CN": "中国",
+    "TW": "台湾",
+    "MO": "マカオ",
+    "HK": "香港",
+    "DK": "デンマーク",
+    "UA": "ウクライナ",
+    "UZ": "ウズベキスタン",
+    "UY": "ウルグアイ",
+    "YE": "イエメン",
+    "IL": "イスラエル",
+    "IQ": "イラク",
+    "IR": "イラン",
+    "RU": "ロシア",
+    "IS": "アイスランド",
+    "LY": "リビア",
+    "CA": "カナダ",
+    "GH": "ガーナ",
+    "HU": "ハンガリー",
+    "ZA": "南アフリカ",
+    "QA": "カタール",
+    "LU": "ルクセンブルク",
+    "IN": "インド",
+    "ID": "インドネシア",
+    "GT": "グアテマラ",
+    "CU": "キューバ",
+    "KZ": "カザフスタン",
+    "CO": "コロンビア",
+    "CR": "コスタリカ",
+    "TR": "トルコ",
+    "EG": "エジプト",
+    "MX": "メキシコ",
+    "AT": "オーストリア",
+    "VE": "ベネズエラ",
+    "BD": "バングラデシュ",
+    "NG": "ナイジェリア",
+    "NP": "ネパール",
+    "PK": "パキスタン",
+    "PG": "パプアニューギニア",
+    "PA": "パナマ",
+    "BR": "ブラジル",
+    "GR": "ギリシャ",
+    "DE": "ドイツ",
+    "IT": "イタリア",
+    "LV": "ラトビア",
+    "NO": "ノルウェー",
+    "CZ": "チェコ",
+    "MA": "モロッコ",
+    "SK": "スロバキア",
+    "LK": "スリランカ",
+    "SG": "シンガポール",
+    "NZ": "ニュージーランド",
+    "JP": "日本",
+    "CL": "チリ",
+    "KH": "カンボジア",
+    "BE": "ベルギー",
+    "SA": "サウジアラビア",
+    "FR": "フランス",
+    "PL": "ポーランド",
+    "TH": "タイ",
+    "AU": "オーストラリア",
+    "IE": "アイルランド",
+    "JM": "ジャマイカ",
+    "SE": "スウェーデン",
+    "CH": "スイス",
+    "KW": "クウェート",
+    "PE": "ペルー",
+    "LT": "リトアニア",
+    "JO": "ヨルダン",
+    "MM": "ミャンマー",
+    "RO": "ルーマニア",
+    "US": "アメリカ",
+    "LA": "ラオス",
+    "KE": "ケニア",
+    "FI": "フィンランド",
+    "GB": "イギリス",
+    "NL": "オランダ",
+    "PH": "フィリピン",
+    "PT": "ポルトガル",
+    "MN": "モンゴル",
+    "ES": "スペイン",
+    "VN": "ベトナム",
+    "AF": "アフガニスタン",
+    "DZ": "アルジェリア",
+    "AL": "アルバニア",
+    "OM": "オマーン",
+    "AR": "アルゼンチン",
+    "AE": "アラブ首長国連邦",
+    "KR": "韓国",
+    "MV": "モルディブ",
+    "MY": "マレーシア",
+    "MG": "マダガスカル",
+    "LB": "レバノン"
+  }
+}

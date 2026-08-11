@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="ui.decode.title">纸质问卷解密演示 | Paper Survey Decryption Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", sans-serif;
+      background: #0a0a0f; color: #e0e0e0;
+      min-height: 100vh; line-height: 1.7;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(0deg, rgba(0,255,100,0.03) 0px, rgba(0,255,100,0.03) 1px, transparent 1px, transparent 3px);
+      pointer-events: none; z-index: 9999;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 24px 16px 48px; position: relative; z-index: 1; }
+
+    .header { text-align: center; margin-bottom: 24px; }
+    .header h1 { font-size: 20px; color: #00ff88; margin-bottom: 6px; }
+    .header p { font-size: 13px; color: #8899aa; }
+    .badge {
+      display: inline-block; background: rgba(0,255,136,0.1); border: 1px solid #00ff88;
+      color: #00ff88; padding: 2px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px;
+    }
+
+    .panel {
+      background: rgba(10,15,25,0.8); border: 1px solid #223344;
+      border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    }
+    .panel h2 { font-size: 15px; color: #00ff88; margin-bottom: 12px; border-bottom: 1px solid #223344; padding-bottom: 8px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 13px; color: #ccddee; margin-bottom: 4px; font-weight: 600; }
+    .field textarea, .field input {
+      width: 100%; padding: 10px 12px; background: #0d1117; border: 1px solid #334455;
+      color: #e0e0e0; border-radius: 8px; font-size: 14px; font-family: monospace;
+    }
+    .field textarea:focus, .field input:focus { outline: none; border-color: #00ff88; }
+    .field textarea { resize: vertical; min-height: 80px; }
+    .hint { font-size: 11px; color: #667788; margin-top: 2px; }
+
+    .btn {
+      padding: 12px 24px; background: #00ff88; color: #000;
+      border: none; border-radius: 10px; font-size: 15px; font-weight: bold;
+      cursor: pointer; width: 100%;
+    }
+    .btn:hover { background: #00cc6a; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .result-table {
+      width: 100%; border-collapse: collapse; margin-top: 12px;
+    }
+    .result-table th, .result-table td {
+      border: 1px solid #334455; padding: 8px 10px; text-align: left; font-size: 13px;
+    }
+    .result-table th { background: rgba(0,255,136,0.1); color: #00ff88; }
+    .result-table td { color: #ccddee; }
+    .result-table td:first-child { width: 30%; color: #8899aa; }
+
+    .overlay {
+      position: fixed; inset: 0; background: #000;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 10000;
+    }
+    .overlay.hidden { display: none !important; }
+    .scan-line {
+      width: 80%; max-width: 600px; height: 2px;
+      background: linear-gradient(90deg, transparent, #00ff88, transparent);
+      margin-bottom: 20px; animation: scan 2s linear infinite;
+    }
+    @keyframes scan {
+      0% { transform: translateY(-100px); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100px); opacity: 0; }
+    }
+    .overlay h2 { font-size: 16px; margin-bottom: 12px; color: #00ff88; }
+    .progress-bar {
+      width: 80%; max-width: 400px; height: 8px;
+      border: 1px solid #004400; background: #001100; margin-bottom: 12px;
+    }
+    .progress-fill { height: 100%; background: #00ff88; width: 0%; transition: width 0.3s; }
+    .log { font-size: 11px; color: #008f22; max-width: 600px; width: 80%; text-align: left; line-height: 1.8; font-family: monospace; }
+    .log .ok { color: #00ff88; }
+
+    .action-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .btn-secondary { background: transparent; color: #00ff88; border: 1px solid #00ff88; }
+    .btn-secondary:hover { background: rgba(0,255,65,0.1); }
+
+    .hidden { display: none !important; }
+  </style>
+  <script src="./js/i18n.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1 data-i18n="ui.decode.header">🔓 纸质问卷解密演示端</h1>
+    <p data-i18n="ui.decode.subtitle">输入加密密文与密钥，在本地浏览器中完成解密</p>
+    <div class="badge">AES-256-GCM · 零信任 · 服务端永不见明文</div>
+  </div>
+
+  <div class="panel">
+    <h2 data-i18n="ui.decode.step1_title">Step 1: 输入密文</h2>
+    <div class="field">
+      <label data-i18n="ui.decode.cipher_label">加密密文（从纸质问卷上抄写或扫描）</label>
+      <textarea id="cipher-input" rows="4" placeholder="粘贴加密密文... 格式: ivBase64:cipherBase64" data-i18n-placeholder="ui.decode.cipher_placeholder"></textarea>
+      <div class="hint">密文仅包含随机字符，不包含任何可识别的个人信息。</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2 data-i18n="ui.decode.step2_title">Step 2: 输入解密密钥</h2>
+    <div class="field">
+      <label data-i18n="ui.decode.key_label">解密密钥</label>
+      <input type="text" id="decrypt-key" value="cmu-survey-paper-2026-key" />
+      <div class="hint">此密钥与加密端使用的密钥相同。密钥不会上传到服务器。</div>
+    </div>
+  </div>
+
+  <button class="btn" id="decrypt-btn" onclick="startDecrypt()">🔓 执行解密</button>
+
+  <div id="result-panel" class="panel hidden" style="margin-top:16px;">
+    <h2 data-i18n="ui.decode.result_title">✅ 解密结果</h2>
+    <table class="result-table" id="result-table"></table>
+    <div class="action-bar">
+      <button class="btn" onclick="downloadCsv()">📥 导出 CSV</button>
+      <button class="btn btn-secondary" onclick="location.reload()">🔄 解密下一份</button>
+    </div>
+  </div>
+
+  <div class="no-print" style="margin-top:24px; text-align:center;">
+    <p style="font-size:12px; color:#556677;">
+      <a href="/paper-encrypt.html" style="color:#00ff88;" data-i18n="ui.decode.to_encrypt">← 前往加密填写端</a>
+      &nbsp;|&nbsp;
+      <a href="/" style="color:#667788;" data-i18n="ui.decode.to_online">返回在线问卷</a>
+    </p>
+  </div>
+</div>
+
+<div id="overlay" class="overlay hidden">
+  <div class="scan-line"></div>
+  <h2 data-i18n="ui.decode.overlay_title">🔐 正在使用 AES-256-GCM 专有算法解密...</h2>
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="log" id="decrypt-log"></div>
+</div>
+
+<script>
+  let decryptedData = null;
+
+  async function getKey(password) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey(
+      "raw", enc.encode(password), { name: "PBKDF2" }, false, ["deriveKey"]
+    );
+    return crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: enc.encode("cmu-survey-salt-v1"), iterations: 100000, hash: "SHA-256" },
+      keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]
+    );
+  }
+
+  async function decryptData(cipherText, password) {
+    const parts = cipherText.split(":");
+    if (parts.length !== 2) throw new Error("密文格式错误");
+    const iv = Uint8Array.from(atob(parts[0]), c => c.charCodeAt(0));
+    const ciphertext = Uint8Array.from(atob(parts[1]), c => c.charCodeAt(0));
+    const key = await getKey(password);
+    const decrypted = await crypto.subtle.decrypt(
+      { name: "AES-GCM", iv }, key, ciphertext
+    );
+    return JSON.parse(new TextDecoder().decode(decrypted));
+  }
+
+  function log(msg, cls) {
+    const el = document.getElementById("decrypt-log");
+    const line = document.createElement("div");
+    line.className = cls || "ok";
+    line.textContent = "> " + msg;
+    el.appendChild(line);
+    el.scrollTop = el.scrollHeight;
+  }
+
+  async function startDecrypt() {
+    const cipherText = document.getElementById("cipher-input").value.trim();
+    const password = document.getElementById("decrypt-key").value.trim();
+
+    if (!cipherText) { alert("请输入密文"); return; }
+    if (!password) { alert(I18n.t("decode.error.no_key")); return; }
+
+    const overlay = document.getElementById("overlay");
+    const progress = document.getElementById("progress-fill");
+    const logEl = document.getElementById("decrypt-log");
+    logEl.innerHTML = "";
+    overlay.classList.remove("hidden");
+
+    const steps = [
+      () => { progress.style.width = "15%"; log("初始化 PBKDF2 密钥派生引擎..."); },
+      () => { progress.style.width = "30%"; log("派生 AES-256-GCM 解密密钥..."); },
+      () => { progress.style.width = "50%"; log("提取初始化向量 (IV) 与密文负载..."); },
+      () => { progress.style.width = "70%"; log("执行 GCM 模式身份验证解密..."); },
+      () => { progress.style.width = "85%"; log("验证认证标签 (Auth Tag)..."); },
+      () => { progress.style.width = "100%"; log("JSON 反序列化完成。", "ok"); },
+    ];
+
+    try {
+      for (const step of steps) {
+        step();
+        await new Promise(r => setTimeout(r, 300 + Math.random() * 200));
+      }
+
+      decryptedData = await decryptData(cipherText, password);
+      await new Promise(r => setTimeout(r, 200));
+      overlay.classList.add("hidden");
+      showResult(decryptedData);
+    } catch (err) {
+      overlay.classList.add("hidden");
+      alert(I18n.t("decode.error.decrypt_failed", {msg: err.message}));
+    }
+  }
+
+  function showResult(data) {
+    const table = document.getElementById("result-table");
+    const labelKeys = [
+      "paper_id", "is_adult", "age_group", "education_stage", "major_category",
+      "nationality_background", "region", "gender_identity", "sexual_orientation",
+      "relationship_status", "relationship_willingness", "love_importance",
+      "influence_factors", "love_view", "partner_factors", "long_distance_acceptance",
+      "study_impact", "relationship_core_values", "conflict_handling",
+      "relationship_pressure", "boundary_awareness", "help_seeking",
+      "school_education_need", "school_support", "open_problem", "open_suggestion"
+    ];
+    const map = {};
+    labelKeys.forEach(k => {
+      const label = I18n.t("decode.columns." + k);
+      map[label] = k;
+    });
+
+    let html = "";
+    for (const [label, key] of Object.entries(map)) {
+      let val = data[key] || "";
+      if (val && val.startsWith("[")) {
+        try { val = JSON.parse(val).join(", "); } catch (e) {}
+      }
+      html += `<tr><td>${label}</td><td>${val || `<span style="color:#556677">${I18n.t("decode.empty")}</span>`}</td></tr>`;
+    }
+    table.innerHTML = html;
+    document.getElementById("result-panel").classList.remove("hidden");
+  }
+
+  function downloadCsv() {
+    if (!decryptedData) return;
+    const d = decryptedData;
+    const gi = d.gender_identity || "";
+    const so = d.sexual_orientation || "";
+
+    const getGroup = (v) => {
+      const map = {
+        female_or_woman_aligned: new Set([
+          "female","woman","girl","cisgender_woman","cis_woman",
+          "transgender_woman","trans_woman","transfeminine","femme",
+          "demigirl","demiwoman","librafeminine","paragirl","juxera","girlflux"
+        ]),
+        male_or_man_aligned: new Set([
+          "male","man","boy","cisgender_man","cis_man",
+          "transgender_man","trans_man","transmasculine","masc",
+          "demiboy","demiman","libramasculine","paraboy","proxvir","boyflux"
+        ]),
+        nonbinary_or_genderqueer: new Set([
+          "nonbinary","non_binary","enby","genderqueer","gender_nonconforming",
+          "gender_variant","gender_diverse","gender_expansive","gender_creative",
+          "gender_independent","third_gender","other_gender","neither_man_nor_woman",
+          "both_man_and_woman","between_man_and_woman"
+        ]),
+        agender_or_neutral: new Set([
+          "agender","genderless","genderfree","gendervoid","voidgender",
+          "nullgender","neutrois","neutral_gender","androgyne","androgynous",
+          "maverique","aporagender","aliagender","epicene","cassgender",
+          "greygender","graygender"
+        ]),
+        fluid_or_multigender: new Set([
+          "genderfluid","genderflux","fluidflux","bigender","trigender",
+          "pangender","polygender","multigender","omnigender","ambigender",
+          "genderfae","genderfaun","genderflor","genderfruct","genderfrith",
+          "genderdoe","genderbuck","demifluid","demiflux","genderfluid_nonbinary"
+        ]),
+        trans_or_non_cis: new Set([
+          "transgender","trans","trans_star","non_cisgender","gender_minority",
+          "transsexual","transvestite_identity","crossdresser_identity",
+          "questioning_gender","gender_questioning","intergender",
+          "intersex_identity","intersex_nonbinary"
+        ]),
+        cultural_or_community_specific: new Set([
+          "two_spirit","hijra","faafafine","faafatama","muxe","travesti",
+          "bakla","kathoey","waria","mahu","fakaleiti","akavaine","bissu",
+          "calabai","calalai","x_gender","x_jenda","sekhet","sworn_virgin",
+          "femminiello","guevedoche"
+        ]),
+        questioning_or_unsure: new Set(["not_sure","questioning_gender","gender_questioning"]),
+        prefer_not_to_say: new Set(["prefer_not_to_say"]),
+        self_describe_or_other: new Set([
+          "self_describe","prefer_to_self_describe","other_not_listed","queer",
+          "queer_gender","pomogender","novigender","autigender","neurogender",
+          "xenogender","aesthetigender","kingender","personagender","egogender",
+          "charagender","mirrorgender","blurgender","chaosgender","cosmicgender",
+          "stargender","solargender","lunargender","cadensgender","colorgender",
+          "dreamgender","oneirogender"
+        ]),
+        partial_or_connected: new Set([
+          "demigender","deminonbinary","demineutral","demifluid_identity",
+          "demiflux_identity","semigender","hemigender","libragender",
+          "librafluid","paragender","perigender","quasigender","offgender","gender_near"
+        ])
+      };
+      for (const [group, set] of Object.entries(map)) {
+        if (set.has(v)) return group;
+      }
+      return v ? "self_describe_or_other" : "not_answered";
+    };
+    const getSOGroup = (v) => {
+      const map = {
+        heterosexual: new Set(["heterosexual"]),
+        same_gender_attraction: new Set(["homosexual","gay","lesbian"]),
+        multi_gender_attraction: new Set(["bisexual","pansexual"]),
+        asexual_spectrum: new Set(["asexual","demisexual"]),
+        queer_or_other: new Set(["queer","other"]),
+        questioning_or_unsure: new Set(["questioning"]),
+        prefer_not_to_say: new Set(["prefer_not_to_say"])
+      };
+      for (const [group, set] of Object.entries(map)) {
+        if (set.has(v)) return group;
+      }
+      return "not_answered";
+    };
+
+    const headers = [
+      "id","created_at","consent","is_adult","age_group","education_stage","major_category","nationality_background","region","gender_identity","gender_identity_label","gender_identity_group","gender_identity_self_describe","sexual_orientation","sexual_orientation_group","sexual_orientation_self_describe","relationship_status","relationship_willingness","love_importance","influence_factors","love_view","partner_factors","long_distance_acceptance","study_impact","relationship_core_values","conflict_handling","relationship_pressure","boundary_awareness","help_seeking","school_education_need","school_support","open_problem","open_suggestion","cf_country","turnstile_success","request_headers","duration_seconds","device_type","screen_width","screen_height","device_pixel_ratio","color_depth","timezone","languages","platform","network_type"
+    ];
+
+    const row = {
+      id: d.paper_id || "P-UNKNOWN",
+      created_at: new Date().toISOString(),
+      consent: 1,
+      is_adult: d.is_adult || "",
+      age_group: d.age_group || "",
+      education_stage: d.education_stage || "",
+      major_category: d.major_category || "",
+      nationality_background: d.nationality_background || "",
+      region: d.region || "",
+      gender_identity: gi,
+      gender_identity_label: d.gender_identity_label || (gi ? gi : ""),
+      gender_identity_group: getGroup(gi),
+      gender_identity_self_describe: d.gender_identity_self_describe || "",
+      sexual_orientation: so,
+      sexual_orientation_group: getSOGroup(so),
+      sexual_orientation_self_describe: d.sexual_orientation_self_describe || "",
+      relationship_status: d.relationship_status || "",
+      relationship_willingness: d.relationship_willingness || "",
+      love_importance: d.love_importance || "",
+      influence_factors: d.influence_factors || "",
+      love_view: d.love_view || "",
+      partner_factors: d.partner_factors || "",
+      long_distance_acceptance: d.long_distance_acceptance || "",
+      study_impact: d.study_impact || "",
+      relationship_core_values: d.relationship_core_values || "",
+      conflict_handling: d.conflict_handling || "",
+      relationship_pressure: d.relationship_pressure || "",
+      boundary_awareness: d.boundary_awareness || "",
+      help_seeking: d.help_seeking || "",
+      school_education_need: d.school_education_need || "",
+      school_support: d.school_support || "",
+      open_problem: d.open_problem || "",
+      open_suggestion: d.open_suggestion || "",
+      cf_country: "", turnstile_success: "", request_headers: "",
+      duration_seconds: "", device_type: "paper-encrypted",
+      screen_width: "", screen_height: "", device_pixel_ratio: "",
+      color_depth: "", timezone: "", languages: "", platform: "", network_type: ""
+    };
+
+    function escape(v) {
+      if (v === null || v === undefined) return "";
+      return '"' + String(v).replace(/"/g, '""') + '"';
+    }
+    const csv = "\uFEFF" + headers.join(",") + "\n" + headers.map(h => escape(row[h])).join(",");
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = (d.paper_id || "paper-decoded") + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+</script>
+<script>
+  (async function() {
+    const detected = I18n.detect();
+    await I18n.load(detected);
+    I18n.applyDOM();
+  })();
+</script>
+</body>
+</html>

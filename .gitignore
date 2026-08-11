@@ -1,0 +1,25 @@
+node_modules/
+.wrangler/
+.DS_Store
+
+# LaTeX 相关文件(tex 源、编译产物、模板)
+*.tex
+*.pdf
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.xdv
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+Soochow_Univeristy_Course_Project_Template/
+analysis/build_latex.py
+
+# 原始数据（开放题回复、中间产物）
+analysis/open_text.txt
+analysis/word_freq.csv
+analysis/cor_matrix.rds
+analysis/mca.rds

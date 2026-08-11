@@ -1,0 +1,10 @@
+ALTER TABLE responses ADD COLUMN duration_seconds INTEGER;
+ALTER TABLE responses ADD COLUMN device_type TEXT;
+ALTER TABLE responses ADD COLUMN screen_width INTEGER;
+ALTER TABLE responses ADD COLUMN screen_height INTEGER;
+ALTER TABLE responses ADD COLUMN device_pixel_ratio REAL;
+ALTER TABLE responses ADD COLUMN color_depth INTEGER;
+ALTER TABLE responses ADD COLUMN timezone TEXT;
+ALTER TABLE responses ADD COLUMN languages TEXT;
+ALTER TABLE responses ADD COLUMN platform TEXT;
+ALTER TABLE responses ADD COLUMN network_type TEXT;

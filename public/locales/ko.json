@@ -1,0 +1,1579 @@
+{
+  "_meta": {
+    "name": "Korean",
+    "name_local": "한국어",
+    "dir": "ltr",
+    "font": "system-ui, -apple-system, 'Malgun Gothic', 'Noto Sans KR', sans-serif"
+  },
+  "defaults": {
+    "region": "overseas",
+    "nationality_background": "other_country"
+  },
+  "available_options": {
+    "is_adult": [
+      "yes_18_or_above",
+      "no_under_18"
+    ],
+    "age_group": [
+      "18_20",
+      "21_23",
+      "24_26",
+      "27_or_above",
+      "prefer_not_to_say"
+    ],
+    "education_stage": [
+      "senior_high_grade_3",
+      "equivalent_to_senior_high_grade_3",
+      "gap_year_or_not_currently_enrolled",
+      "college_preparatory_or_foundation",
+      "undergraduate_year_1",
+      "undergraduate_year_2",
+      "undergraduate_year_3",
+      "undergraduate_year_4",
+      "undergraduate_year_5_or_above",
+      "junior_college",
+      "postgraduate_master",
+      "postgraduate_doctoral",
+      "prefer_not_to_say"
+    ],
+    "major_category": [
+      "humanities",
+      "social_science",
+      "natural_science",
+      "engineering",
+      "medicine",
+      "arts",
+      "business",
+      "law",
+      "education",
+      "agriculture",
+      "prefer_not_to_say"
+    ],
+    "nationality_background": [
+      "china_mainland",
+      "hong_kong_macau_taiwan",
+      "overseas_chinese",
+      "other_country",
+      "prefer_not_to_say"
+    ],
+    "region": [
+      "north_china",
+      "northeast_china",
+      "east_china",
+      "central_china",
+      "south_china",
+      "southwest_china",
+      "northwest_china",
+      "overseas",
+      "prefer_not_to_say"
+    ],
+    "sexual_orientation": [
+      "heterosexual",
+      "homosexual",
+      "gay",
+      "lesbian",
+      "bisexual",
+      "pansexual",
+      "asexual",
+      "demisexual",
+      "queer",
+      "questioning",
+      "prefer_not_to_say",
+      "other"
+    ],
+    "relationship_status": [
+      "never_dated",
+      "dated_before_currently_single",
+      "currently_in_relationship",
+      "ambiguous_or_unofficial_relationship",
+      "not_sure_how_to_define",
+      "prefer_not_to_say"
+    ],
+    "relationship_willingness": [
+      "strongly_want",
+      "somewhat_want",
+      "let_it_be",
+      "not_now",
+      "clearly_not_want",
+      "prefer_not_to_say"
+    ],
+    "love_importance": [
+      "very_important",
+      "somewhat_important",
+      "neutral",
+      "not_very_important",
+      "not_important_at_all",
+      "prefer_not_to_say"
+    ],
+    "love_view": [
+      "serious_commitment",
+      "casual_dating",
+      "let_nature_take_course",
+      "marriage_oriented",
+      "experience_oriented",
+      "independent_love",
+      "prefer_not_to_say"
+    ],
+    "long_distance_acceptance": [
+      "fully_accept",
+      "somewhat_accept",
+      "depends",
+      "somewhat_reject",
+      "fully_reject",
+      "prefer_not_to_say"
+    ],
+    "study_impact": [
+      "very_positive",
+      "somewhat_positive",
+      "no_impact",
+      "somewhat_negative",
+      "very_negative",
+      "prefer_not_to_say"
+    ],
+    "relationship_core_values": [
+      "mutual_trust",
+      "communication",
+      "respect",
+      "shared_goals",
+      "emotional_support",
+      "personal_space",
+      "honesty",
+      "loyalty",
+      "growth_together",
+      "passion",
+      "prefer_not_to_say"
+    ],
+    "conflict_handling": [
+      "communicate_openly",
+      "cool_down_first",
+      "seek_compromise",
+      "avoid_conflict",
+      "ask_friends",
+      "seek_professional_help",
+      "prefer_not_to_say"
+    ],
+    "relationship_pressure": [
+      "strong_pressure",
+      "some_pressure",
+      "no_pressure",
+      "prefer_not_to_say"
+    ],
+    "boundary_awareness": [
+      "very_important",
+      "somewhat_important",
+      "not_very_important",
+      "prefer_not_to_say"
+    ],
+    "help_seeking": [
+      "always",
+      "sometimes",
+      "rarely",
+      "never",
+      "prefer_not_to_say"
+    ],
+    "school_education_need": [
+      "very_needed",
+      "somewhat_needed",
+      "neutral",
+      "not_very_needed",
+      "not_needed_at_all",
+      "prefer_not_to_say"
+    ],
+    "school_support": [
+      "very_sufficient",
+      "somewhat_sufficient",
+      "somewhat_insufficient",
+      "very_insufficient",
+      "prefer_not_to_say"
+    ]
+  },
+  "ui": {
+    "survey": {
+      "title": "대학생 연애 현황 조사",
+      "subtitle": "과제 연구 · 익명 설문 · 통계 분석 전용"
+    },
+    "intro": {
+      "desc": "본 설문은 대학생의 연애 상태, 친밀 관계 관념, 정서적 스트레스 및 캠퍼스 지원 요구에 대한 전반적인 상황을 파악하기 위한 과제 연구용 익명 설문입니다.",
+      "time": "예상 소요 시간: 5–8분",
+      "method": "익명 · 자발적 참여 · 민감한 질문은 건 넘기 가능",
+      "purpose": "데이터 용도: 과제 연구 통계 분석 전용"
+    },
+    "button": {
+      "start": "개인정보 설명 확인 후 응답 시작",
+      "agree": "설명을 읽고 동의하며 응답 시작",
+      "decline": "동의하지 않음, 응답 중단",
+      "submit": "설문 제출",
+      "print": "이 페이지 인쇄",
+      "copy": "암호문 복사",
+      "next_survey": "다음 응답",
+      "paper_submit": "📄 온라인 입력이 불편하신 분은 우편으로 제출",
+      "download_paper": "종이 설문 다운로드",
+      "go_encrypt": "암호화 입력 페이지로"
+    },
+    "common": {
+      "select_placeholder": "선택해 주세요",
+      "optional": "(선택)",
+      "multiple": "(복수 선택 가능)",
+      "required": "(필수)"
+    },
+    "progress": {
+      "section": "제 {current} / {total} 부분: {name}",
+      "percent": "{pct}% 완료"
+    },
+    "status": {
+      "submitting": "제출 중...",
+      "submit_failed": "제출 실패: {msg}"
+    },
+    "success": {
+      "title": "제출 완료",
+      "message": "응답해 주셔서 감사합니다. 익명 응답은 과제 연구 통계 분석에만 사용됩니다.",
+      "again": "다시 응답하기"
+    },
+    "decline": {
+      "title": "응답을 중단하셨습니다",
+      "message": "시간을 내어 주셔서 감사합니다."
+    },
+    "underage": {
+      "title": "관심을 가져 주셔서 감사합니다",
+      "message": "본 설문은 민감한 개인 정보를 포함하므로 18세 이상 응답자만 대상으로 합니다."
+    },
+    "privacy": {
+      "title": "연구 대상자 안내 및 개인정보 보호",
+      "welcome": "「대학생 연애 현황 조사」에 참여해 주셔서 환영합니다. 본 설문은 과제 연구의 통계 분석 및 학습 연구 목적으로만 사용되며, 상업적 이용, 개인 평가 또는 신원 식별에는 사용되지 않습니다.",
+      "read_first": "응답 시작 전에 아래 내용을 주의 깊게 읽어 주세요.",
+      "data_security": {
+        "title": "데이터 관리 및 보안에 대하여",
+        "body": "본 설문은 다수의 제3자 기관의 규정 준수 검토 및 보안 검증을 받은 Cloudflare 서비스로 운영됩니다. 데이터는 신뢰할 수 있고 신중하며 책임 있는 방식으로 처리되며, 모든 결과는 집단 수준의 통계 분석, 그래프 분석, 결론 논의에만 사용되며 개별 응답이 특정 개인과 직접 연결되지 않습니다."
+      },
+      "anonymity": {
+        "title": "익명성에 대하여",
+        "body": "본 설문에서는 이름, 학번, 휴폰 번호, 신분증 번호, 상세 주소, 기숙사 번호, 위챗 ID, QQ 번호 등 개인을 직접 식별할 수 있는 정보의 입력이 필요하지 않습니다. 주관식 문항에 개인을 식별할 수 있는 정보를 포함하지 마십시오."
+      },
+      "abuse": {
+        "title": "부정 이용 방지에 대하여",
+        "body": "중복 응답, 악의적인 투표 및 봇에 의한 제출을 방지하기 위해, 시스템은 제출 시간, 브라우저 User-Agent, Cloudflare가 제공하는 보안 정보 및 해시 처리된 요청 식별자 등 필요한 HTTPS 요청 메타데이터를 기록할 수 있습니다."
+      },
+      "sensitive": {
+        "title": "민감한 질문에 대하여",
+        "body": "본 설문은 국적·거주 지역, 젠더 아이덴티티, 성적 지향, 연애 상태, 연애 관념 등 프라이버시와 관련된 내용을 포함할 수 있습니다. 이들은 집단 통계 분석 목적으로만 사용됩니다. 원치 않는 질문은 「답변하지 않음」을 선택하거나 건 넘기십시오."
+      },
+      "voluntary": {
+        "title": "자발적 참여에 대하여",
+        "body": "본 설문 응답은 자발적으로 결정할 수 있으며, 제출 전 언제든지 중단할 수 있습니다. 설문을 제출하는 것은 위 내용을 읽고 이해하며, 익명 응답을 과제 연구 데이터 분석에 사용하는 것에 동의한 것을 의미합니다."
+      },
+      "age": {
+        "title": "연령 제한에 대하여",
+        "body": "18세 미만인 경우, 젠더 아이덴티티, 성적 지향, 연애 경험 등 프라이버시와 관련된 내용의 입력을 자제하시기 바랍니다. 시스템은 연령과 교육 단계 선택에 따라 정식 설문 진입 여부를 판단합니다."
+      },
+      "consent_check": "위 내용을 확인하였으며, 본 설문 참여를 자발적으로 희망합니다.",
+      "paper_option": "온라인 입력이 불편한 경우,",
+      "paper_link": "📄 우편으로 종이 설문 제출",
+      "ai": {
+        "title": "AI 데이터 처리에 대하여",
+        "body": "AI가 데이터에 접근하지 않습니다. 모든 결과는 AI 처리를 거치지 않습니다."
+      }
+    },
+    "paper": {
+      "title": "📄 종이 설문 제출 방법",
+      "desc": "온라인 입력이 불편한 경우, 다음 방법 중 하나로 종이 설문을 제출할 수 있습니다. 모든 종이 결과는 온라인 결과와 동일한 데이터 구조를 사용하여 통일적으로 분석할 수 있습니다.",
+      "method1": {
+        "title": "방법 1: 기존 종이 설문",
+        "step1": "빈 설문지를 다운로드하여 인쇄",
+        "step2": "손으로 모든 질문에 응답",
+        "step3": "봉투에 넣어 우편 발송"
+      },
+      "method2": {
+        "title": "방법 2: 종단간 암호화 종이 설문",
+        "step1": "온라인으로 설문 응답",
+        "step2": "브라우저에서 AES-256-GCM 로컬 암호화",
+        "step3": "암호문을 인쇄하여 우편 발송"
+      },
+      "address": {
+        "title": "📮 수신 주소",
+        "line1": "중화인민공화국 랴오닝성 선양시 선베이신구 푸허루 77호 중국의과대학",
+        "line2": "우편번호: 110122",
+        "note": "지원: 중국우정 EMS, 중국우정 등기, UPU(중국 본토 이외 지역에서 발송)"
+      },
+      "close": "닫기",
+      "paper": {
+        "title": "대학생 연애 현황 조사 · 종이 설문",
+        "subtitle": "종이 입력판 · 과제 연구 · 익명 설문",
+        "id_label": "귀하의 설문 ID: ",
+        "copy_id": "ID 복사",
+        "id_note": "이 ID를 종이 설문 상단과 봉투에 필사해 주십시오. 이를 통해 응답의 대조가 가능합니다.",
+        "notice_title": "기입 방법: ",
+        "submit_title": "종이 설문 제출 방법",
+        "submit_desc": "기입 완료된 설문을 봉투에 넣어 다음 방법 중 하나로 우편 발송해 주십시오.",
+        "ems": "중국우정 EMS",
+        "registered": "중국우정 등기",
+        "upu": "UPU(중국 본토 이외 지역에서 발송)",
+        "address_title": "수신 주소",
+        "address_line1": "중화인민공화국 랴오닝성 선양시 선베이신구 푸허루 77호",
+        "address_line2": "중국의과대학",
+        "address_zip": "우편번호: 110122",
+        "footer_note": "종이 설문은 전용 프로그램으로 암호화 분석됩니다. 모든 데이터는 과제 연구 통계 분석에만 사용됩니다.",
+        "copied": "ID 복사됨: "
+      }
+    },
+    "lang": {
+      "switch": "🌐 언어",
+      "auto": "자동 감지",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文（台灣）",
+      "zh-HK": "繁體中文（香港）",
+      "en": "English",
+      "ja": "日本語",
+      "ko": "한국어"
+    },
+    "gender": {
+      "search_placeholder": "검색...",
+      "display_placeholder": "젠더 아이덴티티 선택 또는 검색",
+      "empty_result": "일치하는 항목을 찾을 수 없습니다. 「기타 / 자기 기술」을 선택할 수 있습니다.",
+      "self_describe_hint": "자신의 언어로 기술해 주세요. 이름, 학번, 연락처 등 개인 정보는 기재하지 마십시오."
+    },
+    "encrypt": {
+      "title": "종단간 암호화 종이 설문",
+      "header": "🔒 종단간 암호화 종이 설문",
+      "subtitle": "데이터는 사용자의 브라우저에서 암호화되며, 서버는 원본 내용을 결코 읽을 수 없습니다",
+      "step1": "온라인으로 응답",
+      "step2": "로컬 암호화",
+      "step3": "암호문 인쇄",
+      "step4": "종이 암호문 우편 발송",
+      "key_label": "🔐 암호화 방식 안내",
+      "key_warning": "반드시 번호를 종이에 적어 암호문과 함께 우편 발송하십시오. 번호를 분실하면 담당자가 복호화할 수 없습니다.",
+      "success": "✅ 암호화 완료",
+      "result_desc": "응답은 AES-256-GCM 알고리즘을 사용하여 로컬 브라우저에서 암호화되었습니다. 아래는 암호문입니다. 이 페이지를 인쇄하여 우편 발송하십시오.",
+      "print_title": "📄 암호화 종이 설문 · 우편용",
+      "paper_id_label": "설문 ID: ",
+      "algorithm_label": "암호화 알고리즘: ",
+      "time_label": "생성일시: ",
+      "key_label_print": "복호화 키(설문 ID와 동일): ",
+      "address_label": "수신처: ",
+      "submit_btn": "🔐 암호화 설문 생성 및 인쇄",
+      "print_btn": "🖨️ 이 페이지 인쇄",
+      "copy_btn": "📋 암호문 복사",
+      "next_btn": "🔄 다음 응답",
+      "to_decode": "→ 복호화 데모 페이지로",
+      "to_online": "온라인 설문으로 돌아가기",
+      "copy_alert": "암호문이 클립보드에 복사되었습니다",
+      "error_prefix": "암호화 실패: ",
+      "encrypting": "암호화 중..."
+    },
+    "decode": {
+      "title": "종이 설문 복호화 데모",
+      "header": "🔓 종이 설문 복호화 데모",
+      "subtitle": "암호문과 키를 입력하여 로컬 브라우저에서 복호화",
+      "step1_title": "Step 1: 암호문 입력",
+      "cipher_label": "암호문(종이 설문에서 필사 또는 스캔)",
+      "cipher_placeholder": "암호문 붙여넣기... 형식: ivBase64:cipherBase64",
+      "cipher_hint": "암호문에는 무작위 문자만 포함되며 개인을 식별할 수 있는 정보는 포함되지 않습니다.",
+      "step2_title": "Step 2: 복호화 키 입력",
+      "key_label": "복호화 키",
+      "key_hint": "이 키는 암호화 시 사용된 것과 동일합니다. 키는 서버에 업로드되지 않습니다.",
+      "decrypt_btn": "🔓 복호화 실행",
+      "result_title": "✅ 복호화 결과",
+      "export_btn": "📥 CSV 내보내기",
+      "reset_btn": "🔄 다음 복호화",
+      "to_encrypt": "← 암호화 입력 페이지로",
+      "to_online": "온라인 설문으로 돌아가기",
+      "overlay_title": "🔐 AES-256-GCM 전용 알고리즘으로 복호화 중..."
+    },
+    "country": {
+      "title": "국가 / 지역 선택",
+      "search_placeholder": "국가 또는 지역 검색...",
+      "close": "닫기",
+      "no_result": "일치하는 국가 또는 지역을 찾을 수 없습니다"
+    },
+    "sections": {
+      "gender_hint": "다음 질문은 프라이버시와 관련된 내용입니다. 집단 통계 분석 목적으로만 사용됩니다. 「답변하지 않음」을 선택하거나 건 넘기실 수 있습니다."
+    }
+  },
+  "sections": {
+    "background": "선별 및 기본 정보",
+    "gender": "젠더 아이덴티티와 성적 지향",
+    "relationship": "연애 상태",
+    "views": "연애 관념 및 영향 요인",
+    "open": "주관식",
+    "submit": "확인 및 제출"
+  },
+  "questions": {
+    "is_adult": {
+      "label": "18세 이상입니까?"
+    },
+    "age_group": {
+      "label": "연령대를 알려주십시오."
+    },
+    "education_stage": {
+      "label": "현재 교육 단계를 알려주십시오.",
+      "hint": "본인의 교육 경로가 표준적인 고등학교나 대학이 아닌 경우, 가장 가까운 단계를 선택해 주세요."
+    },
+    "major_category": {
+      "label": "전공 분야를 알려주십시오."
+    },
+    "nationality_background": {
+      "label": "국적·호적 배경을 알려주십시오."
+    },
+    "region": {
+      "label": "현재 거주·학습 중인 지역을 알려주십시오."
+    },
+    "gender_identity": {
+      "label": "본인의 젠더 아이덴티티를 알려주십시오.",
+      "hint": "키워드로 검색하거나 목록을 탐색할 수 있습니다."
+    },
+    "gender_identity_self_describe": {
+      "label": "자신의 언어로 기술해 주세요. 이름, 학번, 연락처 등 개인 정보는 기재하지 마십시오.",
+      "placeholder": "최대 80자"
+    },
+    "sexual_orientation": {
+      "label": "귀하의 성적 지향은 다음 중 어디에 가깝습니까?"
+    },
+    "sexual_orientation_self_describe": {
+      "label": "자신의 언어로 기술해 주세요.",
+      "placeholder": "최대 80자"
+    },
+    "relationship_status": {
+      "label": "현재 연애 상태를 알려주십시오."
+    },
+    "relationship_willingness": {
+      "label": "연애에 대한 의지는 어느 정도입니까?"
+    },
+    "love_importance": {
+      "label": "연애는 대학 생활에서 어느 정도 중요하다고 생각하십니까?"
+    },
+    "influence_factors": {
+      "label": "현재 연애 상태에 영향을 미치는 요인은 무엇입니까?"
+    },
+    "love_view": {
+      "label": "귀하의 연애관은 다음 중 어디에 가깝습니까?"
+    },
+    "partner_factors": {
+      "label": "파트너를 선택할 때 가장 중요하게 생각하는 것은 무엇입니까?"
+    },
+    "long_distance_acceptance": {
+      "label": "장거리 연애를 받아들일 수 있습니까?"
+    },
+    "study_impact": {
+      "label": "연애는 학업에 어떤 영향을 미친다고 생각하십니까?"
+    },
+    "relationship_core_values": {
+      "label": "연애 관계에서 가장 중요한 것은 무엇이라고 생각하십니까?"
+    },
+    "conflict_handling": {
+      "label": "연애 중 충돌이 발생했을 때, 귀하의 대처 경향은 무엇입니까?"
+    },
+    "relationship_pressure": {
+      "label": "연애에 관한 외부 또는 내부의 압박을 느끼고 있습니까?"
+    },
+    "boundary_awareness": {
+      "label": "연애에서의 퍼스널 바운더리에 대해 어떻게 생각하십니까?"
+    },
+    "help_seeking": {
+      "label": "정서적 문제에 직면했을 때, 도움을 구하십니까?"
+    },
+    "school_education_need": {
+      "label": "학교는 연애·정서 교육을 실시해야 한다고 생각하십니까?"
+    },
+    "school_support": {
+      "label": "학교가 현재 제공하는 정서 지원은 충분하다고 생각하십니까?"
+    },
+    "open_problem": {
+      "label": "연애와 관련하여 현재 가장 큰 고민이나 과제는 무엇입니까?",
+      "placeholder": "여기에 입력..."
+    },
+    "open_suggestion": {
+      "label": "대학의 연애 교육이나 정서 지원에 대한 제안이 있으십니까?",
+      "placeholder": "여기에 입력..."
+    }
+  },
+  "options": {
+    "yes_18_or_above": "예, 18세 이상입니다",
+    "no_under_18": "아니요, 18세 미만입니다",
+    "prefer_not_to_say": "답변하지 않음",
+    "not_sure": "잘 모르겠음",
+    "self_describe": "기타 / 자기 기술",
+    "other": "기타 / 자기 기술",
+    "other_not_listed": "기타(목록에 없음)",
+    "prefer_to_self_describe": "자기 기술을 원함",
+    "18_20": "18~20세",
+    "21_23": "21~23세",
+    "24_26": "24~26세",
+    "27_or_above": "27세 이상",
+    "senior_high_grade_3": "고등학교 3학년",
+    "equivalent_to_senior_high_grade_3": "고등학교 졸업 학년과 동등(직업고등학교/기술학교/국제고등학교/A-Level/IB/AP 등)",
+    "gap_year_or_not_currently_enrolled": "고등학교 졸업 후 입학 전 / 갭이어 / 현재 재학 중이 아님",
+    "college_preparatory_or_foundation": "대학 예비 / Foundation / 브리지 프로그램",
+    "undergraduate_year_1": "대학 1학년",
+    "undergraduate_year_2": "대학 2학년",
+    "undergraduate_year_3": "대학 3학년",
+    "undergraduate_year_4": "대학 4학년",
+    "undergraduate_year_5_or_above": "5년제 이상 학부 과정",
+    "junior_college": "전문대학 / 전문학교",
+    "postgraduate_master": "대학원 석사 과정",
+    "postgraduate_doctoral": "대학원 박사 과정",
+    "humanities": "인문학",
+    "social_science": "사회과학",
+    "natural_science": "자연과학",
+    "engineering": "공학",
+    "medicine": "의학·보건",
+    "arts": "예술·체육",
+    "business": "경제·경영",
+    "law": "법학",
+    "education": "교육학",
+    "agriculture": "농학",
+    "china_mainland": "중국 본토",
+    "hong_kong_macau_taiwan": "홍콩·마카오·대만",
+    "overseas_chinese": "화교",
+    "other_country": "기타 국가·지역",
+    "north_china": "화북",
+    "northeast_china": "동북",
+    "east_china": "화동",
+    "central_china": "화중",
+    "south_china": "화남",
+    "southwest_china": "서남",
+    "northwest_china": "서북",
+    "overseas": "해외",
+    "heterosexual": "이성애자",
+    "homosexual": "동성애자",
+    "gay": "게이",
+    "lesbian": "레즈비언",
+    "bisexual": "양성애자",
+    "pansexual": "범성애자",
+    "asexual": "무성애자",
+    "demisexual": "데미섹슈얼",
+    "queer": "퀴어",
+    "questioning": "탐색 중 / 불명확",
+    "never_dated": "연애 경험 없음",
+    "dated_before_currently_single": "과거 연애 있음, 현재 독신",
+    "currently_in_relationship": "현재 교제 중",
+    "ambiguous_or_unofficial_relationship": "애매하거나 비공식적인 관계",
+    "not_sure_how_to_define": "현재 관계를 어떻게 정의해야 할지 모르겠음",
+    "strongly_want": "매우 연애하고 싶음",
+    "somewhat_want": "다소 연애하고 싶음",
+    "let_it_be": "자연스럽게 두고 싶음",
+    "not_now": "지금은 연애하고 싶지 않음",
+    "clearly_not_want": "명확하게 연애하고 싶지 않음",
+    "very_important": "매우 중요",
+    "somewhat_important": "다소 중요",
+    "neutral": "보통",
+    "not_very_important": "별로 중요하지 않음",
+    "not_important_at_all": "전혀 중요하지 않음",
+    "academic_pressure": "학업 스트레스",
+    "small_social_circle": "사교 범위가 좁음",
+    "lack_of_suitable_partner": "적절한 파트너가 없음",
+    "financial_constraints": "경제적 제약",
+    "family_expectations": "가족의 기대나 태도",
+    "personal_goals": "개인 목표를 우선",
+    "past_experiences": "과거 경험의 영향",
+    "social_media_influence": "SNS 영향",
+    "peer_pressure": "또래 압박",
+    "no_time": "시간이 없음",
+    "serious_commitment": "결혼을 염두에 둔 진지한 교제",
+    "casual_dating": "당시를 즐기며, 반드시 결혼 목적은 아님",
+    "let_nature_take_course": "자연스럽게 두고, 굳이 추구하지 않음",
+    "marriage_oriented": "평생의 파트너를 찾음",
+    "experience_oriented": "연애 경험을 쌓음",
+    "independent_love": "독립성을 유지하며, 연애는 인생의 일부",
+    "personality": "성격의 궁합",
+    "appearance": "외모",
+    "values_match": "가치관의 일치",
+    "education_background": "학력",
+    "family_background": "가정 환경",
+    "sense_of_humor": "유머 감각",
+    "emotional_stability": "정서적 안정성",
+    "ambition": "상진심",
+    "shared_interests": "공통의 취미",
+    "financial_stability": "경제적 안정성",
+    "physical_attraction": "신체적 매력",
+    "kindness": "친절함과 배려",
+    "fully_accept": "전적으로 받아들일 수 있음",
+    "somewhat_accept": "다소 받아들일 수 있음",
+    "depends": "상황에 따라 다름",
+    "somewhat_reject": "다소 받아들이기 어려움",
+    "fully_reject": "전혀 받아들일 수 없음",
+    "very_positive": "매우 긍정적",
+    "somewhat_positive": "다소 긍정적",
+    "no_impact": "특별한 영향 없음",
+    "somewhat_negative": "다소 부정적",
+    "very_negative": "매우 부정적",
+    "mutual_trust": "상호 신뢰",
+    "communication": "효과적인 소통",
+    "respect": "상호 존중",
+    "shared_goals": "공통의 목표",
+    "emotional_support": "정서적 지지",
+    "personal_space": "퍼스널 스페이스",
+    "honesty": "정직함과 솔직함",
+    "loyalty": "충성과 성실함",
+    "growth_together": "함께 성장하기",
+    "passion": "열정과 로맨스",
+    "communicate_openly": "솔직하게 소통하기",
+    "cool_down_first": "먼저 진정하기",
+    "seek_compromise": "타협안 찾기",
+    "avoid_conflict": "충돌을 피하고 상대가 먼저 말하기를 기다림",
+    "ask_friends": "친구에게 상담하기",
+    "seek_professional_help": "전문가(상담사)에게 상담하기",
+    "strong_pressure": "매우 큰 압박감",
+    "some_pressure": "다소 압박감",
+    "no_pressure": "압박감 없음",
+    "very_important_boundary": "매우 중요",
+    "somewhat_important_boundary": "다소 중요",
+    "not_very_important_boundary": "별로 중요하지 않음",
+    "always": "항상 도움을 구함",
+    "sometimes": "가끔",
+    "rarely": "거의 없음",
+    "never": "결코 없음",
+    "very_needed": "매우 필요함",
+    "somewhat_needed": "다소 필요함",
+    "neutral_need": "보통",
+    "not_very_needed": "별로 필요하지 않음",
+    "not_needed_at_all": "전혀 필요하지 않음",
+    "very_sufficient": "매우 충분함",
+    "somewhat_sufficient": "다소 충분함",
+    "somewhat_insufficient": "다소 불충분함",
+    "very_insufficient": "매우 불충분함"
+  },
+  "gender_options": [
+    {
+      "value": "female",
+      "label": "Female / 여성",
+      "group": "일반적인 선택지"
+    },
+    {
+      "value": "male",
+      "label": "Male / 남성",
+      "group": "일반적인 선택지"
+    },
+    {
+      "value": "prefer_not_to_say",
+      "label": "답변하지 않음",
+      "group": "일반적인 선택지"
+    },
+    {
+      "value": "not_sure",
+      "label": "잘 모르겠음",
+      "group": "일반적인 선택지"
+    },
+    {
+      "value": "self_describe",
+      "label": "기타 / 자기 기술",
+      "group": "일반적인 선택지"
+    },
+    {
+      "value": "woman",
+      "label": "Woman / 여성",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "girl",
+      "label": "Girl / 소녀",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "cisgender_woman",
+      "label": "Cisgender woman / 시스젠더 여성",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "cis_woman",
+      "label": "Cis woman / 시스 여성",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "transgender_woman",
+      "label": "Transgender woman / 트랜스젠더 여성",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "trans_woman",
+      "label": "Trans woman / 트랜스 여성",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "transfeminine",
+      "label": "Transfeminine / 트랜스페미닌",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "femme",
+      "label": "Femme / 펨",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "demigirl",
+      "label": "Demigirl / 데미걸",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "demiwoman",
+      "label": "Demiwoman / 데미우먼",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "librafeminine",
+      "label": "Librafeminine / 리브라페미닌",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "paragirl",
+      "label": "Paragirl / 패러걸",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "juxera",
+      "label": "Juxera / 쥬크세라",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "girlflux",
+      "label": "Girlflux / 걸플럭스",
+      "group": "여성 관련 아이덴티티"
+    },
+    {
+      "value": "man",
+      "label": "Man / 남성",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "boy",
+      "label": "Boy / 소년",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "cisgender_man",
+      "label": "Cisgender man / 시스젠더 남성",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "cis_man",
+      "label": "Cis man / 시스 남성",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "transgender_man",
+      "label": "Transgender man / 트랜스젠더 남성",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "trans_man",
+      "label": "Trans man / 트랜스 남성",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "transmasculine",
+      "label": "Transmasculine / 트랜스마스큐린",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "masc",
+      "label": "Masc / 마스크",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "demiboy",
+      "label": "Demiboy / 데미보이",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "demiman",
+      "label": "Demiman / 데미맨",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "libramasculine",
+      "label": "Libramasculine / 리브라마스큐린",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "paraboy",
+      "label": "Paraboy / 패러보이",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "proxvir",
+      "label": "Proxvir / 프로크스버",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "boyflux",
+      "label": "Boyflux / 보이플럭스",
+      "group": "남성 관련 아이덴티티"
+    },
+    {
+      "value": "nonbinary",
+      "label": "Non-binary / 논바이너리",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "non_binary",
+      "label": "Non binary / 논바이너리",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "enby",
+      "label": "Enby / 엔비",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "genderqueer",
+      "label": "Genderqueer / 젠더퀴어",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_nonconforming",
+      "label": "Gender non-conforming / 젠더논컨포밍",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_variant",
+      "label": "Gender variant / 젠더베리언트",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_diverse",
+      "label": "Gender diverse / 젠더다이버스",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_expansive",
+      "label": "Gender expansive / 젠더익스팬시브",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_creative",
+      "label": "Gender creative / 젠더크리에이티브",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "gender_independent",
+      "label": "Gender independent / 젠더인디펜던트",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "third_gender",
+      "label": "Third gender / 제3의 젠더",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "other_gender",
+      "label": "Other gender / 기타 젠더",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "neither_man_nor_woman",
+      "label": "Neither man nor woman / 남성도 여성도 아님",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "both_man_and_woman",
+      "label": "Both man and woman / 남성과 여성의 양쪽",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "between_man_and_woman",
+      "label": "Between man and woman / 남성과 여성의 사이",
+      "group": "논바이너리·젠더 퀴어"
+    },
+    {
+      "value": "agender",
+      "label": "Agender / 에이젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "genderless",
+      "label": "Genderless / 젠더리스",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "genderfree",
+      "label": "Genderfree / 젠더프리",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "gendervoid",
+      "label": "Gendervoid / 젠더보이드",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "voidgender",
+      "label": "Voidgender / 보이드젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "nullgender",
+      "label": "Nullgender / 널젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "neutrois",
+      "label": "Neutrois / 뉴트로아",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "neutral_gender",
+      "label": "Neutral gender / 뉴트럴젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "androgyne",
+      "label": "Androgyne / 안드로진",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "androgynous",
+      "label": "Androgynous / 안드로지너스",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "maverique",
+      "label": "Maverique / 매버릭",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "aporagender",
+      "label": "Aporagender / 아포라젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "aliagender",
+      "label": "Aliagender / 알리아젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "epicene",
+      "label": "Epicene / 에피신",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "cassgender",
+      "label": "Cassgender / 캐스젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "greygender",
+      "label": "Greygender / 그레이젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "graygender",
+      "label": "Graygender / 그레이젠더",
+      "group": "에이젠더·약한 젠더·중성"
+    },
+    {
+      "value": "genderfluid",
+      "label": "Genderfluid / 젠더플루이드",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderflux",
+      "label": "Genderflux / 젠더플럭스",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "fluidflux",
+      "label": "Fluidflux / 플루이드플럭스",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "bigender",
+      "label": "Bigender / 바이젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "trigender",
+      "label": "Trigender / 트라이젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "pangender",
+      "label": "Pangender / 팬젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "polygender",
+      "label": "Polygender / 폴리젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "multigender",
+      "label": "Multigender / 멀티젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "omnigender",
+      "label": "Omnigender / 옴니젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "ambigender",
+      "label": "Ambigender / 앰비젠더",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderfae",
+      "label": "Genderfae / 젠더페이",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderfaun",
+      "label": "Genderfaun / 젠더파운",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderflor",
+      "label": "Genderflor / 젠더플로",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderfruct",
+      "label": "Genderfruct / 젠더프럭트",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderfrith",
+      "label": "Genderfrith / 젠더프리스",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderdoe",
+      "label": "Genderdoe / 젠더도",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderbuck",
+      "label": "Genderbuck / 젠더벅",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "demifluid",
+      "label": "Demifluid / 데미플루이드",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "demiflux",
+      "label": "Demiflux / 데미플럭스",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "genderfluid_nonbinary",
+      "label": "Genderfluid non-binary / 논바이너리플루이드",
+      "group": "유동성·변화성·다중 젠더"
+    },
+    {
+      "value": "demigender",
+      "label": "Demigender / 데미젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "deminonbinary",
+      "label": "Deminonbinary / 데미논바이너리",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "demineutral",
+      "label": "Demineutral / 데미뉴트럴",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "demifluid_identity",
+      "label": "Demifluid identity / 데미플루이드아이덴티티",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "demiflux_identity",
+      "label": "Demiflux identity / 데미플럭스아이덴티티",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "semigender",
+      "label": "Semigender / 세미젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "hemigender",
+      "label": "Hemigender / 헤미젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "libragender",
+      "label": "Libragender / 리브라젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "librafluid",
+      "label": "Librafluid / 리브라플루이드",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "paragender",
+      "label": "Paragender / 패러젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "perigender",
+      "label": "Perigender / 페리젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "quasigender",
+      "label": "Quasigender / 쿼시젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "offgender",
+      "label": "Offgender / 오프젠더",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "gender_near",
+      "label": "Gender-near / 젠더니어",
+      "group": "부분 젠더·연결성 아이덴티티"
+    },
+    {
+      "value": "two_spirit",
+      "label": "Two-Spirit / 투스피릿",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "hijra",
+      "label": "Hijra / 히주라",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "faafafine",
+      "label": "Fa'afafine / 파파피네",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "faafatama",
+      "label": "Fa'afatama / 파파타마",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "muxe",
+      "label": "Muxe / 무셰",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "travesti",
+      "label": "Travesti / 트라베스티",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "bakla",
+      "label": "Bakla / 바클라",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "kathoey",
+      "label": "Kathoey / 카토이",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "waria",
+      "label": "Waria / 와리아",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "mahu",
+      "label": "Māhū / 마후",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "fakaleiti",
+      "label": "Fakaleiti / 파칼레이티",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "akavaine",
+      "label": "Akava'ine / 아카바이네",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "bissu",
+      "label": "Bissu / 비수",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "calabai",
+      "label": "Calabai / 칼라바이",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "calalai",
+      "label": "Calalai / 칼라라이",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "x_gender",
+      "label": "X-gender / X젠더",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "x_jenda",
+      "label": "X-jenda / X젠다",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "sekhet",
+      "label": "Sekhet / 세케트",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "sworn_virgin",
+      "label": "Sworn virgin / 맹세한 처녀",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "femminiello",
+      "label": "Femminiello / 펨미니엘로",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "guevedoche",
+      "label": "Guevedoche / 게베도체",
+      "group": "문화적·커뮤니티적·역사적 젠더 아이덴티티"
+    },
+    {
+      "value": "transgender",
+      "label": "Transgender / 트랜스젠더",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "trans",
+      "label": "Trans / 트랜스",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "trans_star",
+      "label": "Trans* / 트랜스*",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "non_cisgender",
+      "label": "Non-cisgender / 논시스젠더",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "gender_minority",
+      "label": "Gender minority / 젠더마이너리티",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "transsexual",
+      "label": "Transsexual / 트랜스섹슈얼",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "transvestite_identity",
+      "label": "Transvestite identity / 트랜스베스타이트아이덴티티",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "crossdresser_identity",
+      "label": "Crossdresser identity / 크로스드레서아이덴티티",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "questioning_gender",
+      "label": "Questioning gender / 젠더탐색중",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "gender_questioning",
+      "label": "Gender questioning / 젠더탐색중",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "intergender",
+      "label": "Intergender / 인터젠더",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "intersex_identity",
+      "label": "Intersex identity / 인터섹스아이덴티티",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "intersex_nonbinary",
+      "label": "Intersex non-binary / 인터섹스논바이너리",
+      "group": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티"
+    },
+    {
+      "value": "queer",
+      "label": "Queer / 퀴어",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "queer_gender",
+      "label": "Queer gender / 퀴어젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "pomogender",
+      "label": "Pomogender / 포모젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "novigender",
+      "label": "Novigender / 노비젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "autigender",
+      "label": "Autigender / 오티젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "neurogender",
+      "label": "Neurogender / 뉴로젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "xenogender",
+      "label": "Xenogender / 제노젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "aesthetigender",
+      "label": "Aesthetigender / 에스테티젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "kingender",
+      "label": "Kingender / 킨젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "personagender",
+      "label": "Personagender / 페르소나젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "egogender",
+      "label": "Egogender / 에고젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "charagender",
+      "label": "Charagender / 캐라젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "mirrorgender",
+      "label": "Mirrorgender / 미러젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "blurgender",
+      "label": "Blurgender / 블러젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "chaosgender",
+      "label": "Chaosgender / 카오스젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "cosmicgender",
+      "label": "Cosmicgender / 코즈믹젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "stargender",
+      "label": "Stargender / 스타젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "solargender",
+      "label": "Solargender / 솔라젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "lunargender",
+      "label": "Lunargender / 루나젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "cadensgender",
+      "label": "Cadensgender / 카덴스젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "colorgender",
+      "label": "Colorgender / 컬러젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "dreamgender",
+      "label": "Dreamgender / 드림젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "oneirogender",
+      "label": "Oneirogender / 오네이로젠더",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "other_not_listed",
+      "label": "기타(목록에 없음)",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    },
+    {
+      "value": "prefer_to_self_describe",
+      "label": "자기 기술을 원함",
+      "group": "기타 광의적 또는 자기 정의 아이덴티티"
+    }
+  ],
+  "gender_groups": {
+    "常规选项": "일반적인 선택지",
+    "女性相关认同": "여성 관련 아이덴티티",
+    "男性相关认同": "남성 관련 아이덴티티",
+    "非二元与性别酷儿": "논바이너리·젠더 퀴어",
+    "无性别、弱性别与中性": "에이젠더·약한 젠더·중성",
+    "流动性、变化性与多重性别": "유동성·변화성·다중 젠더",
+    "部分性别与连接性认同": "부분 젠더·연결성 아이덴티티",
+    "文化、社群与历史性别认同": "문화적·커뮤니티적·역사적 젠더 아이덴티티",
+    "跨性别、非顺性别与相关伞状认同": "트랜스젠더·시스젠더 외·관련 포괄적 아이덴티티",
+    "其他广义或自定义认同": "기타 광의적 또는 자기 정의 아이덴티티"
+  },
+  "errors": {
+    "INVALID_REQUEST_FORMAT": "요청 형식이 잘못되었습니다.",
+    "MISSING_CONSENT": "먼저 인포드 컨센트에 동의해 주십시오.",
+    "AGE_RESTRICTION": "본 설문은 18세 이상 응답자만 대상으로 합니다.",
+    "INVALID_AGE_GROUP": "연령대 선택이 잘못되었습니다.",
+    "INVALID_EDUCATION_STAGE": "교육 단계 선택이 잘못되었습니다.",
+    "MISSING_TURNSTILE": "Turnstile 인증이 없습니다.",
+    "TURNSTILE_FAILED": "인간 확인에 실패했습니다. 페이지를 새로고침하여 다시 시도해 주십시오.",
+    "DATABASE_NOT_BOUND": "데이터베이스가 바인딩되지 않았습니다.",
+    "GENDER_DESCRIBE_TOO_LONG": "젠더 아이덴티티 자기 기술은 80자 이내로 해 주십시오.",
+    "ORIENTATION_DESCRIBE_TOO_LONG": "성적 지향 자기 기술은 80자 이내로 해 주십시오.",
+    "INVALID_RELATIONSHIP_STATUS": "연애 상태 선택이 잘못되었습니다.",
+    "INVALID_RELATIONSHIP_WILLINGNESS": "연애 의지 선택이 잘못되었습니다.",
+    "DATABASE_WRITE_FAILED": "데이터베이스 쓰기에 실패했습니다: ",
+    "SERVER_INTERNAL_ERROR": "서버 내부 오류: ",
+    "METHOD_NOT_ALLOWED": "허용되지 않은 메서드"
+  },
+  "decode.columns.paper_id": "설문 ID",
+  "decode.columns.is_adult": "18세 이상",
+  "decode.columns.age_group": "연령대",
+  "decode.columns.education_stage": "교육 단계",
+  "decode.columns.major_category": "전공",
+  "decode.columns.nationality_background": "국적",
+  "decode.columns.region": "지역",
+  "decode.columns.gender_identity": "젠더 아이덴티티",
+  "decode.columns.sexual_orientation": "성적 지향",
+  "decode.columns.relationship_status": "연애 상태",
+  "decode.columns.relationship_willingness": "연애 의지",
+  "decode.columns.love_importance": "연애의 중요성",
+  "decode.columns.influence_factors": "영향 요인",
+  "decode.columns.love_view": "연애관",
+  "decode.columns.partner_factors": "파트너 선택",
+  "decode.columns.long_distance_acceptance": "장거리 연애",
+  "decode.columns.study_impact": "학업 영향",
+  "decode.columns.relationship_core_values": "핵심 가치",
+  "decode.columns.conflict_handling": "충돌 대처",
+  "decode.columns.relationship_pressure": "연애 압박",
+  "decode.columns.boundary_awareness": "바운더리 의식",
+  "decode.columns.help_seeking": "도움 요청",
+  "decode.columns.school_education_need": "교육 필요성",
+  "decode.columns.school_support": "정서 지원 평가",
+  "decode.columns.open_problem": "고민·과제",
+  "decode.columns.open_suggestion": "제안",
+  "decode.empty": "미기입",
+  "decode.error.no_cipher": "암호문을 입력해 주십시오",
+  "decode.error.no_key": "복호화 키를 입력해 주십시오",
+  "decode.error.decrypt_failed": "복호화에 실패했습니다: {msg}",
+  "countries": {
+    "CN": "중국",
+    "TW": "대만",
+    "MO": "마카오",
+    "HK": "홍콩",
+    "DK": "덴마크",
+    "UA": "우크라이나",
+    "UZ": "우즈베키스탄",
+    "UY": "우루과이",
+    "YE": "예멘",
+    "IL": "이스라엘",
+    "IQ": "이라크",
+    "IR": "이란",
+    "RU": "러시아",
+    "IS": "아이슬란드",
+    "LY": "리비아",
+    "CA": "캐나다",
+    "GH": "가나",
+    "HU": "헝가리",
+    "ZA": "남아프리카",
+    "QA": "카타르",
+    "LU": "룩셈부르크",
+    "IN": "인도",
+    "ID": "인도네시아",
+    "GT": "과테말라",
+    "CU": "쿠바",
+    "KZ": "카자흐스탄",
+    "CO": "콜롬비아",
+    "CR": "코스타리카",
+    "TR": "튀르키예",
+    "EG": "이집트",
+    "MX": "멕시코",
+    "AT": "오스트리아",
+    "VE": "베네수엘라",
+    "BD": "방글라데시",
+    "NG": "나이지리아",
+    "NP": "네팔",
+    "PK": "파키스탄",
+    "PG": "파푸아뉴기니",
+    "PA": "파나마",
+    "BR": "브라질",
+    "GR": "그리스",
+    "DE": "독일",
+    "IT": "이탈리아",
+    "LV": "라트비아",
+    "NO": "노르웨이",
+    "CZ": "체코",
+    "MA": "모로코",
+    "SK": "슬로바키아",
+    "LK": "스리랑카",
+    "SG": "싱가포르",
+    "NZ": "뉴질랜드",
+    "JP": "일본",
+    "CL": "칠레",
+    "KH": "캄보디아",
+    "BE": "벨기에",
+    "SA": "사우디아라비아",
+    "FR": "프랑스",
+    "PL": "폴란드",
+    "TH": "태국",
+    "AU": "호주",
+    "IE": "아일랜드",
+    "JM": "자메이카",
+    "SE": "스웨덴",
+    "CH": "스위스",
+    "KW": "쿠웨이트",
+    "PE": "페루",
+    "LT": "리투아니아",
+    "JO": "요르단",
+    "MM": "미얀마",
+    "RO": "루마니아",
+    "US": "미국",
+    "LA": "라오스",
+    "KE": "케냐",
+    "FI": "핀란드",
+    "GB": "영국",
+    "NL": "네덜란드",
+    "PH": "필리핀",
+    "PT": "포르투갈",
+    "MN": "몽골",
+    "ES": "스페인",
+    "VN": "베트남",
+    "AF": "아프가니스탄",
+    "DZ": "알제리",
+    "AL": "알바니아",
+    "OM": "오만",
+    "AR": "아르헨티나",
+    "AE": "아랍에미리트",
+    "KR": "한국",
+    "MV": "몰디브",
+    "MY": "말레이시아",
+    "MG": "마다가스카르",
+    "LB": "레바논"
+  }
+}

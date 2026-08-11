@@ -1,0 +1,12 @@
+{
+  "name": "survey-cloudflare",
+  "version": "1.0.0",
+  "description": "Cloudflare Pages + D1 + Turnstile survey for school assignment",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

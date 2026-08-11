@@ -1,0 +1,1550 @@
+{
+  "_meta": {
+    "name": "English",
+    "name_local": "English",
+    "dir": "ltr",
+    "font": "system-ui, -apple-system, 'Segoe UI', sans-serif"
+  },
+  "defaults": {
+    "region": "overseas",
+    "nationality_background": "other_country"
+  },
+  "available_options": {
+    "is_adult": [
+      "yes_18_or_above",
+      "no_under_18"
+    ],
+    "age_group": [
+      "18_20",
+      "21_23",
+      "24_26",
+      "27_or_above",
+      "prefer_not_to_say"
+    ],
+    "education_stage": [
+      "senior_high_grade_3",
+      "equivalent_to_senior_high_grade_3",
+      "gap_year_or_not_currently_enrolled",
+      "college_preparatory_or_foundation",
+      "undergraduate_year_1",
+      "undergraduate_year_2",
+      "undergraduate_year_3",
+      "undergraduate_year_4",
+      "undergraduate_year_5_or_above",
+      "junior_college",
+      "postgraduate_master",
+      "postgraduate_doctoral",
+      "prefer_not_to_say"
+    ],
+    "major_category": [
+      "humanities",
+      "social_science",
+      "natural_science",
+      "engineering",
+      "medicine",
+      "arts",
+      "business",
+      "law",
+      "education",
+      "agriculture",
+      "prefer_not_to_say"
+    ],
+    "nationality_background": [
+      "china_mainland",
+      "hong_kong_macau_taiwan",
+      "overseas_chinese",
+      "other_country",
+      "prefer_not_to_say"
+    ],
+    "region": [
+      "north_china",
+      "northeast_china",
+      "east_china",
+      "central_china",
+      "south_china",
+      "southwest_china",
+      "northwest_china",
+      "overseas",
+      "prefer_not_to_say"
+    ],
+    "sexual_orientation": [
+      "heterosexual",
+      "homosexual",
+      "gay",
+      "lesbian",
+      "bisexual",
+      "pansexual",
+      "asexual",
+      "demisexual",
+      "queer",
+      "questioning",
+      "prefer_not_to_say",
+      "other"
+    ],
+    "relationship_status": [
+      "never_dated",
+      "dated_before_currently_single",
+      "currently_in_relationship",
+      "ambiguous_or_unofficial_relationship",
+      "not_sure_how_to_define",
+      "prefer_not_to_say"
+    ],
+    "relationship_willingness": [
+      "strongly_want",
+      "somewhat_want",
+      "let_it_be",
+      "not_now",
+      "clearly_not_want",
+      "prefer_not_to_say"
+    ],
+    "love_importance": [
+      "very_important",
+      "somewhat_important",
+      "neutral",
+      "not_very_important",
+      "not_important_at_all",
+      "prefer_not_to_say"
+    ],
+    "love_view": [
+      "serious_commitment",
+      "casual_dating",
+      "let_nature_take_course",
+      "marriage_oriented",
+      "experience_oriented",
+      "independent_love",
+      "prefer_not_to_say"
+    ],
+    "long_distance_acceptance": [
+      "fully_accept",
+      "somewhat_accept",
+      "depends",
+      "somewhat_reject",
+      "fully_reject",
+      "prefer_not_to_say"
+    ],
+    "study_impact": [
+      "very_positive",
+      "somewhat_positive",
+      "no_impact",
+      "somewhat_negative",
+      "very_negative",
+      "prefer_not_to_say"
+    ],
+    "relationship_core_values": [
+      "mutual_trust",
+      "communication",
+      "respect",
+      "shared_goals",
+      "emotional_support",
+      "personal_space",
+      "honesty",
+      "loyalty",
+      "growth_together",
+      "passion",
+      "prefer_not_to_say"
+    ],
+    "conflict_handling": [
+      "communicate_openly",
+      "cool_down_first",
+      "seek_compromise",
+      "avoid_conflict",
+      "ask_friends",
+      "seek_professional_help",
+      "prefer_not_to_say"
+    ],
+    "relationship_pressure": [
+      "strong_pressure",
+      "some_pressure",
+      "no_pressure",
+      "prefer_not_to_say"
+    ],
+    "boundary_awareness": [
+      "very_important",
+      "somewhat_important",
+      "not_very_important",
+      "prefer_not_to_say"
+    ],
+    "help_seeking": [
+      "always",
+      "sometimes",
+      "rarely",
+      "never",
+      "prefer_not_to_say"
+    ],
+    "school_education_need": [
+      "very_needed",
+      "somewhat_needed",
+      "neutral",
+      "not_very_needed",
+      "not_needed_at_all",
+      "prefer_not_to_say"
+    ],
+    "school_support": [
+      "very_sufficient",
+      "somewhat_sufficient",
+      "somewhat_insufficient",
+      "very_insufficient",
+      "prefer_not_to_say"
+    ]
+  },
+  "ui": {
+    "survey": {
+      "title": "College Student Romantic Relationships Survey",
+      "subtitle": "Course Assignment · Anonymous · For Statistical Analysis Only"
+    },
+    "intro": {
+      "desc": "This is an anonymous survey for a course assignment, aiming to understand college students' romantic relationship status, intimate relationship perspectives, emotional stress, and campus support needs.",
+      "time": "Estimated time: 5–8 minutes",
+      "method": "Anonymous, voluntary, sensitive questions can be skipped",
+      "purpose": "Data use: Course assignment statistical analysis only"
+    },
+    "button": {
+      "start": "View privacy notice and start",
+      "agree": "I have read and agree, start filling",
+      "decline": "Decline and exit",
+      "submit": "Submit Survey",
+      "print": "Print this page",
+      "copy": "Copy ciphertext",
+      "next_survey": "Fill another",
+      "paper_submit": "📄 Prefer paper? Mail your response",
+      "download_paper": "Download paper version",
+      "go_encrypt": "Go to encrypted form"
+    },
+    "common": {
+      "select_placeholder": "Please select",
+      "optional": "(Optional)",
+      "multiple": "(Multiple choice)",
+      "required": "(Required)"
+    },
+    "progress": {
+      "section": "Part {current} / {total}: {name}",
+      "percent": "{pct}% completed"
+    },
+    "status": {
+      "submitting": "Submitting...",
+      "submit_failed": "Submission failed: {msg}"
+    },
+    "success": {
+      "title": "Submitted Successfully",
+      "message": "Thank you for your participation. Your anonymous response will be used for course assignment statistical analysis only.",
+      "again": "Fill again"
+    },
+    "decline": {
+      "title": "You have chosen not to participate",
+      "message": "Thank you for your time."
+    },
+    "underage": {
+      "title": "Thank you for your interest",
+      "message": "Due to the sensitive nature of this survey, it is only open to respondents aged 18 and above."
+    },
+    "privacy": {
+      "title": "Privacy Notice & Informed Consent",
+      "welcome": "Welcome to the College Student Romantic Relationships Survey. This survey is for course assignment statistical analysis and learning research only, not for commercial use, individual evaluation, or identity identification.",
+      "read_first": "Please read the following carefully before starting:",
+      "data_security": {
+        "title": "Data Hosting & Security",
+        "body": "This survey is hosted on Cloudflare services, which have undergone multiple third-party compliance and security audits. We handle data in a trustworthy and responsible manner. All results are used for aggregated group-level statistical analysis only."
+      },
+      "anonymity": {
+        "title": "Anonymity",
+        "body": "This survey does not require name, student ID, phone number, ID card number, detailed address, dorm number, WeChat, or QQ. Please do not include any personally identifiable information in open-ended responses."
+      },
+      "abuse": {
+        "title": "Anti-Abuse Measures",
+        "body": "To prevent duplicate submissions, malicious voting, and bot submissions, the system may record necessary HTTPS request metadata such as submission time, browser User-Agent, Cloudflare security information, and hashed request identifiers."
+      },
+      "sensitive": {
+        "title": "Sensitive Questions",
+        "body": "This survey may involve nationality, gender identity, sexual orientation, relationship status, and relationship perspectives. These are for group statistical analysis only. You may select \"Prefer not to say\" or skip any question."
+      },
+      "voluntary": {
+        "title": "Voluntary Participation",
+        "body": "You may voluntarily decide whether to fill out this survey and may exit at any time before submission. Submitting the survey indicates that you have read and understood the above and agree to have your anonymous response used for course assignment data analysis."
+      },
+      "age": {
+        "title": "Age Restriction",
+        "body": "If you are under 18, it is recommended not to continue with questions involving gender identity, sexual orientation, and relationship experience. The system will determine whether to proceed based on your age and education stage selection."
+      },
+      "consent_check": "I confirm that I have read the above and voluntarily participate in this survey.",
+      "paper_option": "If online submission is inconvenient, you may also choose",
+      "paper_link": "📄 Paper mail submission",
+      "ai": {
+        "title": "About AI Data Processing",
+        "body": "Zero AI data access. All results are not processed by any AI."
+      }
+    },
+    "paper": {
+      "title": "College Student Romantic Relationships Survey · Paper",
+      "subtitle": "Paper Version · Course Assignment · Anonymous",
+      "id_label": "Your Survey ID: ",
+      "copy_id": "Copy ID",
+      "id_note": "Please copy this ID to the top of the paper form and the envelope for verification.",
+      "notice_title": "Instructions:",
+      "submit_title": "Paper Survey Submission",
+      "submit_desc": "Please place the completed form in an envelope and mail via any of the following:",
+      "ems": "China Post EMS",
+      "registered": "China Post Registered Mail",
+      "upu": "UPU (from outside mainland China)",
+      "address_title": "Mailing Address",
+      "address_line1": "No. 77 Puhe Road, Shenbei New District, Shenyang, Liaoning, China",
+      "address_line2": "China Medical University",
+      "address_zip": "ZIP: 110122",
+      "footer_note": "Paper surveys will be parsed via a dedicated program. All data is used for course assignment statistical analysis only.",
+      "copied": "ID copied: "
+    },
+    "lang": {
+      "switch": "🌐 Language",
+      "auto": "Auto-detect",
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文（台灣）",
+      "zh-HK": "繁體中文（香港）",
+      "en": "English",
+      "ja": "日本語",
+      "ko": "한국어"
+    },
+    "gender": {
+      "search_placeholder": "Search...",
+      "display_placeholder": "Select or search your gender identity",
+      "empty_result": "No matches found. You may choose \"Other / Self-describe\".",
+      "self_describe_hint": "You may describe in your own words. Please do not include name, student ID, or contact information."
+    },
+    "sections": {
+      "gender_hint": "The following questions are private and for group statistical analysis only. You may select \"Prefer not to say\" or skip."
+    },
+    "encrypt": {
+      "title": "E2E Encrypted Paper Survey",
+      "header": "🔒 E2E Encrypted Paper Survey",
+      "subtitle": "Data is encrypted in your browser; the server can never read the original content",
+      "step1": "Fill out online",
+      "step2": "Local encryption",
+      "step3": "Print ciphertext",
+      "step4": "Mail paper ciphertext",
+      "key_label": "🔐 Encryption Info",
+      "key_warning": "Please write the number on paper and mail it with the ciphertext. If lost, staff cannot decrypt.",
+      "success": "✅ Encryption Complete",
+      "result_desc": "Your response has been encrypted locally using AES-256-GCM. Below is the ciphertext. Please print this page and mail it.",
+      "print_title": "📄 Encrypted Paper Survey · Mail Slip",
+      "paper_id_label": "Survey ID: ",
+      "algorithm_label": "Algorithm: ",
+      "time_label": "Generated: ",
+      "key_label_print": "Decryption Key (same as Survey ID): ",
+      "address_label": "Mail to: ",
+      "submit_btn": "🔐 Generate Encrypted Form & Print",
+      "print_btn": "🖨️ Print This Page",
+      "copy_btn": "📋 Copy Ciphertext",
+      "next_btn": "🔄 Fill Another",
+      "to_decode": "→ Go to Decryption Demo",
+      "to_online": "Back to Online Survey",
+      "copy_alert": "Ciphertext copied to clipboard",
+      "error_prefix": "Encryption failed: ",
+      "encrypting": "Encrypting..."
+    },
+    "decode": {
+      "title": "Paper Survey Decryption Demo",
+      "header": "🔓 Paper Survey Decryption Demo",
+      "subtitle": "Enter ciphertext and key to decrypt locally in your browser",
+      "step1_title": "Step 1: Enter Ciphertext",
+      "cipher_label": "Ciphertext (copy or scan from paper form)",
+      "cipher_placeholder": "Paste ciphertext... Format: ivBase64:cipherBase64",
+      "cipher_hint": "Ciphertext contains only random characters with no personally identifiable information.",
+      "step2_title": "Step 2: Enter Decryption Key",
+      "key_label": "Decryption Key",
+      "key_hint": "This key is the same as used during encryption. The key is never uploaded to the server.",
+      "decrypt_btn": "🔓 Decrypt",
+      "result_title": "✅ Decryption Result",
+      "export_btn": "📥 Export CSV",
+      "reset_btn": "🔄 Decrypt Next",
+      "to_encrypt": "← Go to Encryption Form",
+      "to_online": "Back to Online Survey",
+      "overlay_title": "🔐 Decrypting with AES-256-GCM..."
+    },
+    "country": {
+      "title": "Select Country / Region",
+      "search_placeholder": "Search countries or regions...",
+      "close": "Close",
+      "no_result": "No matching countries or regions found"
+    }
+  },
+  "sections": {
+    "background": "Screening & Background",
+    "gender": "Gender Identity & Sexual Orientation",
+    "relationship": "Relationship Status",
+    "views": "Relationship Perspectives & Influencing Factors",
+    "open": "Open-Ended Questions",
+    "submit": "Verification & Submission"
+  },
+  "questions": {
+    "is_adult": {
+      "label": "Are you 18 years of age or older?"
+    },
+    "age_group": {
+      "label": "What is your age group?"
+    },
+    "education_stage": {
+      "label": "What is your current education stage?",
+      "hint": "If your education path is not standard high school or university, please select the closest option."
+    },
+    "major_category": {
+      "label": "What is your major category?"
+    },
+    "nationality_background": {
+      "label": "What is your nationality/household registration background?"
+    },
+    "region": {
+      "label": "Where do you currently live/study?"
+    },
+    "gender_identity": {
+      "label": "What is your gender identity?",
+      "hint": "You can search by keyword or browse the list."
+    },
+    "gender_identity_self_describe": {
+      "label": "Please describe in your own words. Do not include personally identifiable information.",
+      "placeholder": "Max 80 characters"
+    },
+    "sexual_orientation": {
+      "label": "Which of the following best describes your sexual orientation?"
+    },
+    "sexual_orientation_self_describe": {
+      "label": "Please describe in your own words.",
+      "placeholder": "Max 80 characters"
+    },
+    "relationship_status": {
+      "label": "What is your current relationship status?"
+    },
+    "relationship_willingness": {
+      "label": "How would you describe your willingness to be in a relationship?"
+    },
+    "love_importance": {
+      "label": "How important do you think romantic relationships are in college life?"
+    },
+    "influence_factors": {
+      "label": "What factors affect your current relationship status?"
+    },
+    "love_view": {
+      "label": "Which of the following best describes your view on love?"
+    },
+    "partner_factors": {
+      "label": "What do you value most when choosing a partner?"
+    },
+    "long_distance_acceptance": {
+      "label": "Can you accept a long-distance relationship?"
+    },
+    "study_impact": {
+      "label": "What impact do you think romantic relationships have on academic performance?"
+    },
+    "relationship_core_values": {
+      "label": "What do you think is most important in a romantic relationship?"
+    },
+    "conflict_handling": {
+      "label": "When conflicts arise in a relationship, what do you tend to do?"
+    },
+    "relationship_pressure": {
+      "label": "Do you feel any external or internal pressure about romantic relationships?"
+    },
+    "boundary_awareness": {
+      "label": "What are your thoughts on personal boundaries in romantic relationships?"
+    },
+    "help_seeking": {
+      "label": "When you encounter emotional problems, do you seek help?"
+    },
+    "school_education_need": {
+      "label": "Do you think schools should offer relationship/emotional education?"
+    },
+    "school_support": {
+      "label": "Do you think the emotional support currently provided by your school is sufficient?"
+    },
+    "open_problem": {
+      "label": "What is the biggest challenge or concern you currently face regarding romantic relationships?",
+      "placeholder": "Enter here..."
+    },
+    "open_suggestion": {
+      "label": "What suggestions do you have for college relationship education or emotional support?",
+      "placeholder": "Enter here..."
+    },
+    "adult-fields": {
+      "label": "Are you 18 years of age or older?"
+    },
+    "gender-combobox": {
+      "label": "What is your gender identity? (Optional, searchable)"
+    },
+    "sexual-orientation-select": {
+      "label": "Which of the following best describes your sexual orientation?"
+    }
+  },
+  "options": {
+    "yes_18_or_above": "Yes, I am 18 or above",
+    "no_under_18": "No, I am under 18",
+    "prefer_not_to_say": "Prefer not to say",
+    "not_sure": "Not sure",
+    "self_describe": "Other / Self-describe",
+    "other": "Other / Self-describe",
+    "other_not_listed": "Other (not listed)",
+    "prefer_to_self_describe": "I prefer to self-describe",
+    "18_20": "18–20 years old",
+    "21_23": "21–23 years old",
+    "24_26": "24–26 years old",
+    "27_or_above": "27 years old or above",
+    "senior_high_grade_3": "Senior high school grade 3",
+    "equivalent_to_senior_high_grade_3": "Equivalent to senior high final year (vocational/technical/international high school, A-Level/IB/AP, etc.)",
+    "gap_year_or_not_currently_enrolled": "Gap year / Not currently enrolled",
+    "college_preparatory_or_foundation": "College preparatory / Foundation / Bridge program",
+    "undergraduate_year_1": "Undergraduate year 1 / Freshman",
+    "undergraduate_year_2": "Undergraduate year 2 / Sophomore",
+    "undergraduate_year_3": "Undergraduate year 3 / Junior",
+    "undergraduate_year_4": "Undergraduate year 4 / Senior",
+    "undergraduate_year_5_or_above": "5-year or higher undergraduate program",
+    "junior_college": "Junior college / Vocational college",
+    "postgraduate_master": "Master's degree",
+    "postgraduate_doctoral": "Doctoral degree",
+    "humanities": "Humanities",
+    "social_science": "Social Sciences",
+    "natural_science": "Natural Sciences",
+    "engineering": "Engineering & Technology",
+    "medicine": "Medicine & Health",
+    "arts": "Arts & Sports",
+    "business": "Business & Economics",
+    "law": "Law",
+    "education": "Education",
+    "agriculture": "Agriculture",
+    "china_mainland": "Mainland China",
+    "hong_kong_macau_taiwan": "Hong Kong, Macau, Taiwan",
+    "overseas_chinese": "Overseas Chinese",
+    "other_country": "Other country/region",
+    "north_china": "North China",
+    "northeast_china": "Northeast China",
+    "east_china": "East China",
+    "central_china": "Central China",
+    "south_china": "South China",
+    "southwest_china": "Southwest China",
+    "northwest_china": "Northwest China",
+    "overseas": "Overseas",
+    "heterosexual": "Heterosexual",
+    "homosexual": "Homosexual",
+    "gay": "Gay",
+    "lesbian": "Lesbian",
+    "bisexual": "Bisexual",
+    "pansexual": "Pansexual",
+    "asexual": "Asexual",
+    "demisexual": "Demisexual",
+    "queer": "Queer",
+    "questioning": "Questioning / Unsure",
+    "never_dated": "Never dated",
+    "dated_before_currently_single": "Dated before, currently single",
+    "currently_in_relationship": "Currently in a relationship",
+    "ambiguous_or_unofficial_relationship": "In an ambiguous or unofficial relationship",
+    "not_sure_how_to_define": "Not sure how to define current relationship",
+    "strongly_want": "Strongly want a relationship",
+    "somewhat_want": "Somewhat want a relationship",
+    "let_it_be": "Let it happen naturally",
+    "not_now": "Don't want a relationship right now",
+    "clearly_not_want": "Clearly do not want a relationship",
+    "very_important": "Very important",
+    "somewhat_important": "Somewhat important",
+    "neutral": "Neutral",
+    "not_very_important": "Not very important",
+    "not_important_at_all": "Not important at all",
+    "academic_pressure": "Academic pressure",
+    "small_social_circle": "Small social circle",
+    "lack_of_suitable_partner": "Lack of suitable partners",
+    "financial_constraints": "Financial constraints",
+    "family_expectations": "Family expectations or attitudes",
+    "personal_goals": "Personal development goals prioritized",
+    "past_experiences": "Past experiences",
+    "social_media_influence": "Social media influence",
+    "peer_pressure": "Peer pressure",
+    "no_time": "Not enough time",
+    "serious_commitment": "Serious relationship with marriage in mind",
+    "casual_dating": "Enjoy the present, not necessarily marriage-oriented",
+    "let_nature_take_course": "Let nature take its course, no deliberate pursuit",
+    "marriage_oriented": "Looking for a lifelong partner",
+    "experience_oriented": "Gaining relationship experience",
+    "independent_love": "Maintain independence, love as a supplement to life",
+    "personality": "Personality compatibility",
+    "appearance": "Physical appearance",
+    "values_match": "Matching values",
+    "education_background": "Educational background",
+    "family_background": "Family background",
+    "sense_of_humor": "Sense of humor",
+    "emotional_stability": "Emotional stability",
+    "ambition": "Ambition / Drive",
+    "shared_interests": "Shared interests",
+    "financial_stability": "Financial stability",
+    "physical_attraction": "Physical attraction",
+    "kindness": "Kindness and thoughtfulness",
+    "fully_accept": "Fully acceptable",
+    "somewhat_accept": "Somewhat acceptable",
+    "depends": "Depends on the situation",
+    "somewhat_reject": "Somewhat unacceptable",
+    "fully_reject": "Completely unacceptable",
+    "very_positive": "Very positive",
+    "somewhat_positive": "Somewhat positive",
+    "no_impact": "No obvious impact",
+    "somewhat_negative": "Somewhat negative",
+    "very_negative": "Very negative",
+    "mutual_trust": "Mutual trust",
+    "communication": "Effective communication",
+    "respect": "Mutual respect",
+    "shared_goals": "Shared goals",
+    "emotional_support": "Emotional support",
+    "personal_space": "Personal space",
+    "honesty": "Honesty and openness",
+    "loyalty": "Loyalty and exclusivity",
+    "growth_together": "Growing together",
+    "passion": "Passion and romance",
+    "communicate_openly": "Communicate openly, express thoughts",
+    "cool_down_first": "Cool down first",
+    "seek_compromise": "Seek compromise",
+    "avoid_conflict": "Avoid conflict, wait for the other to speak first",
+    "ask_friends": "Talk to friends or seek advice",
+    "seek_professional_help": "Seek professional counseling",
+    "strong_pressure": "A lot of pressure",
+    "some_pressure": "Some pressure",
+    "no_pressure": "No pressure",
+    "very_important_boundary": "Very important",
+    "somewhat_important_boundary": "Somewhat important",
+    "not_very_important_boundary": "Not very important",
+    "always": "Always seek help",
+    "sometimes": "Sometimes",
+    "rarely": "Rarely",
+    "never": "Never",
+    "very_needed": "Very needed",
+    "somewhat_needed": "Somewhat needed",
+    "neutral_need": "Neutral",
+    "not_very_needed": "Not very needed",
+    "not_needed_at_all": "Not needed at all",
+    "very_sufficient": "Very sufficient",
+    "somewhat_sufficient": "Somewhat sufficient",
+    "somewhat_insufficient": "Somewhat insufficient",
+    "very_insufficient": "Very insufficient"
+  },
+  "gender_groups": {
+    "常规选项": "Common options",
+    "女性相关认同": "Feminine identities",
+    "男性相关认同": "Masculine identities",
+    "非二元与性别酷儿": "Non-binary & genderqueer",
+    "无性别、弱性别与中性": "Agender, neutral & demigender",
+    "流动性、变化性与多重性别": "Fluid, flux & multigender",
+    "部分性别与连接性认同": "Partial & connected identities",
+    "文化、社群与历史性别认同": "Cultural, community & historical",
+    "跨性别、非顺性别与相关伞状认同": "Transgender & umbrella",
+    "其他广义或自定义认同": "Other & self-defined"
+  },
+  "gender_options": [
+    {
+      "value": "female",
+      "label": "Female",
+      "group": "Common options"
+    },
+    {
+      "value": "male",
+      "label": "Male",
+      "group": "Common options"
+    },
+    {
+      "value": "prefer_not_to_say",
+      "label": "Prefer not to say",
+      "group": "Common options"
+    },
+    {
+      "value": "not_sure",
+      "label": "Not sure",
+      "group": "Common options"
+    },
+    {
+      "value": "self_describe",
+      "label": "Other / Self-describe",
+      "group": "Common options"
+    },
+    {
+      "value": "woman",
+      "label": "Woman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "girl",
+      "label": "Girl",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "cisgender_woman",
+      "label": "Cisgender woman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "cis_woman",
+      "label": "Cis woman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "transgender_woman",
+      "label": "Transgender woman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "trans_woman",
+      "label": "Trans woman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "transfeminine",
+      "label": "Transfeminine",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "femme",
+      "label": "Femme",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "demigirl",
+      "label": "Demigirl",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "demiwoman",
+      "label": "Demiwoman",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "librafeminine",
+      "label": "Librafeminine",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "paragirl",
+      "label": "Paragirl",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "juxera",
+      "label": "Juxera",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "girlflux",
+      "label": "Girlflux",
+      "group": "Feminine identities"
+    },
+    {
+      "value": "man",
+      "label": "Man",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "boy",
+      "label": "Boy",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "cisgender_man",
+      "label": "Cisgender man",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "cis_man",
+      "label": "Cis man",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "transgender_man",
+      "label": "Transgender man",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "trans_man",
+      "label": "Trans man",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "transmasculine",
+      "label": "Transmasculine",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "masc",
+      "label": "Masc",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "demiboy",
+      "label": "Demiboy",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "demiman",
+      "label": "Demiman",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "libramasculine",
+      "label": "Libramasculine",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "paraboy",
+      "label": "Paraboy",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "proxvir",
+      "label": "Proxvir",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "boyflux",
+      "label": "Boyflux",
+      "group": "Masculine identities"
+    },
+    {
+      "value": "nonbinary",
+      "label": "Non-binary",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "non_binary",
+      "label": "Non binary",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "enby",
+      "label": "Enby",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "genderqueer",
+      "label": "Genderqueer",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_nonconforming",
+      "label": "Gender non-conforming",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_variant",
+      "label": "Gender variant",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_diverse",
+      "label": "Gender diverse",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_expansive",
+      "label": "Gender expansive",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_creative",
+      "label": "Gender creative",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "gender_independent",
+      "label": "Gender independent",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "third_gender",
+      "label": "Third gender",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "other_gender",
+      "label": "Other gender",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "neither_man_nor_woman",
+      "label": "Neither man nor woman",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "both_man_and_woman",
+      "label": "Both man and woman",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "between_man_and_woman",
+      "label": "Between man and woman",
+      "group": "Non-binary & genderqueer"
+    },
+    {
+      "value": "agender",
+      "label": "Agender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "genderless",
+      "label": "Genderless",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "genderfree",
+      "label": "Genderfree",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "gendervoid",
+      "label": "Gendervoid",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "voidgender",
+      "label": "Voidgender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "nullgender",
+      "label": "Nullgender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "neutrois",
+      "label": "Neutrois",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "neutral_gender",
+      "label": "Neutral gender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "androgyne",
+      "label": "Androgyne",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "androgynous",
+      "label": "Androgynous",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "maverique",
+      "label": "Maverique",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "aporagender",
+      "label": "Aporagender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "aliagender",
+      "label": "Aliagender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "epicene",
+      "label": "Epicene",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "cassgender",
+      "label": "Cassgender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "greygender",
+      "label": "Greygender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "graygender",
+      "label": "Graygender",
+      "group": "Agender, neutral & demigender"
+    },
+    {
+      "value": "genderfluid",
+      "label": "Genderfluid",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderflux",
+      "label": "Genderflux",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "fluidflux",
+      "label": "Fluidflux",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "bigender",
+      "label": "Bigender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "trigender",
+      "label": "Trigender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "pangender",
+      "label": "Pangender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "polygender",
+      "label": "Polygender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "multigender",
+      "label": "Multigender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "omnigender",
+      "label": "Omnigender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "ambigender",
+      "label": "Ambigender",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderfae",
+      "label": "Genderfae",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderfaun",
+      "label": "Genderfaun",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderflor",
+      "label": "Genderflor",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderfruct",
+      "label": "Genderfruct",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderfrith",
+      "label": "Genderfrith",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderdoe",
+      "label": "Genderdoe",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderbuck",
+      "label": "Genderbuck",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "demifluid",
+      "label": "Demifluid",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "demiflux",
+      "label": "Demiflux",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "genderfluid_nonbinary",
+      "label": "Genderfluid non-binary",
+      "group": "Fluid, flux & multigender"
+    },
+    {
+      "value": "demigender",
+      "label": "Demigender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "deminonbinary",
+      "label": "Deminonbinary",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "demineutral",
+      "label": "Demineutral",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "demifluid_identity",
+      "label": "Demifluid identity",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "demiflux_identity",
+      "label": "Demiflux identity",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "semigender",
+      "label": "Semigender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "hemigender",
+      "label": "Hemigender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "libragender",
+      "label": "Libragender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "librafluid",
+      "label": "Librafluid",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "paragender",
+      "label": "Paragender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "perigender",
+      "label": "Perigender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "quasigender",
+      "label": "Quasigender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "offgender",
+      "label": "Offgender",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "gender_near",
+      "label": "Gender-near",
+      "group": "Partial & connected identities"
+    },
+    {
+      "value": "two_spirit",
+      "label": "Two-Spirit",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "hijra",
+      "label": "Hijra",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "faafafine",
+      "label": "Fa'afafine",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "faafatama",
+      "label": "Fa'afatama",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "muxe",
+      "label": "Muxe",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "travesti",
+      "label": "Travesti",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "bakla",
+      "label": "Bakla",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "kathoey",
+      "label": "Kathoey",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "waria",
+      "label": "Waria",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "mahu",
+      "label": "Māhū",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "fakaleiti",
+      "label": "Fakaleiti",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "akavaine",
+      "label": "Akava'ine",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "bissu",
+      "label": "Bissu",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "calabai",
+      "label": "Calabai",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "calalai",
+      "label": "Calalai",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "x_gender",
+      "label": "X-gender",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "x_jenda",
+      "label": "X-jenda",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "sekhet",
+      "label": "Sekhet",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "sworn_virgin",
+      "label": "Sworn virgin",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "femminiello",
+      "label": "Femminiello",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "guevedoche",
+      "label": "Guevedoche",
+      "group": "Cultural, community & historical"
+    },
+    {
+      "value": "transgender",
+      "label": "Transgender",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "trans",
+      "label": "Trans",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "trans_star",
+      "label": "Trans*",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "non_cisgender",
+      "label": "Non-cisgender",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "gender_minority",
+      "label": "Gender minority",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "transsexual",
+      "label": "Transsexual",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "transvestite_identity",
+      "label": "Transvestite identity",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "crossdresser_identity",
+      "label": "Crossdresser identity",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "questioning_gender",
+      "label": "Questioning gender",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "gender_questioning",
+      "label": "Gender questioning",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "intergender",
+      "label": "Intergender",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "intersex_identity",
+      "label": "Intersex identity",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "intersex_nonbinary",
+      "label": "Intersex non-binary",
+      "group": "Transgender & umbrella"
+    },
+    {
+      "value": "queer",
+      "label": "Queer",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "queer_gender",
+      "label": "Queer gender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "pomogender",
+      "label": "Pomogender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "novigender",
+      "label": "Novigender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "autigender",
+      "label": "Autigender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "neurogender",
+      "label": "Neurogender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "xenogender",
+      "label": "Xenogender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "aesthetigender",
+      "label": "Aesthetigender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "kingender",
+      "label": "Kingender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "personagender",
+      "label": "Personagender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "egogender",
+      "label": "Egogender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "charagender",
+      "label": "Charagender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "mirrorgender",
+      "label": "Mirrorgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "blurgender",
+      "label": "Blurgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "chaosgender",
+      "label": "Chaosgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "cosmicgender",
+      "label": "Cosmicgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "stargender",
+      "label": "Stargender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "solargender",
+      "label": "Solargender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "lunargender",
+      "label": "Lunargender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "cadensgender",
+      "label": "Cadensgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "colorgender",
+      "label": "Colorgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "dreamgender",
+      "label": "Dreamgender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "oneirogender",
+      "label": "Oneirogender",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "other_not_listed",
+      "label": "Other (not listed)",
+      "group": "Other & self-defined"
+    },
+    {
+      "value": "prefer_to_self_describe",
+      "label": "Prefer to self-describe",
+      "group": "Other & self-defined"
+    }
+  ],
+  "errors": {
+    "请求格式错误": "Invalid request format.",
+    "请先同意知情同意说明": "Please agree to the informed consent statement first.",
+    "本问卷仅面向年满_18_周岁的受访者": "This survey is only for respondents aged 18 and above.",
+    "年龄段选项不合法": "Invalid age group option.",
+    "教育阶段选项不合法": "Invalid education stage option.",
+    "缺少_turnstile_验证": "Missing Turnstile verification.",
+    "人机验证失败请刷新后重试": "Human verification failed. Please refresh and try again.",
+    "数据库未绑定": "Database not bound.",
+    "性别认同自我描述不能超过_80_字": "Gender identity self-description cannot exceed 80 characters.",
+    "性取向自我描述不能超过_80_字": "Sexual orientation self-description cannot exceed 80 characters.",
+    "恋爱状态选项不合法": "Invalid relationship status option.",
+    "恋爱意愿选项不合法": "Invalid relationship willingness option.",
+    "数据库写入失败": "Database write failed: ",
+    "服务器内部错误": "Server internal error: ",
+    "method_not_allowed": "Method Not Allowed",
+    "INVALID_REQUEST_FORMAT": "Invalid request format.",
+    "MISSING_CONSENT": "Please agree to the informed consent statement first.",
+    "AGE_RESTRICTION": "This survey is only for respondents aged 18 and above.",
+    "INVALID_AGE_GROUP": "Invalid age group option.",
+    "INVALID_EDUCATION_STAGE": "Invalid education stage option.",
+    "MISSING_TURNSTILE": "Missing Turnstile verification.",
+    "TURNSTILE_FAILED": "Human verification failed. Please refresh and try again.",
+    "DATABASE_NOT_BOUND": "Database not bound.",
+    "GENDER_DESCRIBE_TOO_LONG": "Gender identity self-description cannot exceed 80 characters.",
+    "ORIENTATION_DESCRIBE_TOO_LONG": "Sexual orientation self-description cannot exceed 80 characters.",
+    "INVALID_RELATIONSHIP_STATUS": "Invalid relationship status option.",
+    "INVALID_RELATIONSHIP_WILLINGNESS": "Invalid relationship willingness option.",
+    "DATABASE_WRITE_FAILED": "Database write failed: ",
+    "SERVER_INTERNAL_ERROR": "Server internal error: ",
+    "METHOD_NOT_ALLOWED": "Method Not Allowed"
+  },
+  "countries": {
+    "AF": "Afghanistan",
+    "AL": "Albania",
+    "DZ": "Algeria",
+    "AR": "Argentina",
+    "AU": "Australia",
+    "AT": "Austria",
+    "BD": "Bangladesh",
+    "BE": "Belgium",
+    "BR": "Brazil",
+    "KH": "Cambodia",
+    "CA": "Canada",
+    "CL": "Chile",
+    "CN": "China",
+    "CO": "Colombia",
+    "CR": "Costa Rica",
+    "CU": "Cuba",
+    "CZ": "Czech Republic",
+    "DK": "Denmark",
+    "EG": "Egypt",
+    "FI": "Finland",
+    "FR": "France",
+    "DE": "Germany",
+    "GH": "Ghana",
+    "GR": "Greece",
+    "GT": "Guatemala",
+    "HK": "Hong Kong",
+    "HU": "Hungary",
+    "IS": "Iceland",
+    "IN": "India",
+    "ID": "Indonesia",
+    "IR": "Iran",
+    "IQ": "Iraq",
+    "IE": "Ireland",
+    "IL": "Israel",
+    "IT": "Italy",
+    "JM": "Jamaica",
+    "JP": "Japan",
+    "JO": "Jordan",
+    "KZ": "Kazakhstan",
+    "KE": "Kenya",
+    "KW": "Kuwait",
+    "LA": "Laos",
+    "LV": "Latvia",
+    "LB": "Lebanon",
+    "LY": "Libya",
+    "LT": "Lithuania",
+    "LU": "Luxembourg",
+    "MO": "Macau",
+    "MG": "Madagascar",
+    "MY": "Malaysia",
+    "MV": "Maldives",
+    "MX": "Mexico",
+    "MN": "Mongolia",
+    "MA": "Morocco",
+    "MM": "Myanmar",
+    "NP": "Nepal",
+    "NL": "Netherlands",
+    "NZ": "New Zealand",
+    "NG": "Nigeria",
+    "NO": "Norway",
+    "OM": "Oman",
+    "PK": "Pakistan",
+    "PA": "Panama",
+    "PG": "Papua New Guinea",
+    "PE": "Peru",
+    "PH": "Philippines",
+    "PL": "Poland",
+    "PT": "Portugal",
+    "QA": "Qatar",
+    "RO": "Romania",
+    "RU": "Russia",
+    "SA": "Saudi Arabia",
+    "SG": "Singapore",
+    "SK": "Slovakia",
+    "ZA": "South Africa",
+    "KR": "South Korea",
+    "ES": "Spain",
+    "LK": "Sri Lanka",
+    "SE": "Sweden",
+    "CH": "Switzerland",
+    "TW": "Taiwan",
+    "TH": "Thailand",
+    "TR": "Turkey",
+    "AE": "UAE",
+    "UA": "Ukraine",
+    "GB": "United Kingdom",
+    "US": "United States",
+    "UY": "Uruguay",
+    "UZ": "Uzbekistan",
+    "VE": "Venezuela",
+    "VN": "Vietnam",
+    "YE": "Yemen"
+  }
+}

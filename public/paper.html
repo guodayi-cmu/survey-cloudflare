@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="ui.paper.title">高校大学生恋爱现状调研 · 纸质版</title>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff; margin: 0; }
+      .page { box-shadow: none; margin: 0; max-width: 100%; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "SimSun", "Songti SC", serif;
+      background: #f5f5f5;
+      color: #000;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 24mm 20mm;
+      min-height: 297mm;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 { text-align: center; font-size: 22px; margin-bottom: 6px; }
+    .subtitle { text-align: center; font-size: 13px; color: #333; margin-bottom: 16px; }
+    .paper-id {
+      border: 1px solid #000; padding: 8px 12px; margin-bottom: 16px;
+      font-size: 13px;
+    }
+    .paper-id strong { font-size: 15px; }
+    .notice {
+      border: 1px solid #000; padding: 10px; font-size: 12px; margin-bottom: 16px;
+    }
+    .notice p { margin: 0 0 6px; }
+    .section-title {
+      font-size: 15px; font-weight: bold; margin: 16px 0 8px;
+      border-bottom: 1px solid #000; padding-bottom: 4px;
+    }
+    .question { margin-bottom: 12px; }
+    .question-label {
+      font-size: 13px; font-weight: bold; margin-bottom: 4px;
+    }
+    .question-hint { font-size: 11px; color: #333; margin-bottom: 4px; }
+    .options { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .option {
+      font-size: 12px; display: flex; align-items: center; gap: 4px;
+    }
+    .box {
+      display: inline-block; width: 12px; height: 12px;
+      border: 1px solid #000; flex-shrink: 0;
+    }
+    .lines {
+      border-bottom: 1px solid #000; height: 24px; margin-top: 4px;
+    }
+    .footer {
+      margin-top: 24px; border-top: 2px solid #000; padding-top: 12px;
+      font-size: 12px;
+    }
+    .footer h3 { font-size: 14px; margin: 0 0 8px; }
+    .footer p { margin: 0 0 4px; }
+    .address {
+      border: 1px solid #000; padding: 10px; margin-top: 8px;
+      font-size: 13px; text-align: center;
+    }
+    .no-print {
+      text-align: center; margin-bottom: 20px;
+    }
+    .no-print button {
+      padding: 10px 24px; font-size: 15px; cursor: pointer;
+      background: #111827; color: #fff; border: none; border-radius: 8px;
+    }
+  </style>
+  <script src="./js/i18n.js"></script>
+</head>
+<body>
+  <div class="no-print">
+    <button onclick="window.print()">打印此页</button>
+  </div>
+
+  <div class="page">
+    <h1 data-i18n="ui.survey.title">高校大学生恋爱现状调研</h1>
+    <div class="subtitle">纸质填写版 · 课程作业 · 匿名问卷</div>
+
+    <div class="paper-id">
+      <strong>你的问卷编号：</strong> <span id="paper-code" style="font-size:16px; font-weight:bold;"></span>
+      <button class="no-print" onclick="copyCode()" style="margin-left:8px; padding:4px 10px; font-size:12px;">复制编号</button>
+      <br>
+      <span style="font-size:11px;">请将此编号抄写在纸质问卷顶部和信封上，以便我们核对。此编号与您的答卷一一对应。</span>
+    </div>
+    <script>
+      const code = 'P-' + new Date().toISOString().slice(0,10).replace(/-/g,'') + '-' + Math.floor(1000 + Math.random()*9000);
+      document.getElementById('paper-code').textContent = code;
+      function copyCode() {
+        navigator.clipboard.writeText(code).then(() => alert('编号已复制：' + code));
+      }
+    </script>
+
+    <div class="notice">
+      <p><strong data-i18n="ui.paper.notice_title">填写说明：</strong></p>
+      <p>1. 本问卷仅用于课程作业统计分析，采用匿名方式。请不要填写姓名、学号、手机号等可识别个人身份的信息。</p>
+      <p>2. 请用黑色或蓝色笔在对应选项前的 □ 内打勾（✓）。如选"其他"，请在横线上补充说明。</p>
+      <p>3. 开放题请在横线上书写，内容不超过 200 字。</p>
+      <p>4. 如不方便回答某题，可跳过或在"不愿透露"处打勾。</p>
+      <p>5. 填写完成后，请将本页装入信封，按下方地址邮寄。</p>
+    </div>
+
+    <div class="section-title">一、筛查与基本背景</div>
+
+    <div class="question">
+      <div class="question-label">Q1. 你是否已年满 18 周岁？</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 是，我已年满 18 周岁</div>
+        <div class="option"><span class="box"></span> 否，我未满 18 周岁</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q2. 你的年龄段是？</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 18–20 岁</div>
+        <div class="option"><span class="box"></span> 21–23 岁</div>
+        <div class="option"><span class="box"></span> 24–26 岁</div>
+        <div class="option"><span class="box"></span> 27 岁及以上</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q3. 你目前所处的教育阶段是？</div>
+      <div class="question-hint">如果你的教育路径不是普通高中或普通本科，请选择最接近的选项。</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 普通高中高三</div>
+        <div class="option"><span class="box"></span> 同等教育阶段毕业年级（中职/技校/职高/国际高中等）</div>
+        <div class="option"><span class="box"></span> 高中毕业后暂未入学 / 间隔年</div>
+        <div class="option"><span class="box"></span> 大学预科 / Foundation / 桥梁课程</div>
+        <div class="option"><span class="box"></span> 本科一年级 / 大一</div>
+        <div class="option"><span class="box"></span> 本科二年级 / 大二</div>
+        <div class="option"><span class="box"></span> 本科三年级 / 大三</div>
+        <div class="option"><span class="box"></span> 本科四年级 / 大四</div>
+        <div class="option"><span class="box"></span> 五年制或更高年级本科</div>
+        <div class="option"><span class="box"></span> 专科 / 高职</div>
+        <div class="option"><span class="box"></span> 硕士研究生</div>
+        <div class="option"><span class="box"></span> 博士研究生</div>
+        <div class="option"><span class="box"></span> 其他：__________</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q4. 你的专业所属大类是？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 人文科学</div>
+        <div class="option"><span class="box"></span> 社会科学</div>
+        <div class="option"><span class="box"></span> 自然科学</div>
+        <div class="option"><span class="box"></span> 工程技术</div>
+        <div class="option"><span class="box"></span> 医药卫生</div>
+        <div class="option"><span class="box"></span> 艺术体育</div>
+        <div class="option"><span class="box"></span> 经济管理</div>
+        <div class="option"><span class="box"></span> 法学</div>
+        <div class="option"><span class="box"></span> 教育</div>
+        <div class="option"><span class="box"></span> 农学</div>
+        <div class="option"><span class="box"></span> 其他：__________</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q5. 你的国籍/户籍背景是？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 中国大陆</div>
+        <div class="option"><span class="box"></span> 港澳台地区</div>
+        <div class="option"><span class="box"></span> 海外华侨</div>
+        <div class="option"><span class="box"></span> 其他国家/地区</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q6. 你目前主要居住/学习的地区是？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 华北地区</div>
+        <div class="option"><span class="box"></span> 东北地区</div>
+        <div class="option"><span class="box"></span> 华东地区</div>
+        <div class="option"><span class="box"></span> 华中地区</div>
+        <div class="option"><span class="box"></span> 华南地区</div>
+        <div class="option"><span class="box"></span> 西南地区</div>
+        <div class="option"><span class="box"></span> 西北地区</div>
+        <div class="option"><span class="box"></span> 海外</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="section-title">二、性别认同与性取向</div>
+    <div class="question-hint">以下题目较为私密，仅用于群体统计分析。可选择"不愿透露"或跳过。</div>
+
+    <div class="question">
+      <div class="question-label">Q7. 你的自我性别认同是？（选填）</div>
+      <div class="question-hint">如列表中没有合适选项，可在"其他"处补充。</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> Female / 女性</div>
+        <div class="option"><span class="box"></span> Male / 男性</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+        <div class="option"><span class="box"></span> 尚不确定</div>
+        <div class="option"><span class="box"></span> 其他：__________</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q8. 你的性取向更接近以下哪一项？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 异性恋 / Heterosexual</div>
+        <div class="option"><span class="box"></span> 同性恋 / Homosexual</div>
+        <div class="option"><span class="box"></span> Gay</div>
+        <div class="option"><span class="box"></span> Lesbian</div>
+        <div class="option"><span class="box"></span> 双性恋 / Bisexual</div>
+        <div class="option"><span class="box"></span> 泛性恋 / Pansexual</div>
+        <div class="option"><span class="box"></span> 无性恋 / Asexual</div>
+        <div class="option"><span class="box"></span> 半性恋 / Demisexual</div>
+        <div class="option"><span class="box"></span> 酷儿 / Queer</div>
+        <div class="option"><span class="box"></span> 尚不确定 / Questioning</div>
+        <div class="option"><span class="box"></span> 其他：__________</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="section-title">三、恋爱现状</div>
+
+    <div class="question">
+      <div class="question-label">Q9. 你目前的恋爱状态是？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 从未恋爱过</div>
+        <div class="option"><span class="box"></span> 曾经恋爱，目前单身</div>
+        <div class="option"><span class="box"></span> 正在恋爱中</div>
+        <div class="option"><span class="box"></span> 处于暧昧或非正式关系中</div>
+        <div class="option"><span class="box"></span> 不确定如何定义目前关系</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q10. 你对恋爱的意愿更接近？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 很希望恋爱</div>
+        <div class="option"><span class="box"></span> 比较希望恋爱</div>
+        <div class="option"><span class="box"></span> 顺其自然</div>
+        <div class="option"><span class="box"></span> 暂时不想恋爱</div>
+        <div class="option"><span class="box"></span> 明确不想恋爱</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="section-title">四、恋爱观念与影响因素</div>
+
+    <div class="question">
+      <div class="question-label">Q11. 你认为恋爱在大学生活中重要吗？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 非常重要</div>
+        <div class="option"><span class="box"></span> 比较重要</div>
+        <div class="option"><span class="box"></span> 一般</div>
+        <div class="option"><span class="box"></span> 不太重要</div>
+        <div class="option"><span class="box"></span> 完全不重要</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q12. 哪些因素影响你目前的恋爱状态？（可多选）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 学业压力</div>
+        <div class="option"><span class="box"></span> 社交圈较小</div>
+        <div class="option"><span class="box"></span> 缺少合适的交往对象</div>
+        <div class="option"><span class="box"></span> 经济因素</div>
+        <div class="option"><span class="box"></span> 家庭期望或态度</div>
+        <div class="option"><span class="box"></span> 个人发展目标优先</div>
+        <div class="option"><span class="box"></span> 过往经历影响</div>
+        <div class="option"><span class="box"></span> 社交媒体影响</div>
+        <div class="option"><span class="box"></span> 同辈压力</div>
+        <div class="option"><span class="box"></span> 没有足够时间</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q13. 你的恋爱观更接近以下哪种？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 以结婚为目的的认真交往</div>
+        <div class="option"><span class="box"></span> 享受当下，不一定以结婚为目的</div>
+        <div class="option"><span class="box"></span> 顺其自然，不刻意追求</div>
+        <div class="option"><span class="box"></span> 以寻找终身伴侣为目标</div>
+        <div class="option"><span class="box"></span> 积累恋爱经验为主</div>
+        <div class="option"><span class="box"></span> 保持独立，恋爱是生活的补充</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q14. 择偶时你最看重什么？（可多选）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 性格相合</div>
+        <div class="option"><span class="box"></span> 外貌形象</div>
+        <div class="option"><span class="box"></span> 三观一致</div>
+        <div class="option"><span class="box"></span> 教育背景</div>
+        <div class="option"><span class="box"></span> 家庭背景</div>
+        <div class="option"><span class="box"></span> 幽默感</div>
+        <div class="option"><span class="box"></span> 情绪稳定</div>
+        <div class="option"><span class="box"></span> 上进心</div>
+        <div class="option"><span class="box"></span> 共同兴趣</div>
+        <div class="option"><span class="box"></span> 经济稳定</div>
+        <div class="option"><span class="box"></span> 身体吸引力</div>
+        <div class="option"><span class="box"></span> 善良体贴</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q15. 你能接受异地恋吗？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 完全可以接受</div>
+        <div class="option"><span class="box"></span> 比较可以接受</div>
+        <div class="option"><span class="box"></span> 视具体情况而定</div>
+        <div class="option"><span class="box"></span> 比较不能接受</div>
+        <div class="option"><span class="box"></span> 完全不能接受</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q16. 你认为恋爱对学业有什么影响？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 非常积极</div>
+        <div class="option"><span class="box"></span> 比较积极</div>
+        <div class="option"><span class="box"></span> 没有明显影响</div>
+        <div class="option"><span class="box"></span> 比较消极</div>
+        <div class="option"><span class="box"></span> 非常消极</div>
+        <div class="option"><span class="box"></span> 视具体情况而定</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q17. 你认为恋爱关系中最重要的是什么？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 相互信任</div>
+        <div class="option"><span class="box"></span> 有效沟通</div>
+        <div class="option"><span class="box"></span> 相互尊重</div>
+        <div class="option"><span class="box"></span> 共同目标</div>
+        <div class="option"><span class="box"></span> 情感支持</div>
+        <div class="option"><span class="box"></span> 个人空间</div>
+        <div class="option"><span class="box"></span> 诚实坦诚</div>
+        <div class="option"><span class="box"></span> 忠诚专一</div>
+        <div class="option"><span class="box"></span> 共同成长</div>
+        <div class="option"><span class="box"></span> 激情浪漫</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q18. 恋爱中发生冲突时你倾向于？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 直接沟通，表达想法</div>
+        <div class="option"><span class="box"></span> 先冷静一段时间</div>
+        <div class="option"><span class="box"></span> 寻求妥协方案</div>
+        <div class="option"><span class="box"></span> 回避冲突，等对方先开口</div>
+        <div class="option"><span class="box"></span> 向朋友倾诉或寻求建议</div>
+        <div class="option"><span class="box"></span> 寻求专业心理咨询</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q19. 你是否感受到来自外界或自身的恋爱压力？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 压力很大</div>
+        <div class="option"><span class="box"></span> 有一定压力</div>
+        <div class="option"><span class="box"></span> 没有压力</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q20. 你对恋爱中个人边界感的看法？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 非常重要</div>
+        <div class="option"><span class="box"></span> 比较重要</div>
+        <div class="option"><span class="box"></span> 一般</div>
+        <div class="option"><span class="box"></span> 不太重要</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q21. 遇到情感问题时你会寻求帮助吗？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 总是寻求帮助</div>
+        <div class="option"><span class="box"></span> 有时会</div>
+        <div class="option"><span class="box"></span> 很少</div>
+        <div class="option"><span class="box"></span> 从不</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q22. 你认为学校是否需要开展恋爱/情感教育？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 非常需要</div>
+        <div class="option"><span class="box"></span> 比较需要</div>
+        <div class="option"><span class="box"></span> 无所谓</div>
+        <div class="option"><span class="box"></span> 不太需要</div>
+        <div class="option"><span class="box"></span> 完全不需要</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q23. 你认为学校目前提供的情感支持是否足够？（选填）</div>
+      <div class="options">
+        <div class="option"><span class="box"></span> 非常充足</div>
+        <div class="option"><span class="box"></span> 比较充足</div>
+        <div class="option"><span class="box"></span> 一般</div>
+        <div class="option"><span class="box"></span> 不太充足</div>
+        <div class="option"><span class="box"></span> 非常不足</div>
+        <div class="option"><span class="box"></span> 不愿透露</div>
+      </div>
+    </div>
+
+    <div class="section-title">五、开放题</div>
+
+    <div class="question">
+      <div class="question-label">Q24. 目前你在恋爱方面最大的困扰或挑战是什么？（选填，最多 200 字）</div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-label">Q25. 你对高校恋爱教育或情感支持有什么建议？（选填，最多 200 字）</div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+    </div>
+
+    <div class="footer">
+      <h3 data-i18n="ui.paper.submit_title">纸质问卷提交方式</h3>
+      <p data-i18n="ui.paper.submit_desc">请将填写完成的问卷装入信封，通过以下任一方式邮寄：</p>
+      <ul>
+        <li data-i18n="ui.paper.ems">中国邮政 EMS</li>
+        <li data-i18n="ui.paper.registered">中国邮政挂号信</li>
+        <li data-i18n="ui.paper.upu">万国邮政联盟（从中国大陆以外地区寄往中国大陆）</li>
+      </ul>
+      <div class="address">
+        <strong>收件地址</strong><br>
+        中国大陆 辽宁省 沈阳市 沈北新区 蒲河路 77 号<br>
+        中国医科大学<br>
+        <span style="font-size:11px;">邮编：110122</span>
+      </div>
+      <p style="margin-top:8px; font-size:11px;">
+        纸质问卷将通过专有程序加密解析，配套唯一编号可回溯对应答案。所有数据仅用于课程作业统计分析。
+      </p>
+    </div>
+  </div>
+<script>
+  (async function() {
+    const detected = I18n.detect();
+    await I18n.load(detected);
+    I18n.applyDOM();
+  })();
+</script>
+</body>
+</html>

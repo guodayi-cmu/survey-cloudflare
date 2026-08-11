@@ -1,0 +1,1563 @@
+{
+  "_meta": {
+    "name": "繁體中文（香港）",
+    "name_local": "繁體中文（香港）",
+    "dir": "ltr",
+    "font": "system-ui, -apple-system, 'Segoe UI', sans-serif"
+  },
+  "defaults": {
+    "region": "north_china",
+    "nationality_background": "china_mainland"
+  },
+  "available_options": {
+    "is_adult": [
+      "yes_18_or_above",
+      "no_under_18"
+    ],
+    "age_group": [
+      "18_20",
+      "21_23",
+      "24_26",
+      "27_or_above",
+      "prefer_not_to_say"
+    ],
+    "education_stage": [
+      "senior_high_grade_3",
+      "equivalent_to_senior_high_grade_3",
+      "gap_year_or_not_currently_enrolled",
+      "college_preparatory_or_foundation",
+      "undergraduate_year_1",
+      "undergraduate_year_2",
+      "undergraduate_year_3",
+      "undergraduate_year_4",
+      "undergraduate_year_5_or_above",
+      "junior_college",
+      "postgraduate_master",
+      "postgraduate_doctoral",
+      "prefer_not_to_say"
+    ],
+    "major_category": [
+      "humanities",
+      "social_science",
+      "natural_science",
+      "engineering",
+      "medicine",
+      "arts",
+      "business",
+      "law",
+      "education",
+      "agriculture",
+      "prefer_not_to_say"
+    ],
+    "nationality_background": [
+      "china_mainland",
+      "hong_kong_macau_taiwan",
+      "overseas_chinese",
+      "other_country",
+      "prefer_not_to_say"
+    ],
+    "region": [
+      "north_china",
+      "northeast_china",
+      "east_china",
+      "central_china",
+      "south_china",
+      "southwest_china",
+      "northwest_china",
+      "overseas",
+      "prefer_not_to_say"
+    ],
+    "sexual_orientation": [
+      "heterosexual",
+      "homosexual",
+      "gay",
+      "lesbian",
+      "bisexual",
+      "pansexual",
+      "asexual",
+      "demisexual",
+      "queer",
+      "questioning",
+      "prefer_not_to_say",
+      "other"
+    ],
+    "relationship_status": [
+      "never_dated",
+      "dated_before_currently_single",
+      "currently_in_relationship",
+      "ambiguous_or_unofficial_relationship",
+      "not_sure_how_to_define",
+      "prefer_not_to_say"
+    ],
+    "relationship_willingness": [
+      "strongly_want",
+      "somewhat_want",
+      "let_it_be",
+      "not_now",
+      "clearly_not_want",
+      "prefer_not_to_say"
+    ],
+    "love_importance": [
+      "very_important",
+      "somewhat_important",
+      "neutral",
+      "not_very_important",
+      "not_important_at_all",
+      "prefer_not_to_say"
+    ],
+    "love_view": [
+      "serious_commitment",
+      "casual_dating",
+      "let_nature_take_course",
+      "marriage_oriented",
+      "experience_oriented",
+      "independent_love",
+      "prefer_not_to_say"
+    ],
+    "long_distance_acceptance": [
+      "fully_accept",
+      "somewhat_accept",
+      "depends",
+      "somewhat_reject",
+      "fully_reject",
+      "prefer_not_to_say"
+    ],
+    "study_impact": [
+      "very_positive",
+      "somewhat_positive",
+      "no_impact",
+      "somewhat_negative",
+      "very_negative",
+      "prefer_not_to_say"
+    ],
+    "relationship_core_values": [
+      "mutual_trust",
+      "communication",
+      "respect",
+      "shared_goals",
+      "emotional_support",
+      "personal_space",
+      "honesty",
+      "loyalty",
+      "growth_together",
+      "passion",
+      "prefer_not_to_say"
+    ],
+    "conflict_handling": [
+      "communicate_openly",
+      "cool_down_first",
+      "seek_compromise",
+      "avoid_conflict",
+      "ask_friends",
+      "seek_professional_help",
+      "prefer_not_to_say"
+    ],
+    "relationship_pressure": [
+      "strong_pressure",
+      "some_pressure",
+      "no_pressure",
+      "prefer_not_to_say"
+    ],
+    "boundary_awareness": [
+      "very_important",
+      "somewhat_important",
+      "not_very_important",
+      "prefer_not_to_say"
+    ],
+    "help_seeking": [
+      "always",
+      "sometimes",
+      "rarely",
+      "never",
+      "prefer_not_to_say"
+    ],
+    "school_education_need": [
+      "very_needed",
+      "somewhat_needed",
+      "neutral",
+      "not_very_needed",
+      "not_needed_at_all",
+      "prefer_not_to_say"
+    ],
+    "school_support": [
+      "very_sufficient",
+      "somewhat_sufficient",
+      "somewhat_insufficient",
+      "very_insufficient",
+      "prefer_not_to_say"
+    ]
+  },
+  "ui": {
+    "survey": {
+      "title": "高校大學生戀愛現狀調研",
+      "subtitle": "課程作業 · 匿名問卷 · 僅用於統計分析"
+    },
+    "intro": {
+      "desc": "這是一份用於課程作業的匿名問卷，旨在了解高校學生在戀愛狀態、亲密關系觀念、情感壓力與校園支持需求方面的整體情況。",
+      "time": "預計填写時間：5–8 分鐘",
+      "method": "填写方式：匿名、自願、可跳過敏感題",
+      "purpose": "數據用途：僅用於課程作業統計分析"
+    },
+    "button": {
+      "start": "查看隱私說明並開始填写",
+      "agree": "我已閱讀並同意，開始填写",
+      "decline": "不同意，退出問卷",
+      "submit": "提交問卷",
+      "print": "打印此頁",
+      "copy": "復制密文",
+      "next_survey": "填写下一份",
+      "paper_submit": "📄 不方便在線填写？使用紙質郵寄提交",
+      "download_paper": "下載紙質版問卷",
+      "go_encrypt": "前往加密填写端"
+    },
+    "common": {
+      "select_placeholder": "請選擇",
+      "optional": "（選填）",
+      "multiple": "（可多選）",
+      "required": "（必填）"
+    },
+    "progress": {
+      "section": "第 {current} / {total} 部分：{name}",
+      "percent": "已完成 {pct}%"
+    },
+    "status": {
+      "submitting": "正在提交...",
+      "submit_failed": "提交失敗：{msg}"
+    },
+    "success": {
+      "title": "提交成功",
+      "message": "感謝你的填写，你的匿名答卷將僅用於課程作業的統計分析。",
+      "again": "再填一份"
+    },
+    "decline": {
+      "title": "你已選擇不參與本次問卷",
+      "message": "感謝你的閱讀。"
+    },
+    "underage": {
+      "title": "感謝你的關注",
+      "message": "由于本問卷涉及較為私密的個人問題，為保護未成年受訪者隱私，本問卷僅面向已年滿 18 周歲的受訪者開放。"
+    },
+    "privacy": {
+      "title": "研究對象告知與隱私說明",
+      "welcome": "歡迎參加《高校大學生戀愛現狀調研》。本問卷僅用於課程作業中的統計分析與學习研究，不用於商業用途、個体評价或身份識別。",
+      "read_first": "在開始填写前，請你仔細閱讀以下說明：",
+      "data_security": {
+        "title": "關于數據託管與安全",
+        "body": "本問卷網頁使用經多重第三方合規審查與數據安全檢驗的 Cloudflare 公司託管服務，並採用必要的訪問保護與防濫用驗證措施。我們会以可信、審慎和負責任的方式處理數據，所有結果僅用於群体層面的匯總統計、圖表分析和結論討論，不会將單份答卷直接關聯到具體個人。"
+      },
+      "anonymity": {
+        "title": "關于匿名性",
+        "body": "本問卷不要求填写姓名、學號、手機號、身份證號、詳細住址、宿舍號、微信號、QQ 號等可直接識別個人身份的資訊。請不要在開放題中主動填写任何可識別個人身份的内容。"
+      },
+      "abuse": {
+        "title": "關于防濫用資訊",
+        "body": "為防止重復提交、惡意刷票和機器人提交，系統可能會記錄必要的 HTTPS 請求元數據，例如提交時間、瀏覽器 User-Agent、Cloudflare 提供的請求安全資訊，以及經雜湊處理的網絡請求標識。"
+      },
+      "sensitive": {
+        "title": "關于敏感問題",
+        "body": "本問卷可能涉及國籍與居住地区、自我性別認同、性取向、戀愛狀態、戀愛觀念等較為私密的問題。相關題目僅用於群体統計分析。對於你不願回答的問題，可以選擇「不願透露」或跳過。"
+      },
+      "voluntary": {
+        "title": "關於自願參與",
+        "body": "你可以自願决定是否填写本問卷，提交前也可以隨時退出。提交問卷即表示你已閱讀並理解以上說明，並同意將你的匿名答卷用於本課程作業的數據分析。"
+      },
+      "age": {
+        "title": "關於年齡限制",
+        "body": "如你未滿 18 周歲，建議不要繼續填写涉及性別認同、性取向、戀愛經歷等私密内容的問題。系統会根據年齡與教育階段選擇，决定是否繼續進入正式問卷。"
+      },
+      "consent_check": "我確認已閱讀以上說明，並自願參加本問卷調查。",
+      "paper_option": "如果你不方便在線填写，也可以選擇",
+      "paper_link": "📄 紙質郵寄提交",
+      "ai": {
+        "title": "關於 AI 數據接觸",
+        "body": "0 AI 接觸數據。所有結果不會經由任何 AI 處理。"
+      }
+    },
+    "paper": {
+      "title": "高校大學生戀愛現狀調研 · 紙質版",
+      "subtitle": "紙質填写版 · 課程作業 · 匿名問卷",
+      "id_label": "你的問卷編號：",
+      "copy_id": "復制編號",
+      "id_note": "請將此編號抄写在紙質問卷頂部和信封上，以便我們核對。此編號與您的答卷一一對应。",
+      "notice_title": "填写說明：",
+      "submit_title": "紙質問卷提交方式",
+      "submit_desc": "請將填写完成的問卷裝入信封，通過以下任一方式郵寄：",
+      "ems": "中國郵政 EMS",
+      "registered": "中國郵政掛號信",
+      "upu": "万國郵政聯盟（從中國大陸以外地区寄往中國大陸）",
+      "address_title": "收件地址",
+      "address_line1": "中國大陸 遼寧省 沈陽市 沈北新区 蒲河路 77 號",
+      "address_line2": "中國医科大學",
+      "address_zip": "郵編：110122",
+      "footer_note": "紙質問卷將通過专有程序加密解析，配套唯一編號可回溯對应答案。所有數據僅用於課程作業統計分析。",
+      "copied": "編號已復制："
+    },
+    "lang": {
+      "switch": "🌐 語言",
+      "auto": "自動識別",
+      "zh-CN": "簡体中文",
+      "zh-TW": "繁體中文（台灣）",
+      "zh-HK": "繁體中文（香港）",
+      "en": "English",
+      "ja": "日本語",
+      "ko": "한국어"
+    },
+    "gender": {
+      "search_placeholder": "搜索...",
+      "display_placeholder": "請選擇或搜索你的自我性別認同",
+      "empty_result": "未找到匹配項，你可以選擇「其他 / 自我描述」。",
+      "self_describe_hint": "你可以用自己的語言描述。請不要填写姓名、學號、聯系方式等身份資訊。"
+    },
+    "sections": {
+      "gender_hint": "以下題目較為私密，僅用於群体層面的統計分析。你可以選擇「不願透露」或跳過。"
+    },
+    "encrypt": {
+      "title": "端到端加密紙質問卷 | E2E Encrypted Paper Survey",
+      "header": "🔒 端到端加密紙質問卷",
+      "subtitle": "數據在您的瀏覽器中完成加密，服務器永遠無法讀取原始内容",
+      "step1": "在線填写問卷",
+      "step2": "本地加密",
+      "step3": "打印密文",
+      "step4": "郵寄紙質密文",
+      "key_label": "🔐 加密方式說明",
+      "key_warning": "請務必把編號写在紙上，與密文一起郵寄。若編號丢失，工作人员將無法解密。",
+      "success": "✅ 加密完成",
+      "result_desc": "您的答卷已通過 AES-256-GCM 算法在本地瀏覽器中完成加密。下方是加密后的密文，請打印此頁並郵寄。",
+      "print_title": "📄 加密紙質問卷 · 郵寄聯",
+      "paper_id_label": "問卷編號：",
+      "algorithm_label": "加密算法：",
+      "time_label": "生成時間：",
+      "key_label_print": "解密密鑰（即問卷編號）：",
+      "address_label": "郵寄地址：",
+      "submit_btn": "🔐 生成加密答卷並打印",
+      "print_btn": "🖨️ 打印此頁",
+      "copy_btn": "📋 復制密文",
+      "next_btn": "🔄 填写下一份",
+      "to_decode": "→ 前往解密演示端",
+      "to_online": "返回在線問卷",
+      "copy_alert": "密文已復制到剪貼闆",
+      "error_prefix": "加密失敗：",
+      "encrypting": "正在加密..."
+    },
+    "decode": {
+      "title": "紙質問卷解密演示 | Paper Survey Decryption Demo",
+      "header": "🔓 紙質問卷解密演示端",
+      "subtitle": "輸入加密密文與密鑰，在本地瀏覽器中完成解密",
+      "step1_title": "Step 1: 輸入密文",
+      "cipher_label": "加密密文（從紙質問卷上抄写或掃描）",
+      "cipher_placeholder": "粘貼加密密文... 格式: ivBase64:cipherBase64",
+      "cipher_hint": "密文僅包含隨機字符，不包含任何可識別的個人資訊。",
+      "step2_title": "Step 2: 輸入解密密鑰",
+      "key_label": "解密密鑰",
+      "key_hint": "此密鑰與加密端使用的密鑰相同。密鑰不会上传到服務器。",
+      "decrypt_btn": "🔓 执行解密",
+      "result_title": "✅ 解密結果",
+      "export_btn": "📥 導出 CSV",
+      "reset_btn": "🔄 解密下一份",
+      "to_encrypt": "← 前往加密填写端",
+      "to_online": "返回在線問卷",
+      "overlay_title": "🔐 正在使用 AES-256-GCM 专有算法解密..."
+    },
+    "country": {
+      "title": "選擇國家 / 地区",
+      "search_placeholder": "搜索國家或地区...",
+      "close": "關閉",
+      "no_result": "未找到匹配的國家或地区"
+    }
+  },
+  "sections": {
+    "background": "篩查與基本背景",
+    "gender": "性別認同與性取向",
+    "relationship": "戀愛現狀",
+    "views": "戀愛觀念與影响因素",
+    "open": "開放題",
+    "submit": "驗證與提交"
+  },
+  "questions": {
+    "adult-fields": {
+      "label": "你是否已年滿 18 周歲？"
+    },
+    "age_group": {
+      "label": "你的年齡段是？"
+    },
+    "education_stage": {
+      "label": "你目前所處的教育階段是？",
+      "hint": "如果你的教育路徑不是普通高中或普通本科，請選擇最接近你當前學习階段的選項。"
+    },
+    "major_category": {
+      "label": "你的专業所屬大類是？"
+    },
+    "nationality_background": {
+      "label": "你的國籍/戶籍背景是？"
+    },
+    "region": {
+      "label": "你目前主要居住/學习的地区是？"
+    },
+    "gender-combobox": {
+      "label": "你的自我性別認同是？（選填，可搜索）"
+    },
+    "sexual-orientation-select": {
+      "label": "你的性取向更接近以下哪一項？"
+    },
+    "relationship_status": {
+      "label": "你目前的戀愛狀態是？"
+    },
+    "relationship_willingness": {
+      "label": "你對戀愛的意願更接近？"
+    },
+    "love_importance": {
+      "label": "你認為戀愛在大學生活中重要吗？"
+    },
+    "love_view": {
+      "label": "你的戀愛觀更接近以下哪種？"
+    },
+    "long_distance_acceptance": {
+      "label": "你能接受異地戀吗？"
+    },
+    "study_impact": {
+      "label": "你認為戀愛對學業有什么影响？"
+    },
+    "relationship_core_values": {
+      "label": "你認為戀愛關系中最重要的是什么？"
+    },
+    "conflict_handling": {
+      "label": "戀愛中發生冲突時你倾向于？"
+    },
+    "relationship_pressure": {
+      "label": "你是否感受到來自外界或自身的戀愛壓力？"
+    },
+    "boundary_awareness": {
+      "label": "你對戀愛中個人邊界感的看法？"
+    },
+    "help_seeking": {
+      "label": "遇到情感問題時你会尋求帮助吗？"
+    },
+    "school_education_need": {
+      "label": "你認為學校是否需要開展戀愛/情感教育？"
+    },
+    "school_support": {
+      "label": "你認為學校目前提供的情感支持是否足夠？"
+    },
+    "open_problem": {
+      "label": "目前你在戀愛方面最大的困擾或挑戰是什么？",
+      "placeholder": "可在此輸入..."
+    },
+    "open_suggestion": {
+      "label": "你對高校戀愛教育或情感支持有什么建議？",
+      "placeholder": "可在此輸入..."
+    },
+    "is_adult": {
+      "label": "你是否已年滿 18 周歲？"
+    },
+    "gender_identity": {
+      "label": "你的自我性別認同是？",
+      "hint": "你可以在搜索框中輸入關鍵詞查找，也可以直接瀏覽列表。"
+    },
+    "gender_identity_self_describe": {
+      "label": "你可以用自己的語言描述。請不要填写姓名、學號、聯系方式等身份資訊。",
+      "placeholder": "最多 80 字"
+    },
+    "sexual_orientation_self_describe": {
+      "label": "你可以用自己的語言描述。",
+      "placeholder": "最多 80 字"
+    }
+  },
+  "options": {
+    "18_20": "18–20 歲",
+    "21_23": "21–23 歲",
+    "24_26": "24–26 歲",
+    "27_or_above": "27 歲及以上",
+    "prefer_not_to_say": "不願透露",
+    "senior_high_grade_3": "普通高中高三",
+    "equivalent_to_senior_high_grade_3": "同等教育階段的畢業年級（中職三年級、技校三年級、職高三年級、國際高中 12 年級、A-Level / IB / AP 等）",
+    "gap_year_or_not_currently_enrolled": "高中畢業后暫未入學 / 間隔年 / 當前未在校",
+    "college_preparatory_or_foundation": "大學預科 / Foundation / 橋梁課程",
+    "undergraduate_year_1": "本科一年級 / Year 1",
+    "undergraduate_year_2": "本科二年級 / Year 2",
+    "undergraduate_year_3": "本科三年級 / Year 3",
+    "undergraduate_year_4": "本科四年級 / Year 4",
+    "undergraduate_year_5_or_above": "五年制或更高年級本科",
+    "junior_college": "专科 / 高職",
+    "postgraduate_master": "碩士研究生",
+    "postgraduate_doctoral": "博士研究生",
+    "other": "其他 / 自我描述",
+    "humanities": "人文科學",
+    "social_science": "社会科學",
+    "natural_science": "自然科學",
+    "engineering": "工程技術",
+    "medicine": "医藥卫生",
+    "arts": "藝術体育",
+    "business": "經濟管理",
+    "law": "法學",
+    "education": "教育",
+    "agriculture": "农學",
+    "china_mainland": "中國大陸",
+    "hong_kong_macau_taiwan": "港澳台地区",
+    "overseas_chinese": "海外華僑",
+    "other_country": "其他國家/地区",
+    "north_china": "華北地区",
+    "northeast_china": "東北地区",
+    "east_china": "華東地区",
+    "central_china": "華中地区",
+    "south_china": "華南地区",
+    "southwest_china": "西南地区",
+    "northwest_china": "西北地区",
+    "overseas": "海外",
+    "heterosexual": "異性戀 / Heterosexual",
+    "homosexual": "同性戀 / Homosexual",
+    "gay": "Gay",
+    "lesbian": "Lesbian",
+    "bisexual": "双性戀 / Bisexual",
+    "pansexual": "泛性戀 / Pansexual",
+    "asexual": "無性戀 / Asexual",
+    "demisexual": "半性戀 / Demisexual",
+    "queer": "酷儿 / Queer",
+    "questioning": "尚不確定 / Questioning",
+    "never_dated": "從未戀愛過",
+    "dated_before_currently_single": "曾經戀愛，目前單身",
+    "currently_in_relationship": "正在戀愛中",
+    "ambiguous_or_unofficial_relationship": "處于曖昧或非正式關系中",
+    "not_sure_how_to_define": "不確定如何定义目前關系",
+    "strongly_want": "很希望戀愛",
+    "somewhat_want": "比較希望戀愛",
+    "let_it_be": "順其自然",
+    "not_now": "暫時不想戀愛",
+    "clearly_not_want": "明確不想戀愛",
+    "very_important": "非常重要",
+    "somewhat_important": "比較重要",
+    "neutral": "一般",
+    "not_very_important": "不太重要",
+    "not_important_at_all": "完全不重要",
+    "serious_commitment": "以結婚為目的的認真交往",
+    "casual_dating": "享受當下，不一定以結婚為目的",
+    "let_nature_take_course": "順其自然，不刻意追求",
+    "marriage_oriented": "以尋找終身伴侣為目標",
+    "experience_oriented": "積累戀愛經驗為主",
+    "independent_love": "保持獨立，戀愛是生活的補充",
+    "fully_accept": "完全可以接受",
+    "somewhat_accept": "比較可以接受",
+    "depends": "視具體情況而定",
+    "somewhat_reject": "比較不能接受",
+    "fully_reject": "完全不能接受",
+    "very_positive": "非常積極",
+    "somewhat_positive": "比較積極",
+    "no_impact": "沒有明顯影响",
+    "somewhat_negative": "比較消極",
+    "very_negative": "非常消極",
+    "mutual_trust": "相互信任",
+    "communication": "有效溝通",
+    "respect": "相互尊重",
+    "shared_goals": "共同目標",
+    "emotional_support": "情感支持",
+    "personal_space": "個人空間",
+    "honesty": "誠實坦誠",
+    "loyalty": "忠誠专一",
+    "growth_together": "共同成長",
+    "passion": "激情浪漫",
+    "communicate_openly": "直接溝通，表達想法",
+    "cool_down_first": "先冷靜一段時間",
+    "seek_compromise": "尋求妥协方案",
+    "avoid_conflict": "回避冲突，等對方先開口",
+    "ask_friends": "向朋友倾訴或尋求建議",
+    "seek_professional_help": "尋求专業心理咨詢",
+    "strong_pressure": "壓力很大",
+    "some_pressure": "有一定壓力",
+    "no_pressure": "沒有壓力",
+    "always": "總是尋求帮助",
+    "sometimes": "有時会",
+    "rarely": "很少",
+    "never": "從不",
+    "very_needed": "非常需要",
+    "somewhat_needed": "比較需要",
+    "not_very_needed": "不太需要",
+    "not_needed_at_all": "完全不需要",
+    "very_sufficient": "非常充足",
+    "somewhat_sufficient": "比較充足",
+    "somewhat_insufficient": "不太充足",
+    "very_insufficient": "非常不足",
+    "yes_18_or_above": "是，我已年滿 18 周歲",
+    "no_under_18": "否，我未滿 18 周歲",
+    "academic_pressure": "學業壓力",
+    "small_social_circle": "社交圈較小",
+    "lack_of_suitable_partner": "缺少合適的交往對象",
+    "financial_constraints": "經濟因素",
+    "family_expectations": "家庭期望或態度",
+    "personal_goals": "個人發展目標优先",
+    "past_experiences": "過往經历影响",
+    "social_media_influence": "社交媒体影响",
+    "peer_pressure": "同輩壓力",
+    "no_time": "沒有足夠時間",
+    "personality": "性格相合",
+    "appearance": "外貌形象",
+    "values_match": "三觀一致",
+    "education_background": "教育背景",
+    "family_background": "家庭背景",
+    "sense_of_humor": "幽默感",
+    "emotional_stability": "情緒穩定",
+    "ambition": "上進心",
+    "shared_interests": "共同兴趣",
+    "financial_stability": "經濟穩定",
+    "physical_attraction": "身体吸引力",
+    "kindness": "善良体貼"
+  },
+  "gender_options": [
+    {
+      "value": "female",
+      "label": "Female / 女性",
+      "group": "常規選項"
+    },
+    {
+      "value": "male",
+      "label": "Male / 男性",
+      "group": "常規選項"
+    },
+    {
+      "value": "prefer_not_to_say",
+      "label": "不願透露",
+      "group": "常規選項"
+    },
+    {
+      "value": "not_sure",
+      "label": "尚不確定",
+      "group": "常規選項"
+    },
+    {
+      "value": "self_describe",
+      "label": "其他 / 自我描述",
+      "group": "常規選項"
+    },
+    {
+      "value": "woman",
+      "label": "Woman / 女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "girl",
+      "label": "Girl / 女孩",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "cisgender_woman",
+      "label": "Cisgender woman / 順性別女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "cis_woman",
+      "label": "Cis woman / 順性別女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "transgender_woman",
+      "label": "Transgender woman / 跨性別女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "trans_woman",
+      "label": "Trans woman / 跨性別女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "transfeminine",
+      "label": "Transfeminine / 跨女性化",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "femme",
+      "label": "Femme / 女性化認同",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "demigirl",
+      "label": "Demigirl / 半女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "demiwoman",
+      "label": "Demiwoman / 半女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "librafeminine",
+      "label": "Librafeminine / 偏女性的弱性別認同",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "paragirl",
+      "label": "Paragirl / 大部分女性認同",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "juxera",
+      "label": "Juxera / 接近女性但非完全女性",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "girlflux",
+      "label": "Girlflux / 女性感強度流動",
+      "group": "女性相關認同"
+    },
+    {
+      "value": "man",
+      "label": "Man / 男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "boy",
+      "label": "Boy / 男孩",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "cisgender_man",
+      "label": "Cisgender man / 順性別男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "cis_man",
+      "label": "Cis man / 順性別男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "transgender_man",
+      "label": "Transgender man / 跨性別男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "trans_man",
+      "label": "Trans man / 跨性別男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "transmasculine",
+      "label": "Transmasculine / 跨男性化",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "masc",
+      "label": "Masc / 男性化認同",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "demiboy",
+      "label": "Demiboy / 半男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "demiman",
+      "label": "Demiman / 半男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "libramasculine",
+      "label": "Libramasculine / 偏男性的弱性別認同",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "paraboy",
+      "label": "Paraboy / 大部分男性認同",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "proxvir",
+      "label": "Proxvir / 接近男性但非完全男性",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "boyflux",
+      "label": "Boyflux / 男性感強度流動",
+      "group": "男性相關認同"
+    },
+    {
+      "value": "nonbinary",
+      "label": "Non-binary / 非二元性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "non_binary",
+      "label": "Non binary / 非二元性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "enby",
+      "label": "Enby / 非二元",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "genderqueer",
+      "label": "Genderqueer / 性別酷儿",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_nonconforming",
+      "label": "Gender non-conforming / 性別不順從",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_variant",
+      "label": "Gender variant / 性別变体",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_diverse",
+      "label": "Gender diverse / 多元性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_expansive",
+      "label": "Gender expansive / 擴展性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_creative",
+      "label": "Gender creative / 创造性性別表達",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "gender_independent",
+      "label": "Gender independent / 獨立性別認同",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "third_gender",
+      "label": "Third gender / 第三性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "other_gender",
+      "label": "Other gender / 其他性別",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "neither_man_nor_woman",
+      "label": "Neither man nor woman / 既非男性也非女性",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "both_man_and_woman",
+      "label": "Both man and woman / 同時認同男性與女性",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "between_man_and_woman",
+      "label": "Between man and woman / 介于男性與女性之間",
+      "group": "非二元與性別酷儿"
+    },
+    {
+      "value": "agender",
+      "label": "Agender / 無性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "genderless",
+      "label": "Genderless / 無性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "genderfree",
+      "label": "Genderfree / 不受性別定义",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "gendervoid",
+      "label": "Gendervoid / 性別空無",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "voidgender",
+      "label": "Voidgender / 空無性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "nullgender",
+      "label": "Nullgender / 空性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "neutrois",
+      "label": "Neutrois / 中性性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "neutral_gender",
+      "label": "Neutral gender / 中性性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "androgyne",
+      "label": "Androgyne / 雌雄同体式性別認同",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "androgynous",
+      "label": "Androgynous / 中性或双性化認同",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "maverique",
+      "label": "Maverique / 獨立于男女框架的性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "aporagender",
+      "label": "Aporagender / 非男非女且具有明確性別感",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "aliagender",
+      "label": "Aliagender / 另性別",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "epicene",
+      "label": "Epicene / 中性",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "cassgender",
+      "label": "Cassgender / 性別對自我不重要",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "greygender",
+      "label": "Greygender / 弱性別感",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "graygender",
+      "label": "Graygender / 弱性別感",
+      "group": "無性別、弱性別與中性"
+    },
+    {
+      "value": "genderfluid",
+      "label": "Genderfluid / 性別流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderflux",
+      "label": "Genderflux / 性別強度流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "fluidflux",
+      "label": "Fluidflux / 性別類型與強度均流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "bigender",
+      "label": "Bigender / 双性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "trigender",
+      "label": "Trigender / 三性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "pangender",
+      "label": "Pangender / 泛性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "polygender",
+      "label": "Polygender / 多性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "multigender",
+      "label": "Multigender / 多重性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "omnigender",
+      "label": "Omnigender / 全性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "ambigender",
+      "label": "Ambigender / 双重或模糊性別",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderfae",
+      "label": "Genderfae / 不包含男性的性別流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderfaun",
+      "label": "Genderfaun / 不包含女性的性別流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderflor",
+      "label": "Genderflor / 不包含男性或女性的性別流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderfruct",
+      "label": "Genderfruct / 性別波動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderfrith",
+      "label": "Genderfrith / 以男性與女性之外為主的流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderdoe",
+      "label": "Genderdoe / 偏女性范围流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderbuck",
+      "label": "Genderbuck / 偏男性范围流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "demifluid",
+      "label": "Demifluid / 部分性別固定、部分流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "demiflux",
+      "label": "Demiflux / 部分性別強度流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "genderfluid_nonbinary",
+      "label": "Genderfluid non-binary / 非二元性別流動",
+      "group": "流動性、变化性與多重性別"
+    },
+    {
+      "value": "demigender",
+      "label": "Demigender / 半性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "deminonbinary",
+      "label": "Deminonbinary / 半非二元",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "demineutral",
+      "label": "Demineutral / 半中性",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "demifluid_identity",
+      "label": "Demifluid identity / 半流動性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "demiflux_identity",
+      "label": "Demiflux identity / 半強度流動性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "semigender",
+      "label": "Semigender / 部分性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "hemigender",
+      "label": "Hemigender / 半性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "libragender",
+      "label": "Libragender / 弱性別認同",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "librafluid",
+      "label": "Librafluid / 弱性別流動",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "paragender",
+      "label": "Paragender / 大部分某性別認同",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "perigender",
+      "label": "Perigender / 接近某性別認同",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "quasigender",
+      "label": "Quasigender / 近似性別認同",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "offgender",
+      "label": "Offgender / 與某性別接近但不完全相同",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "gender_near",
+      "label": "Gender-near / 接近某性別",
+      "group": "部分性別與連接性認同"
+    },
+    {
+      "value": "two_spirit",
+      "label": "Two-Spirit / 双靈",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "hijra",
+      "label": "Hijra / 海吉拉",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "faafafine",
+      "label": "Fa'afafine",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "faafatama",
+      "label": "Fa'afatama",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "muxe",
+      "label": "Muxe",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "travesti",
+      "label": "Travesti",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "bakla",
+      "label": "Bakla",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "kathoey",
+      "label": "Kathoey",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "waria",
+      "label": "Waria",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "mahu",
+      "label": "Māhū",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "fakaleiti",
+      "label": "Fakaleiti",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "akavaine",
+      "label": "Akava'ine",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "bissu",
+      "label": "Bissu",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "calabai",
+      "label": "Calabai",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "calalai",
+      "label": "Calalai",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "x_gender",
+      "label": "X-gender",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "x_jenda",
+      "label": "X-jenda",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "sekhet",
+      "label": "Sekhet",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "sworn_virgin",
+      "label": "Sworn virgin",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "femminiello",
+      "label": "Femminiello",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "guevedoche",
+      "label": "Guevedoche",
+      "group": "文化、社群與历史性別認同"
+    },
+    {
+      "value": "transgender",
+      "label": "Transgender / 跨性別",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "trans",
+      "label": "Trans / 跨性別",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "trans_star",
+      "label": "Trans* / 跨性別伞狀認同",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "non_cisgender",
+      "label": "Non-cisgender / 非順性別",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "gender_minority",
+      "label": "Gender minority / 性別少數",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "transsexual",
+      "label": "Transsexual / 跨性別者",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "transvestite_identity",
+      "label": "Transvestite identity / 易裝相關身份認同",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "crossdresser_identity",
+      "label": "Crossdresser identity / 易裝相關身份認同",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "questioning_gender",
+      "label": "Questioning gender / 性別認同探索中",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "gender_questioning",
+      "label": "Gender questioning / 性別認同探索中",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "intergender",
+      "label": "Intergender / 間性別",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "intersex_identity",
+      "label": "Intersex identity / 間性相關認同",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "intersex_nonbinary",
+      "label": "Intersex non-binary / 間性非二元認同",
+      "group": "跨性別、非順性別與相關伞狀認同"
+    },
+    {
+      "value": "queer",
+      "label": "Queer / 酷儿",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "queer_gender",
+      "label": "Queer gender / 酷儿性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "pomogender",
+      "label": "Pomogender / 后現代性別認同",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "novigender",
+      "label": "Novigender / 難以归類或描述的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "autigender",
+      "label": "Autigender / 與自我体驗相關的性別認同",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "neurogender",
+      "label": "Neurogender / 與神經多樣性体驗相關的性別認同",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "xenogender",
+      "label": "Xenogender / 非传統語义框架性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "aesthetigender",
+      "label": "Aesthetigender / 與審美体驗相關的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "kingender",
+      "label": "Kingender / 與亲緣或身份体驗相關的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "personagender",
+      "label": "Personagender / 與人格体驗相關的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "egogender",
+      "label": "Egogender / 以自我体驗定义的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "charagender",
+      "label": "Charagender / 與角色体驗相關的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "mirrorgender",
+      "label": "Mirrorgender / 鏡像性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "blurgender",
+      "label": "Blurgender / 模糊性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "chaosgender",
+      "label": "Chaosgender / 混沌性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "cosmicgender",
+      "label": "Cosmicgender / 宇宙性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "stargender",
+      "label": "Stargender / 星性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "solargender",
+      "label": "Solargender / 太陽性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "lunargender",
+      "label": "Lunargender / 月亮性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "cadensgender",
+      "label": "Cadensgender / 隨音乐或節律变化的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "colorgender",
+      "label": "Colorgender / 與顏色体驗相關的性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "dreamgender",
+      "label": "Dreamgender / 夢境性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "oneirogender",
+      "label": "Oneirogender / 夢境相關性別",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "other_not_listed",
+      "label": "其他未列出",
+      "group": "其他廣义或自定义認同"
+    },
+    {
+      "value": "prefer_to_self_describe",
+      "label": "我希望自己描述",
+      "group": "其他廣义或自定义認同"
+    }
+  ],
+  "gender_groups": {
+    "常规选项": "常規選項",
+    "女性相关認同": "女性相關認同",
+    "男性相关認同": "男性相關認同",
+    "非二元与性别酷儿": "非二元與性別酷儿",
+    "无性别、弱性别与中性": "無性別、弱性別與中性",
+    "流动性、变化性与多重性别": "流動性、变化性與多重性別",
+    "部分性别与连接性認同": "部分性別與連接性認同",
+    "文化、社群与历史性别認同": "文化、社群與历史性別認同",
+    "跨性别、非顺性别与相关伞状認同": "跨性別、非順性別與相關伞狀認同",
+    "其他广义或自定义認同": "其他廣义或自定义認同"
+  },
+  "errors": {
+    "请求格式错误": "請求格式錯誤。",
+    "请先同意知情同意说明": "請先同意知情同意說明。",
+    "本问卷僅面向年满_18_周岁的受访者": "本問卷僅面向年滿 18 周歲的受訪者。",
+    "年龄段选项不合法": "年齡段選項不合法。",
+    "教育阶段选项不合法": "教育階段選項不合法。",
+    "缺少_turnstile_验证": "缺少 Turnstile 驗證。",
+    "人机验证失败请刷新后重试": "人機驗證失敗，請刷新后重試。",
+    "数据库未绑定": "數據库未綁定。",
+    "性别認同自我描述不能超过_80_字": "性別認同自我描述不能超過 80 字。",
+    "性取向自我描述不能超过_80_字": "性取向自我描述不能超過 80 字。",
+    "恋爱状态选项不合法": "戀愛狀態選項不合法。",
+    "恋爱意愿选项不合法": "戀愛意願選項不合法。",
+    "数据库写入失败": "數據库写入失敗：",
+    "服务器内部错误": "服務器内部錯誤：",
+    "method_not_allowed": "Method Not Allowed",
+    "INVALID_REQUEST_FORMAT": "請求格式錯誤。",
+    "MISSING_CONSENT": "請先同意知情同意說明。",
+    "AGE_RESTRICTION": "本問卷僅面向年滿 18 周歲的受訪者。",
+    "INVALID_AGE_GROUP": "年齡段選項不合法。",
+    "INVALID_EDUCATION_STAGE": "教育階段選項不合法。",
+    "MISSING_TURNSTILE": "缺少 Turnstile 驗證。",
+    "TURNSTILE_FAILED": "人機驗證失敗，請刷新后重試。",
+    "DATABASE_NOT_BOUND": "數據库未綁定。",
+    "GENDER_DESCRIBE_TOO_LONG": "性別認同自我描述不能超過 80 字。",
+    "ORIENTATION_DESCRIBE_TOO_LONG": "性取向自我描述不能超過 80 字。",
+    "INVALID_RELATIONSHIP_STATUS": "戀愛狀態選項不合法。",
+    "INVALID_RELATIONSHIP_WILLINGNESS": "戀愛意願選項不合法。",
+    "DATABASE_WRITE_FAILED": "數據库写入失敗：",
+    "SERVER_INTERNAL_ERROR": "服務器内部錯誤：",
+    "METHOD_NOT_ALLOWED": "Method Not Allowed"
+  },
+  "decode.columns.paper_id": "問卷編號",
+  "decode.columns.is_adult": "是否年滿18歲",
+  "decode.columns.age_group": "年齡段",
+  "decode.columns.education_stage": "教育階段",
+  "decode.columns.major_category": "专業大類",
+  "decode.columns.nationality_background": "國籍/戶籍",
+  "decode.columns.region": "所在地区",
+  "decode.columns.gender_identity": "性別認同",
+  "decode.columns.sexual_orientation": "性取向",
+  "decode.columns.relationship_status": "戀愛狀態",
+  "decode.columns.relationship_willingness": "戀愛意願",
+  "decode.columns.love_importance": "戀愛重要性",
+  "decode.columns.influence_factors": "影响因素",
+  "decode.columns.love_view": "戀愛觀",
+  "decode.columns.partner_factors": "擇偶因素",
+  "decode.columns.long_distance_acceptance": "異地戀接受度",
+  "decode.columns.study_impact": "對學業影响",
+  "decode.columns.relationship_core_values": "關系核心",
+  "decode.columns.conflict_handling": "冲突處理",
+  "decode.columns.relationship_pressure": "戀愛壓力",
+  "decode.columns.boundary_awareness": "邊界感",
+  "decode.columns.help_seeking": "求助行為",
+  "decode.columns.school_education_need": "戀愛教育需求",
+  "decode.columns.school_support": "情感支持評价",
+  "decode.columns.open_problem": "困擾或挑戰",
+  "decode.columns.open_suggestion": "建議",
+  "decode.empty": "未填寫",
+  "decode.error.no_cipher": "請輸入密文",
+  "decode.error.no_key": "請輸入解密密鑰",
+  "decode.error.decrypt_failed": "解密失敗：{msg}",
+  "countries": {
+    "CN": "中國",
+    "TW": "台灣",
+    "MO": "澳門",
+    "HK": "香港",
+    "DK": "丹麥",
+    "UA": "烏克蘭",
+    "UZ": "烏茲別克",
+    "UY": "烏拉圭",
+    "YE": "葉門",
+    "IL": "以色列",
+    "IQ": "伊拉克",
+    "IR": "伊朗",
+    "RU": "俄羅斯",
+    "IS": "冰島",
+    "LY": "利比亞",
+    "CA": "加拿大",
+    "GH": "迦納",
+    "HU": "匈牙利",
+    "ZA": "南非",
+    "QA": "卡達",
+    "LU": "盧森堡",
+    "IN": "印度",
+    "ID": "印尼",
+    "GT": "瓜地馬拉",
+    "CU": "古巴",
+    "KZ": "哈薩克",
+    "CO": "哥倫比亞",
+    "CR": "哥斯大黎加",
+    "TR": "土耳其",
+    "EG": "埃及",
+    "MX": "墨西哥",
+    "AT": "奧地利",
+    "VE": "委內瑞拉",
+    "BD": "孟加拉",
+    "NG": "奈及利亞",
+    "NP": "尼泊爾",
+    "PK": "巴基斯坦",
+    "PG": "巴布亞紐幾內亞",
+    "PA": "巴拿馬",
+    "BR": "巴西",
+    "GR": "希臘",
+    "DE": "德國",
+    "IT": "義大利",
+    "LV": "拉脫維亞",
+    "NO": "挪威",
+    "CZ": "捷克",
+    "MA": "摩洛哥",
+    "SK": "斯洛伐克",
+    "LK": "斯里蘭卡",
+    "SG": "新加坡",
+    "NZ": "紐西蘭",
+    "JP": "日本",
+    "CL": "智利",
+    "KH": "柬埔寨",
+    "BE": "比利時",
+    "SA": "沙烏地阿拉伯",
+    "FR": "法國",
+    "PL": "波蘭",
+    "TH": "泰國",
+    "AU": "澳洲",
+    "IE": "愛爾蘭",
+    "JM": "牙買加",
+    "SE": "瑞典",
+    "CH": "瑞士",
+    "KW": "科威特",
+    "PE": "秘魯",
+    "LT": "立陶宛",
+    "JO": "約旦",
+    "MM": "緬甸",
+    "RO": "羅馬尼亞",
+    "US": "美國",
+    "LA": "寮國",
+    "KE": "肯亞",
+    "FI": "芬蘭",
+    "GB": "英國",
+    "NL": "荷蘭",
+    "PH": "菲律賓",
+    "PT": "葡萄牙",
+    "MN": "蒙古",
+    "ES": "西班牙",
+    "VN": "越南",
+    "AF": "阿富汗",
+    "DZ": "阿爾及利亞",
+    "AL": "阿爾巴尼亞",
+    "OM": "阿曼",
+    "AR": "阿根廷",
+    "AE": "阿聯酋",
+    "KR": "韓國",
+    "MV": "馬爾地夫",
+    "MY": "馬來西亞",
+    "MG": "馬達加斯加",
+    "LB": "黎巴嫩"
+  }
+}

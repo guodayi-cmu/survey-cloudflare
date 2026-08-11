@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="ui.encrypt.title">端到端加密纸质问卷 | E2E Encrypted Paper Survey</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(0deg, rgba(0,255,100,0.03) 0px, rgba(0,255,100,0.03) 1px, transparent 1px, transparent 3px);
+      pointer-events: none; z-index: 9999;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; position: relative; z-index: 1; }
+
+    .header { text-align: center; margin-bottom: 24px; }
+    .header h1 { font-size: 20px; color: #00ff88; margin-bottom: 6px; }
+    .header p { font-size: 13px; color: #8899aa; }
+    .badge {
+      display: inline-block; background: rgba(0,255,136,0.1); border: 1px solid #00ff88;
+      color: #00ff88; padding: 2px 10px; border-radius: 4px; font-size: 11px; margin-top: 8px;
+    }
+
+    .step-bar {
+      display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .step {
+      flex: 1; min-width: 120px; padding: 10px; border: 1px solid #223344;
+      background: rgba(0,20,30,0.5); font-size: 12px; color: #667788;
+    }
+    .step.active { border-color: #00ff88; color: #00ff88; background: rgba(0,255,136,0.05); }
+    .step-num { font-size: 18px; font-weight: bold; display: block; margin-bottom: 2px; }
+
+    .panel {
+      background: rgba(10,15,25,0.8); border: 1px solid #223344;
+      border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    }
+    .panel h2 { font-size: 15px; color: #00ff88; margin-bottom: 12px; border-bottom: 1px solid #223344; padding-bottom: 8px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 13px; color: #ccddee; margin-bottom: 4px; font-weight: 600; }
+    .field select, .field input[type="text"], .field textarea {
+      width: 100%; padding: 10px 12px; background: #0d1117; border: 1px solid #334455;
+      color: #e0e0e0; border-radius: 8px; font-size: 14px; font-family: inherit;
+    }
+    .field select:focus, .field input:focus, .field textarea:focus {
+      outline: none; border-color: #00ff88;
+    }
+    .field textarea { resize: vertical; min-height: 60px; }
+    .hint { font-size: 11px; color: #667788; margin-top: 2px; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .checkbox-group label { display: flex; align-items: center; gap: 6px; font-weight: 400; font-size: 13px; cursor: pointer; }
+    .checkbox-group input { width: auto; }
+
+    .password-box {
+      background: rgba(0,255,136,0.05); border: 1px solid #00ff88;
+      padding: 16px; border-radius: 10px; margin-bottom: 16px;
+    }
+    .password-box label { color: #00ff88; font-size: 13px; }
+    .password-box input {
+      width: 100%; padding: 10px; background: #0d1117; border: 1px solid #00ff88;
+      color: #00ff88; border-radius: 8px; font-size: 14px; font-family: monospace;
+      margin-top: 6px;
+    }
+
+    .btn {
+      padding: 12px 24px; background: #00ff88; color: #000;
+      border: none; border-radius: 10px; font-size: 15px; font-weight: bold;
+      cursor: pointer; width: 100%;
+    }
+    .btn:hover { background: #00cc6a; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Result */
+    .result-panel {
+      background: #000; border: 2px solid #00ff88; border-radius: 12px;
+      padding: 20px; margin-top: 20px;
+    }
+    .result-panel h3 { color: #00ff88; font-size: 16px; margin-bottom: 12px; }
+    .cipher-block {
+      background: #0a0a0a; border: 1px solid #334455; border-radius: 8px;
+      padding: 12px; font-family: monospace; font-size: 11px;
+      color: #00ff88; word-break: break-all; line-height: 1.8;
+      max-height: 200px; overflow-y: auto; white-space: pre-wrap;
+    }
+    .print-area {
+      background: #fff; color: #000; padding: 24px; border-radius: 8px;
+      margin-top: 12px; font-family: "SimSun", serif;
+    }
+    .print-area h4 { font-size: 16px; margin-bottom: 8px; }
+    .print-area .cipher-text {
+      font-family: monospace; font-size: 10px; word-break: break-all;
+      border: 1px solid #000; padding: 8px; background: #f5f5f5;
+    }
+
+    @media print {
+      body::before { display: none !important; }
+      .no-print { display: none !important; }
+      .panel, .step-bar, .password-box { display: none !important; }
+      body { background: #fff; color: #000; }
+      .result-panel { border: none; background: #fff; box-shadow: none; }
+      .cipher-block { display: none !important; }
+      .print-area { display: block !important; background: #fff; color: #000; border: 1px solid #000; }
+      .print-area h4 { color: #000; }
+      .print-area .cipher-text { background: #f5f5f5; color: #000; border: 1px solid #000; }
+    }
+
+    .hidden { display: none !important; }
+
+
+    .combobox {
+      position: relative;
+    }
+    .combobox-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .combobox-dropdown {
+      position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+      background: #1e1e1e; border: 1px solid #333; border-radius: 10px;
+      max-height: 320px; overflow-y: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 100; display: none;
+    }
+    .combobox-dropdown.open { display: block; }
+    .combobox-search {
+      position: sticky; top: 0; background: #1e1e1e; padding: 8px 10px;
+      border-bottom: 1px solid #333;
+    }
+    .combobox-search input {
+      width: 100%; padding: 8px 10px; border: 1px solid #333;
+      border-radius: 8px; font-size: 14px;
+      background: #1a1a1a; color: #fff;
+    }
+    .combobox-group {
+      padding: 6px 10px; font-size: 12px; color: #888;
+      background: #151515; font-weight: 600;
+    }
+    .combobox-option {
+      padding: 8px 12px; cursor: pointer; font-size: 14px; color: #eee;
+    }
+    .combobox-option:hover, .combobox-option.highlighted {
+      background: #2c2c2c;
+    }
+    .combobox-option.selected {
+      background: #333;
+      font-weight: 600;
+    }
+    .combobox-empty {
+      padding: 12px; font-size: 13px; color: #888; text-align: center;
+    }
+  </style>
+  <script src="./js/i18n.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1 data-i18n="ui.encrypt.header">🔒 端到端加密纸质问卷</h1>
+    <p data-i18n="ui.encrypt.subtitle">数据在您的浏览器中完成加密，服务器永远无法读取原始内容</p>
+    <div class="badge">AES-256-GCM · PBKDF2 · 零信任架构</div>
+  </div>
+
+  <div class="step-bar">
+    <div class="step active" id="step1"><span class="step-num">01</span>在线填写问卷</div>
+    <div class="step" id="step2"><span class="step-num">02</span>本地加密</div>
+    <div class="step" id="step3"><span class="step-num">03</span>打印密文</div>
+    <div class="step" id="step4"><span class="step-num">04</span>邮寄纸质密文</div>
+  </div>
+
+  <div class="password-box no-print">
+    <label data-i18n="ui.encrypt.key_label">🔐 加密方式说明</label>
+    <div style="font-size:14px; color:#00ff88; margin-top:6px;">
+      系统会自动生成一份<strong>问卷编号</strong>，该编号同时作为<strong>解密密钥</strong>。<br>
+      <strong style="color:#ff6b6b;">请务必把编号写在纸上，与密文一起邮寄。若编号丢失，工作人员将无法解密。</strong>
+    </div>
+  </div>
+
+  <form id="encrypt-form">
+    <div class="panel">
+      <h2 data-i18n="sections.background">一、筛查与基本背景</h2>
+      <div class="field">
+        <label>Q1. 是否年满 18 岁</label>
+        <select name="is_adult" required data-i18n-options="is_adult"></select>
+      </div>
+      <div class="field">
+        <label>Q2. 年龄段</label>
+        <select name="age_group" required data-i18n-options="age_group"></select>
+      </div>
+      <div class="field">
+        <label>Q3. 教育阶段</label>
+        <select name="education_stage" required data-i18n-options="education_stage"></select>
+      </div>
+      <div class="field">
+        <label>Q4. 专业大类（选填）</label>
+        <select name="major_category" data-i18n-options="major_category"></select>
+      </div>
+      <div class="field">
+        <label>Q5. 国籍/户籍背景（选填）</label>
+        <select name="nationality_background" data-i18n-options="nationality_background"></select>
+      </div>
+      <div class="field">
+        <label>Q6. 所在地区（选填）</label>
+        <select name="region" data-i18n-options="region"></select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 data-i18n="sections.gender">二、性别认同与性取向</h2>
+      <div class="field">
+        <label>Q5. 性别认同（选填）</label>
+        <div class="combobox" id="gender-combobox">
+          <div class="combobox-input" id="gender-display" tabindex="0">请选择或搜索你的自我性别认同</div>
+          <input type="hidden" name="gender_identity" id="gender-value" />
+          <input type="hidden" name="gender_identity_label" id="gender-label" />
+          <div class="combobox-dropdown" id="gender-dropdown">
+            <div class="combobox-search">
+              <input type="text" id="gender-search" placeholder="搜索..." autocomplete="off" />
+            </div>
+            <div id="gender-options"></div>
+          </div>
+        </div>
+        <div id="gender-self-describe-box" style="display:none; margin-top:8px;">
+          <label style="font-size:13px; color:#888;">你可以用自己的语言描述。请不要填写姓名、学号、联系方式等身份信息。</label>
+          <input type="text" name="gender_identity_self_describe" id="gender-self-describe" maxlength="80" placeholder="最多 80 字" style="width:100%; margin-top:4px;" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Q6. 性取向（选填）</label>
+        <select name="sexual_orientation" id="sexual-orientation-select" data-i18n-options="sexual_orientation"></select>
+        <div id="so-self-describe-box" style="display:none; margin-top:8px;">
+          <label style="font-size:13px; color:#888;">你可以用自己的语言描述。请不要填写姓名、学号、联系方式等身份信息。</label>
+          <input type="text" name="sexual_orientation_self_describe" id="so-self-describe" maxlength="80" placeholder="最多 80 字" style="width:100%; margin-top:4px;" />
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 data-i18n="sections.relationship">三、恋爱现状</h2>
+      <div class="field">
+        <label>Q7. 恋爱状态（选填）</label>
+        <select name="relationship_status" data-i18n-options="relationship_status"></select>
+      </div>
+      <div class="field">
+        <label>Q8. 恋爱意愿（选填）</label>
+        <select name="relationship_willingness" data-i18n-options="relationship_willingness"></select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 data-i18n="sections.views">四、恋爱观念与影响因素</h2>
+      <div class="field">
+        <label>Q11. 你认为恋爱在大学生活中重要吗？（选填）</label>
+        <select name="love_importance" data-i18n-options="love_importance"></select>
+      </div>
+      <div class="field">
+        <label>Q12. 哪些因素影响你目前的恋爱状态？（可多选）</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="influence_factors" value="academic_pressure" /> 学业压力</label>
+          <label><input type="checkbox" name="influence_factors" value="small_social_circle" /> 社交圈较小</label>
+          <label><input type="checkbox" name="influence_factors" value="lack_of_suitable_partner" /> 缺少合适的交往对象</label>
+          <label><input type="checkbox" name="influence_factors" value="financial_constraints" /> 经济因素</label>
+          <label><input type="checkbox" name="influence_factors" value="family_expectations" /> 家庭期望或态度</label>
+          <label><input type="checkbox" name="influence_factors" value="personal_goals" /> 个人发展目标优先</label>
+          <label><input type="checkbox" name="influence_factors" value="past_experiences" /> 过往经历影响</label>
+          <label><input type="checkbox" name="influence_factors" value="social_media_influence" /> 社交媒体影响</label>
+          <label><input type="checkbox" name="influence_factors" value="peer_pressure" /> 同辈压力</label>
+          <label><input type="checkbox" name="influence_factors" value="no_time" /> 没有足够时间</label>
+          <label><input type="checkbox" name="influence_factors" value="prefer_not_to_say" /> 不愿透露</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Q13. 你的恋爱观更接近以下哪种？（选填）</label>
+        <select name="love_view" data-i18n-options="love_view"></select>
+      </div>
+      <div class="field">
+        <label>Q14. 择偶时你最看重什么？（可多选）</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="partner_factors" value="personality" /> 性格相合</label>
+          <label><input type="checkbox" name="partner_factors" value="appearance" /> 外貌形象</label>
+          <label><input type="checkbox" name="partner_factors" value="values_match" /> 三观一致</label>
+          <label><input type="checkbox" name="partner_factors" value="education_background" /> 教育背景</label>
+          <label><input type="checkbox" name="partner_factors" value="family_background" /> 家庭背景</label>
+          <label><input type="checkbox" name="partner_factors" value="sense_of_humor" /> 幽默感</label>
+          <label><input type="checkbox" name="partner_factors" value="emotional_stability" /> 情绪稳定</label>
+          <label><input type="checkbox" name="partner_factors" value="ambition" /> 上进心</label>
+          <label><input type="checkbox" name="partner_factors" value="shared_interests" /> 共同兴趣</label>
+          <label><input type="checkbox" name="partner_factors" value="financial_stability" /> 经济稳定</label>
+          <label><input type="checkbox" name="partner_factors" value="physical_attraction" /> 身体吸引力</label>
+          <label><input type="checkbox" name="partner_factors" value="kindness" /> 善良体贴</label>
+          <label><input type="checkbox" name="partner_factors" value="prefer_not_to_say" /> 不愿透露</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Q15. 你能接受异地恋吗？（选填）</label>
+        <select name="long_distance_acceptance" data-i18n-options="long_distance_acceptance"></select>
+      </div>
+      <div class="field">
+        <label>Q16. 你认为恋爱对学业有什么影响？（选填）</label>
+        <select name="study_impact" data-i18n-options="study_impact"></select>
+      </div>
+      <div class="field">
+        <label>Q17. 你认为恋爱关系中最重要的是什么？（选填）</label>
+        <select name="relationship_core_values" data-i18n-options="relationship_core_values"></select>
+      </div>
+      <div class="field">
+        <label>Q18. 恋爱中发生冲突时你倾向于？（选填）</label>
+        <select name="conflict_handling" data-i18n-options="conflict_handling"></select>
+      </div>
+      <div class="field">
+        <label>Q19. 你是否感受到来自外界或自身的恋爱压力？（选填）</label>
+        <select name="relationship_pressure" data-i18n-options="relationship_pressure"></select>
+      </div>
+      <div class="field">
+        <label>Q20. 你对恋爱中个人边界感的看法？（选填）</label>
+        <select name="boundary_awareness" data-i18n-options="boundary_awareness"></select>
+      </div>
+      <div class="field">
+        <label>Q21. 遇到情感问题时你会寻求帮助吗？（选填）</label>
+        <select name="help_seeking" data-i18n-options="help_seeking"></select>
+      </div>
+      <div class="field">
+        <label>Q22. 你认为学校是否需要开展恋爱/情感教育？（选填）</label>
+        <select name="school_education_need" data-i18n-options="school_education_need"></select>
+      </div>
+      <div class="field">
+        <label>Q23. 你认为学校目前提供的情感支持是否足够？（选填）</label>
+        <select name="school_support" data-i18n-options="school_support"></select>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 data-i18n="sections.open">五、开放题</h2>
+      <div class="field">
+        <label>Q24. 目前你在恋爱方面最大的困扰或挑战是什么？（选填，最多 200 字）</label>
+        <textarea name="open_problem" maxlength="200" rows="3"></textarea>
+      </div>
+      <div class="field">
+        <label>Q25. 你对高校恋爱教育或情感支持有什么建议？（选填，最多 200 字）</label>
+        <textarea name="open_suggestion" maxlength="200" rows="3"></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn no-print" id="encrypt-btn" data-i18n="ui.encrypt.submit_btn">🔐 生成加密答卷并打印</button>
+  </form>
+
+  <div id="result-area" class="hidden">
+    <div class="result-panel">
+      <h3 data-i18n="ui.encrypt.success">✅ 加密完成</h3>
+      <p style="font-size:12px; color:#8899aa; margin-bottom:10px;" data-i18n="ui.encrypt.result_desc">您的答卷已通过 AES-256-GCM 算法在本地浏览器中完成加密。下方是加密后的密文，请打印此页并邮寄。</p>
+      <div class="cipher-block" id="cipher-text"></div>
+
+      <div class="print-area" id="print-section">
+        <h4 data-i18n="ui.encrypt.print_title">📄 加密纸质问卷 · 邮寄联</h4>
+        <p style="font-size:11px; margin-bottom:8px;">
+          <strong data-i18n="ui.encrypt.paper_id_label">问卷编号：</strong><span id="paper-id"></span><br>
+          <strong data-i18n="ui.encrypt.algorithm_label">加密算法：</strong>AES-256-GCM + PBKDF2<br>
+          <strong data-i18n="ui.encrypt.time_label">生成时间：</strong><span id="gen-time"></span><br>
+          <strong data-i18n="ui.encrypt.key_label_print">解密密钥（即问卷编号）：</strong><span id="print-key" style="color:#c00; font-weight:bold;"></span>
+        </p>
+        <div class="cipher-text" id="print-cipher"></div>
+        <p style="font-size:10px; margin-top:8px;">
+          <strong data-i18n="ui.encrypt.address_label">邮寄地址：</strong>中国大陆 辽宁省 沈阳市 沈北新区 蒲河路 77 号 中国医科大学 （邮编：110122）<br>
+          <strong style="color:#c00;">重要提示：请务必随信附上本页打印件，工作人员需要此密钥才能解密。若密钥丢失，答卷将无法恢复。</strong><br>
+          请勿在密文上书写任何可识别个人身份的信息。
+        </p>
+      </div>
+
+      <div class="no-print" style="margin-top:12px; display:flex; gap:10px;">
+        <button class="btn" onclick="window.print()" data-i18n="ui.encrypt.print_btn">🖨️ 打印此页</button>
+        <button class="btn" style="background:transparent; color:#00ff88; border:1px solid #00ff88;" onclick="copyCipher()" data-i18n="ui.encrypt.copy_btn">📋 复制密文</button>
+        <button class="btn" style="background:transparent; color:#00ff88; border:1px solid #00ff88;" onclick="location.reload()" data-i18n="ui.encrypt.next_btn">🔄 填写下一份</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-print" style="margin-top:24px; text-align:center;">
+    <p style="font-size:12px; color:#556677;">
+      <a href="/paper-decode.html" style="color:#00ff88;" data-i18n="ui.encrypt.to_decode">→ 前往解密演示端</a>
+      &nbsp;|&nbsp;
+      <a href="/" style="color:#667788;" data-i18n="ui.encrypt.to_online">返回在线问卷</a>
+    </p>
+  </div>
+</div>
+
+<script>
+  async function getKey(password) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey(
+      "raw", enc.encode(password), { name: "PBKDF2" }, false, ["deriveKey"]
+    );
+    return crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: enc.encode("cmu-survey-salt-v1"), iterations: 100000, hash: "SHA-256" },
+      keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]
+    );
+  }
+
+  const GENDER_OPTIONS = [
+    // group 1
+    { value: "female", label: "Female / 女性", group: "常规选项" },
+    { value: "male", label: "Male / 男性", group: "常规选项" },
+    { value: "prefer_not_to_say", label: "不愿透露", group: "常规选项" },
+    { value: "not_sure", label: "尚不确定", group: "常规选项" },
+    { value: "self_describe", label: "其他 / 自我描述", group: "常规选项" },
+    // group 2
+    { value: "woman", label: "Woman / 女性", group: "女性相关认同" },
+    { value: "girl", label: "Girl / 女孩", group: "女性相关认同" },
+    { value: "cisgender_woman", label: "Cisgender woman / 顺性别女性", group: "女性相关认同" },
+    { value: "cis_woman", label: "Cis woman / 顺性别女性", group: "女性相关认同" },
+    { value: "transgender_woman", label: "Transgender woman / 跨性别女性", group: "女性相关认同" },
+    { value: "trans_woman", label: "Trans woman / 跨性别女性", group: "女性相关认同" },
+    { value: "transfeminine", label: "Transfeminine / 跨女性化", group: "女性相关认同" },
+    { value: "femme", label: "Femme / 女性化认同", group: "女性相关认同" },
+    { value: "demigirl", label: "Demigirl / 半女性", group: "女性相关认同" },
+    { value: "demiwoman", label: "Demiwoman / 半女性", group: "女性相关认同" },
+    { value: "librafeminine", label: "Librafeminine / 偏女性的弱性别认同", group: "女性相关认同" },
+    { value: "paragirl", label: "Paragirl / 大部分女性认同", group: "女性相关认同" },
+    { value: "juxera", label: "Juxera / 接近女性但非完全女性", group: "女性相关认同" },
+    { value: "girlflux", label: "Girlflux / 女性感强度流动", group: "女性相关认同" },
+    // group 3
+    { value: "man", label: "Man / 男性", group: "男性相关认同" },
+    { value: "boy", label: "Boy / 男孩", group: "男性相关认同" },
+    { value: "cisgender_man", label: "Cisgender man / 顺性别男性", group: "男性相关认同" },
+    { value: "cis_man", label: "Cis man / 顺性别男性", group: "男性相关认同" },
+    { value: "transgender_man", label: "Transgender man / 跨性别男性", group: "男性相关认同" },
+    { value: "trans_man", label: "Trans man / 跨性别男性", group: "男性相关认同" },
+    { value: "transmasculine", label: "Transmasculine / 跨男性化", group: "男性相关认同" },
+    { value: "masc", label: "Masc / 男性化认同", group: "男性相关认同" },
+    { value: "demiboy", label: "Demiboy / 半男性", group: "男性相关认同" },
+    { value: "demiman", label: "Demiman / 半男性", group: "男性相关认同" },
+    { value: "libramasculine", label: "Libramasculine / 偏男性的弱性别认同", group: "男性相关认同" },
+    { value: "paraboy", label: "Paraboy / 大部分男性认同", group: "男性相关认同" },
+    { value: "proxvir", label: "Proxvir / 接近男性但非完全男性", group: "男性相关认同" },
+    { value: "boyflux", label: "Boyflux / 男性感强度流动", group: "男性相关认同" },
+    // group 4
+    { value: "nonbinary", label: "Non-binary / 非二元性别", group: "非二元与性别酷儿" },
+    { value: "non_binary", label: "Non binary / 非二元性别", group: "非二元与性别酷儿" },
+    { value: "enby", label: "Enby / 非二元", group: "非二元与性别酷儿" },
+    { value: "genderqueer", label: "Genderqueer / 性别酷儿", group: "非二元与性别酷儿" },
+    { value: "gender_nonconforming", label: "Gender non-conforming / 性别不顺从", group: "非二元与性别酷儿" },
+    { value: "gender_variant", label: "Gender variant / 性别变体", group: "非二元与性别酷儿" },
+    { value: "gender_diverse", label: "Gender diverse / 多元性别", group: "非二元与性别酷儿" },
+    { value: "gender_expansive", label: "Gender expansive / 扩展性别", group: "非二元与性别酷儿" },
+    { value: "gender_creative", label: "Gender creative / 创造性性别表达", group: "非二元与性别酷儿" },
+    { value: "gender_independent", label: "Gender independent / 独立性别认同", group: "非二元与性别酷儿" },
+    { value: "third_gender", label: "Third gender / 第三性别", group: "非二元与性别酷儿" },
+    { value: "other_gender", label: "Other gender / 其他性别", group: "非二元与性别酷儿" },
+    { value: "neither_man_nor_woman", label: "Neither man nor woman / 既非男性也非女性", group: "非二元与性别酷儿" },
+    { value: "both_man_and_woman", label: "Both man and woman / 同时认同男性与女性", group: "非二元与性别酷儿" },
+    { value: "between_man_and_woman", label: "Between man and woman / 介于男性与女性之间", group: "非二元与性别酷儿" },
+    // group 5
+    { value: "agender", label: "Agender / 无性别", group: "无性别、弱性别与中性" },
+    { value: "genderless", label: "Genderless / 无性别", group: "无性别、弱性别与中性" },
+    { value: "genderfree", label: "Genderfree / 不受性别定义", group: "无性别、弱性别与中性" },
+    { value: "gendervoid", label: "Gendervoid / 性别空无", group: "无性别、弱性别与中性" },
+    { value: "voidgender", label: "Voidgender / 空无性别", group: "无性别、弱性别与中性" },
+    { value: "nullgender", label: "Nullgender / 空性别", group: "无性别、弱性别与中性" },
+    { value: "neutrois", label: "Neutrois / 中性性别", group: "无性别、弱性别与中性" },
+    { value: "neutral_gender", label: "Neutral gender / 中性性别", group: "无性别、弱性别与中性" },
+    { value: "androgyne", label: "Androgyne / 雌雄同体式性别认同", group: "无性别、弱性别与中性" },
+    { value: "androgynous", label: "Androgynous / 中性或双性化认同", group: "无性别、弱性别与中性" },
+    { value: "maverique", label: "Maverique / 独立于男女框架的性别", group: "无性别、弱性别与中性" },
+    { value: "aporagender", label: "Aporagender / 非男非女且具有明确性别感", group: "无性别、弱性别与中性" },
+    { value: "aliagender", label: "Aliagender / 另性别", group: "无性别、弱性别与中性" },
+    { value: "epicene", label: "Epicene / 中性", group: "无性别、弱性别与中性" },
+    { value: "cassgender", label: "Cassgender / 性别对自我不重要", group: "无性别、弱性别与中性" },
+    { value: "greygender", label: "Greygender / 弱性别感", group: "无性别、弱性别与中性" },
+    { value: "graygender", label: "Graygender / 弱性别感", group: "无性别、弱性别与中性" },
+    // group 6
+    { value: "genderfluid", label: "Genderfluid / 性别流动", group: "流动性、变化性与多重性别" },
+    { value: "genderflux", label: "Genderflux / 性别强度流动", group: "流动性、变化性与多重性别" },
+    { value: "fluidflux", label: "Fluidflux / 性别类型与强度均流动", group: "流动性、变化性与多重性别" },
+    { value: "bigender", label: "Bigender / 双性别", group: "流动性、变化性与多重性别" },
+    { value: "trigender", label: "Trigender / 三性别", group: "流动性、变化性与多重性别" },
+    { value: "pangender", label: "Pangender / 泛性别", group: "流动性、变化性与多重性别" },
+    { value: "polygender", label: "Polygender / 多性别", group: "流动性、变化性与多重性别" },
+    { value: "multigender", label: "Multigender / 多重性别", group: "流动性、变化性与多重性别" },
+    { value: "omnigender", label: "Omnigender / 全性别", group: "流动性、变化性与多重性别" },
+    { value: "ambigender", label: "Ambigender / 双重或模糊性别", group: "流动性、变化性与多重性别" },
+    { value: "genderfae", label: "Genderfae / 不包含男性的性别流动", group: "流动性、变化性与多重性别" },
+    { value: "genderfaun", label: "Genderfaun / 不包含女性的性别流动", group: "流动性、变化性与多重性别" },
+    { value: "genderflor", label: "Genderflor / 不包含男性或女性的性别流动", group: "流动性、变化性与多重性别" },
+    { value: "genderfruct", label: "Genderfruct / 性别波动", group: "流动性、变化性与多重性别" },
+    { value: "genderfrith", label: "Genderfrith / 以男性与女性之外为主的流动", group: "流动性、变化性与多重性别" },
+    { value: "genderdoe", label: "Genderdoe / 偏女性范围流动", group: "流动性、变化性与多重性别" },
+    { value: "genderbuck", label: "Genderbuck / 偏男性范围流动", group: "流动性、变化性与多重性别" },
+    { value: "demifluid", label: "Demifluid / 部分性别固定、部分流动", group: "流动性、变化性与多重性别" },
+    { value: "demiflux", label: "Demiflux / 部分性别强度流动", group: "流动性、变化性与多重性别" },
+    { value: "genderfluid_nonbinary", label: "Genderfluid non-binary / 非二元性别流动", group: "流动性、变化性与多重性别" },
+    // group 7
+    { value: "demigender", label: "Demigender / 半性别", group: "部分性别与连接性认同" },
+    { value: "deminonbinary", label: "Deminonbinary / 半非二元", group: "部分性别与连接性认同" },
+    { value: "demineutral", label: "Demineutral / 半中性", group: "部分性别与连接性认同" },
+    { value: "demifluid_identity", label: "Demifluid identity / 半流动性别", group: "部分性别与连接性认同" },
+    { value: "demiflux_identity", label: "Demiflux identity / 半强度流动性别", group: "部分性别与连接性认同" },
+    { value: "semigender", label: "Semigender / 部分性别", group: "部分性别与连接性认同" },
+    { value: "hemigender", label: "Hemigender / 半性别", group: "部分性别与连接性认同" },
+    { value: "libragender", label: "Libragender / 弱性别认同", group: "部分性别与连接性认同" },
+    { value: "librafluid", label: "Librafluid / 弱性别流动", group: "部分性别与连接性认同" },
+    { value: "paragender", label: "Paragender / 大部分某性别认同", group: "部分性别与连接性认同" },
+    { value: "perigender", label: "Perigender / 接近某性别认同", group: "部分性别与连接性认同" },
+    { value: "quasigender", label: "Quasigender / 近似性别认同", group: "部分性别与连接性认同" },
+    { value: "offgender", label: "Offgender / 与某性别接近但不完全相同", group: "部分性别与连接性认同" },
+    { value: "gender_near", label: "Gender-near / 接近某性别", group: "部分性别与连接性认同" },
+    // group 8
+    { value: "two_spirit", label: "Two-Spirit / 双灵", group: "文化、社群与历史性别认同" },
+    { value: "hijra", label: "Hijra / 海吉拉", group: "文化、社群与历史性别认同" },
+    { value: "faafafine", label: "Fa'afafine", group: "文化、社群与历史性别认同" },
+    { value: "faafatama", label: "Fa'afatama", group: "文化、社群与历史性别认同" },
+    { value: "muxe", label: "Muxe", group: "文化、社群与历史性别认同" },
+    { value: "travesti", label: "Travesti", group: "文化、社群与历史性别认同" },
+    { value: "bakla", label: "Bakla", group: "文化、社群与历史性别认同" },
+    { value: "kathoey", label: "Kathoey", group: "文化、社群与历史性别认同" },
+    { value: "waria", label: "Waria", group: "文化、社群与历史性别认同" },
+    { value: "mahu", label: "Māhū", group: "文化、社群与历史性别认同" },
+    { value: "fakaleiti", label: "Fakaleiti", group: "文化、社群与历史性别认同" },
+    { value: "akavaine", label: "Akava'ine", group: "文化、社群与历史性别认同" },
+    { value: "bissu", label: "Bissu", group: "文化、社群与历史性别认同" },
+    { value: "calabai", label: "Calabai", group: "文化、社群与历史性别认同" },
+    { value: "calalai", label: "Calalai", group: "文化、社群与历史性别认同" },
+    { value: "x_gender", label: "X-gender", group: "文化、社群与历史性别认同" },
+    { value: "x_jenda", label: "X-jenda", group: "文化、社群与历史性别认同" },
+    { value: "sekhet", label: "Sekhet", group: "文化、社群与历史性别认同" },
+    { value: "sworn_virgin", label: "Sworn virgin", group: "文化、社群与历史性别认同" },
+    { value: "femminiello", label: "Femminiello", group: "文化、社群与历史性别认同" },
+    { value: "guevedoche", label: "Guevedoche", group: "文化、社群与历史性别认同" },
+    // group 9
+    { value: "transgender", label: "Transgender / 跨性别", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "trans", label: "Trans / 跨性别", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "trans_star", label: "Trans* / 跨性别伞状认同", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "non_cisgender", label: "Non-cisgender / 非顺性别", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "gender_minority", label: "Gender minority / 性别少数", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "transsexual", label: "Transsexual / 跨性别者", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "transvestite_identity", label: "Transvestite identity / 易装相关身份认同", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "crossdresser_identity", label: "Crossdresser identity / 易装相关身份认同", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "questioning_gender", label: "Questioning gender / 性别认同探索中", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "gender_questioning", label: "Gender questioning / 性别认同探索中", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "intergender", label: "Intergender / 间性别", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "intersex_identity", label: "Intersex identity / 间性相关认同", group: "跨性别、非顺性别与相关伞状认同" },
+    { value: "intersex_nonbinary", label: "Intersex non-binary / 间性非二元认同", group: "跨性别、非顺性别与相关伞状认同" },
+    // group 10
+    { value: "queer", label: "Queer / 酷儿", group: "其他广义或自定义认同" },
+    { value: "queer_gender", label: "Queer gender / 酷儿性别", group: "其他广义或自定义认同" },
+    { value: "pomogender", label: "Pomogender / 后现代性别认同", group: "其他广义或自定义认同" },
+    { value: "novigender", label: "Novigender / 难以归类或描述的性别", group: "其他广义或自定义认同" },
+    { value: "autigender", label: "Autigender / 与自我体验相关的性别认同", group: "其他广义或自定义认同" },
+    { value: "neurogender", label: "Neurogender / 与神经多样性体验相关的性别认同", group: "其他广义或自定义认同" },
+    { value: "xenogender", label: "Xenogender / 非传统语义框架性别", group: "其他广义或自定义认同" },
+    { value: "aesthetigender", label: "Aesthetigender / 与审美体验相关的性别", group: "其他广义或自定义认同" },
+    { value: "kingender", label: "Kingender / 与亲缘或身份体验相关的性别", group: "其他广义或自定义认同" },
+    { value: "personagender", label: "Personagender / 与人格体验相关的性别", group: "其他广义或自定义认同" },
+    { value: "egogender", label: "Egogender / 以自我体验定义的性别", group: "其他广义或自定义认同" },
+    { value: "charagender", label: "Charagender / 与角色体验相关的性别", group: "其他广义或自定义认同" },
+    { value: "mirrorgender", label: "Mirrorgender / 镜像性别", group: "其他广义或自定义认同" },
+    { value: "blurgender", label: "Blurgender / 模糊性别", group: "其他广义或自定义认同" },
+    { value: "chaosgender", label: "Chaosgender / 混沌性别", group: "其他广义或自定义认同" },
+    { value: "cosmicgender", label: "Cosmicgender / 宇宙性别", group: "其他广义或自定义认同" },
+    { value: "stargender", label: "Stargender / 星性别", group: "其他广义或自定义认同" },
+    { value: "solargender", label: "Solargender / 太阳性别", group: "其他广义或自定义认同" },
+    { value: "lunargender", label: "Lunargender / 月亮性别", group: "其他广义或自定义认同" },
+    { value: "cadensgender", label: "Cadensgender / 随音乐或节律变化的性别", group: "其他广义或自定义认同" },
+    { value: "colorgender", label: "Colorgender / 与颜色体验相关的性别", group: "其他广义或自定义认同" },
+    { value: "dreamgender", label: "Dreamgender / 梦境性别", group: "其他广义或自定义认同" },
+    { value: "oneirogender", label: "Oneirogender / 梦境相关性别", group: "其他广义或自定义认同" },
+    { value: "other_not_listed", label: "其他未列出", group: "其他广义或自定义认同" },
+    { value: "prefer_to_self_describe", label: "我希望自己描述", group: "其他广义或自定义认同" }
+  ];
+
+  const SELF_DESCRIBE_VALUES = new Set(["self_describe", "prefer_to_self_describe", "other_not_listed"]);
+
+  // Combobox logic
+  function initCombobox(opts) {
+    const { displayEl, valueEl, labelEl, dropdownEl, searchEl, optionsEl, optionsData, selfDescribeBox, selfDescribeInput } = opts;
+    let open = false;
+    let highlightedIndex = -1;
+    let filtered = [];
+
+    function renderOptions(query) {
+      const q = (query || "").toLowerCase().trim();
+      if (!q) {
+        filtered = [...optionsData];
+      } else {
+        filtered = optionsData.filter(o =>
+          o.label.toLowerCase().includes(q) ||
+          o.value.toLowerCase().includes(q) ||
+          o.group.toLowerCase().includes(q)
+        );
+      }
+      optionsEl.innerHTML = "";
+      if (filtered.length === 0) {
+        optionsEl.innerHTML = '<div class="combobox-empty">未找到匹配项，你可以选择“其他 / 自我描述”。</div>';
+        highlightedIndex = -1;
+        return;
+      }
+      let currentGroup = null;
+      filtered.forEach((opt, idx) => {
+        if (opt.group !== currentGroup) {
+          currentGroup = opt.group;
+          const g = document.createElement("div");
+          g.className = "combobox-group";
+          g.textContent = currentGroup;
+          optionsEl.appendChild(g);
+        }
+        const div = document.createElement("div");
+        div.className = "combobox-option";
+        div.dataset.index = idx;
+        div.textContent = opt.label;
+        div.addEventListener("click", () => selectOption(opt));
+        optionsEl.appendChild(div);
+      });
+      highlightedIndex = 0;
+      updateHighlight();
+    }
+
+    function updateHighlight() {
+      const els = optionsEl.querySelectorAll(".combobox-option");
+      els.forEach((el, i) => {
+        el.classList.toggle("highlighted", i === highlightedIndex);
+      });
+    }
+
+    function selectOption(opt) {
+      valueEl.value = opt.value;
+      labelEl.value = opt.label;
+      displayEl.textContent = opt.label;
+      closeDropdown();
+      if (selfDescribeBox) {
+        selfDescribeBox.style.display = SELF_DESCRIBE_VALUES.has(opt.value) ? "block" : "none";
+        if (!SELF_DESCRIBE_VALUES.has(opt.value)) selfDescribeInput.value = "";
+      }
+    }
+
+    function openDropdown() {
+      open = true;
+      dropdownEl.classList.add("open");
+      renderOptions(searchEl.value);
+      searchEl.focus();
+    }
+
+    function closeDropdown() {
+      open = false;
+      dropdownEl.classList.remove("open");
+      searchEl.value = "";
+    }
+
+    displayEl.addEventListener("click", (e) => { e.stopPropagation(); open ? closeDropdown() : openDropdown(); });
+    displayEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open ? closeDropdown() : openDropdown(); }
+      if (e.key === "ArrowDown") { e.preventDefault(); openDropdown(); }
+    });
+
+    searchEl.addEventListener("input", () => { renderOptions(searchEl.value); });
+    searchEl.addEventListener("keydown", (e) => {
+      const max = optionsEl.querySelectorAll(".combobox-option").length - 1;
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        highlightedIndex = Math.min(highlightedIndex + 1, max);
+        updateHighlight();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        highlightedIndex = Math.max(highlightedIndex - 1, 0);
+        updateHighlight();
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (highlightedIndex >= 0 && filtered[highlightedIndex]) {
+          selectOption(filtered[highlightedIndex]);
+        }
+      } else if (e.key === "Escape") {
+        closeDropdown();
+        displayEl.focus();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!displayEl.contains(e.target) && !dropdownEl.contains(e.target)) closeDropdown();
+    });
+  }
+
+  initCombobox({
+    displayEl: document.getElementById("gender-display"),
+    valueEl: document.getElementById("gender-value"),
+    labelEl: document.getElementById("gender-label"),
+    dropdownEl: document.getElementById("gender-dropdown"),
+    searchEl: document.getElementById("gender-search"),
+    optionsEl: document.getElementById("gender-options"),
+    optionsData: GENDER_OPTIONS,
+    selfDescribeBox: document.getElementById("gender-self-describe-box"),
+    selfDescribeInput: document.getElementById("gender-self-describe")
+  });
+
+  // Sexual orientation self-describe toggle
+  document.getElementById("sexual-orientation-select").addEventListener("change", function() {
+    const box = document.getElementById("so-self-describe-box");
+    box.style.display = this.value === "other" ? "block" : "none";
+    if (this.value !== "other") document.getElementById("so-self-describe").value = "";
+  });
+
+  async function encryptData(data, password) {
+    const key = await getKey(password);
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const enc = new TextEncoder();
+    const ciphertext = await crypto.subtle.encrypt(
+      { name: "AES-GCM", iv }, key, enc.encode(JSON.stringify(data))
+    );
+    const ivB64 = btoa(String.fromCharCode(...iv));
+    const cipherB64 = btoa(String.fromCharCode(...new Uint8Array(ciphertext)));
+    return `${ivB64}:${cipherB64}`;
+  }
+
+  function bytesToHex(bytes) {
+    return Array.from(bytes).map(b => b.toString(16).padStart(2, "0")).join("").toUpperCase();
+  }
+
+  document.getElementById("encrypt-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("encrypt-btn");
+    btn.disabled = true;
+    btn.textContent = "正在加密...";
+
+    const formData = new FormData(e.target);
+    const payload = Object.fromEntries(formData.entries());
+    const multiFields = ["influence_factors", "partner_factors"];
+    multiFields.forEach(key => {
+      const values = formData.getAll(key);
+      if (values.length > 0) payload[key] = JSON.stringify(values);
+    });
+    payload.consent = true;
+
+    const paperId = "P-" + new Date().toISOString().slice(0,10).replace(/-/g,"") + "-" + Math.floor(1000 + Math.random()*9000);
+    const password = paperId;
+
+    try {
+      const cipher = await encryptData(payload, password);
+
+      document.getElementById("cipher-text").textContent = cipher;
+      document.getElementById("print-cipher").textContent = cipher;
+      document.getElementById("paper-id").textContent = paperId;
+      document.getElementById("gen-time").textContent = new Date().toLocaleString("zh-CN");
+      document.getElementById("print-key").textContent = paperId;
+
+      document.getElementById("result-area").classList.remove("hidden");
+      window.scrollTo({ top: document.getElementById("result-area").offsetTop - 20, behavior: "smooth" });
+
+      document.getElementById("step1").classList.remove("active");
+      document.getElementById("step2").classList.add("active");
+      document.getElementById("step3").classList.add("active");
+    } catch (err) {
+      alert("加密失败：" + err.message);
+      btn.disabled = false;
+      btn.textContent = "🔐 生成加密答卷并打印";
+    }
+  });
+
+  function copyCipher() {
+    const text = document.getElementById("cipher-text").textContent;
+    navigator.clipboard.writeText(text).then(() => alert(I18n.t("ui.encrypt.copy_alert")));
+  }
+
+  // Country selector
+  const nationalitySelect = document.querySelector('select[name="nationality_background"]');
+  const countryModal = document.getElementById("country-modal");
+  const countrySearch = document.getElementById("country-search");
+  const countryList = document.getElementById("country-list");
+  const countryCodeInput = document.getElementById("nationality-country-code");
+  let allCountries = [];
+
+  function openCountryModal() {
+    countryModal.style.display = "flex";
+    const raw = I18n.raw("countries") || {};
+    allCountries = Object.entries(raw).map(([code, name]) => ({ code, name }));
+    renderCountryList("");
+    countrySearch.focus();
+  }
+  function closeCountryModal() {
+    countryModal.style.display = "none";
+    countrySearch.value = "";
+  }
+  function renderCountryList(query) {
+    const q = (query || "").toLowerCase().trim();
+    let filtered = allCountries;
+    if (q) filtered = allCountries.filter(c => c.name.toLowerCase().includes(q) || c.code.toLowerCase().includes(q));
+    let html = "";
+    if (filtered.length === 0) {
+      html = '<div style="padding:16px; text-align:center; color:#888;">' + I18n.t("ui.country.no_result") + '</div>';
+    } else {
+      filtered.forEach(c => {
+        html += `<div class="country-option" data-code="${c.code}" onclick="selectCountry('${c.code}', '${c.name.replace(/'/g, "\'")}')">${c.name}<span class="country-code">${c.code}</span></div>`;
+      });
+    }
+    countryList.innerHTML = html;
+  }
+  function selectCountry(code, name) {
+    countryCodeInput.value = code;
+    closeCountryModal();
+  }
+  if (nationalitySelect) {
+    nationalitySelect.addEventListener("change", function() {
+      if (this.value !== "china_mainland" && this.value !== "" && this.value !== "prefer_not_to_say") {
+        openCountryModal();
+      } else {
+        countryCodeInput.value = "";
+      }
+    });
+  }
+  if (countrySearch) {
+    countrySearch.addEventListener("input", function() { renderCountryList(this.value); });
+    countrySearch.addEventListener("keydown", function(e) { if (e.key === "Escape") closeCountryModal(); });
+  }
+  countryModal.addEventListener("click", function(e) { if (e.target === countryModal) closeCountryModal(); });
+</script>
+<script>
+  (async function() {
+    const detected = I18n.detect();
+    await I18n.load(detected);
+    I18n.applyDOM();
+    I18n.renderAllDynamic();
+  })();
+</script>
+
+<!-- Country Selector Modal -->
+<div id="country-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-box" style="max-width:480px; background:#1e1e1e; border:1px solid #333;">
+    <h2 data-i18n="ui.country.title">选择国家 / 地区</h2>
+    <div class="modal-body">
+      <input type="text" id="country-search" placeholder="搜索国家或地区..." data-i18n-placeholder="ui.country.search_placeholder" autocomplete="off" style="width:100%; padding:10px; background:#1a1a1a; border:1px solid #333; color:#fff; border-radius:8px; margin-bottom:12px;" />
+      <div id="country-list" style="max-height:320px; overflow-y:auto; border:1px solid #333; border-radius:8px; background:#1a1a1a;">
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeCountryModal()" data-i18n="ui.country.close">关闭</button>
+    </div>
+  </div>
+</div>
+<input type="hidden" name="nationality_country_code" id="nationality-country-code" />
+
+</body>
+</html>
