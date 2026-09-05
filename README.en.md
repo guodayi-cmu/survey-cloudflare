@@ -133,4 +133,4 @@ https://your-domain/api/export.csv?token=YOUR_EXPORT_TOKEN
 | Cloudflare Pages | Static hosting |
 | Pages Functions | Serverless backend endpoints |
 | D1 | Serverless SQLite database |
-| Turnstile | Human verification (currently disabled; can be enabled as needed) |
+| Turnstile | Human verification (can be enabled as needed) |
