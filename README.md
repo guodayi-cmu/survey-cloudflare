@@ -136,4 +136,4 @@ https://你的域名/api/export.csv?token=你的EXPORT_TOKEN
 | Cloudflare Pages | 静态页面托管 |
 | Pages Functions | Serverless 后端接口 |
 | D1 | Serverless SQLite 数据库 |
-| Turnstile | 人机验证（当前已关闭，可按需开启） |
+| Turnstile | 人机验证（可按需开启） |
